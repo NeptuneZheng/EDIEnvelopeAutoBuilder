@@ -1669,24 +1669,7 @@ public class FunctionHelper {
 		return dir;
 	}
 	
-	public static String getEnv(){
-		String env = "QA3";
-//		logger.info("excel: "+excel);
-//		String[] str = null;
-//		str = excel.split("-");
-//		String msgtype = str[1];
-//		logger.info("msgType: "+msgtype);
-//		try {
-//			Configuration config = new PropertiesConfiguration(envConfigFile);
-//			String envList = config.getString("configEnv");
-//		} catch (ConfigurationException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
-		
-		
-		return env;
-	}
+
 	/**
 	 * 判断时间格式 格式必须为“YYYY-MM-dd”
 	 * 2004-2-30 是无效的

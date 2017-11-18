@@ -230,7 +230,7 @@ public class DBHandler {
 								(int) blob.length());
 
 						String unzippedContent = upzipBlob(samDocContent);
-						String fileName = filePath+messageID+"_"+procID+".in";
+						String fileName = filePath+messageID+"_"+procID+"_Output"+".in";
 						File outputfolder = new File(fileName);
 						if (!outputfolder.getParentFile().exists()) {
 							outputfolder.getParentFile().mkdirs();

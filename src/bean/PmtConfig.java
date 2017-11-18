@@ -24,7 +24,26 @@ public class PmtConfig {
     private String una;
     private String unb;
     private String unh;
+    private String ung;
+    private String une;
     private String txnIndentifier;
+
+    public String getUng() {
+        return ung;
+    }
+
+    public void setUng(String ung) {
+        this.ung = ung;
+    }
+
+    public String getUne() {
+        return une;
+    }
+
+    public void setUne(String une) {
+        this.une = une;
+    }
+
     private boolean isMCI;
 
     public boolean isMCI() {
