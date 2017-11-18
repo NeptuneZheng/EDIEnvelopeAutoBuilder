@@ -108,6 +108,8 @@ public class FileHandler {
             logger.info("UNG : " + pmtConfig.getUng());
             pmtConfig.setUnh(findValueInArrays(elements,"UNH"));
             logger.info("UNH : " + pmtConfig.getUnh());
+            pmtConfig.setUne(findValueInArrays(elements,"UNE"));
+            logger.info("UNH : " + pmtConfig.getUne());
         }else {
             if(content.startsWith("ISA")){
                 pmtConfig.setIsa(findValueInArrays(elements,"ISA"));
@@ -127,6 +129,8 @@ public class FileHandler {
                 logger.info("UNG : " + pmtConfig.getUng());
                 pmtConfig.setUnh(findValueInArrays(elements,"UNH"));
                 logger.info("UNH : " + pmtConfig.getUnh());
+                pmtConfig.setUne(findValueInArrays(elements,"UNE"));
+                logger.info("UNH : " + pmtConfig.getUne());
             }
 
         }

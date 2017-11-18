@@ -384,10 +384,22 @@ public class BuildApiJsonforHeader {
 		cfg.edifactEnvelop.unt.E0074_01 = "";
 		//reference with cfg.edifactEnvelop.unh.E0062_01, should be same
 		cfg.edifactEnvelop.unt.E0062_02 = "%EDI_CTRL_NUM_IN_TXN_FORMAT%%TXN_COUNT_FORMAT%";
-		
+		if(!pmtConfig.getUne().equals("")){
+
+			cfg.edifactEnvelop.une = new UNE();
+			cfg.edifactEnvelop.une.E0060_01 = "%TXN_COUNT%" ;
+			cfg.edifactEnvelop.une.E0048_02 = "%EDI_CTRL_NUM_FORMAT%";
+
+		}
+		//if une exists then unz will hard code 1
 		cfg.edifactEnvelop.unz = new UNZ();
 		// the transaction sequence, no prefix 0
-		cfg.edifactEnvelop.unz.E0036_01 = "%TXN_COUNT%";
+		if(!pmtConfig.getUne().equals("")){
+			cfg.edifactEnvelop.unz.E0036_01 = "1";
+		}else{
+			cfg.edifactEnvelop.unz.E0036_01 = "%TXN_COUNT%";
+		}
+
 		// reference with cfg.edifactEnvelop.unb.e0020_05, should be same
 		cfg.edifactEnvelop.unz.E0020_02 = "%EDI_CTRL_NUM_FORMAT%";
 		
