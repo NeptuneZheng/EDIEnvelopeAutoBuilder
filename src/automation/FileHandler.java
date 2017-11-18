@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 
 import java.io.File;
 
+import java.util.Arrays;
 import java.util.Map;
 
 /**
@@ -70,45 +71,61 @@ public class FileHandler {
         return  pmtConfig;
     }
 
-//    public static void main(String[] args) {
-//
-//        FileHandler fileHandler =  new FileHandler();
-//        fileHandler.autoSubmitFile("b2bqa3","JCPENNYYUSEN","O","CT","X.12","STD-Baseline.xml","D:\\Auto_Code\\TestFile\\");
-//       // fileHandler.autoSubmitFile("b2bqa3","KNN","O","CT","EDIFACT","STD-Baseline.xml","D:\\Auto_Code\\TestFile\\");
-//
-//
-//
-//
-//    }
-
-
+    public static String findValueInArrays(String[] arr, String targetValue) {
+        boolean hasValue = false;
+        String str = "";
+        int i = 0;
+        for (String s : arr) {
+            if (s.startsWith(targetValue)){
+                hasValue =  true;
+                if(hasValue){
+                    logger.info(targetValue + "'s index = "+ i);
+                    str  = arr[i];
+                }
+                break;
+            }
+            i++;
+        }
+        return str;
+    }
 
     public PmtConfig  getHeaderInfo(String content, Map<String,String> separator,PmtConfig pmtConfig){
 
         String[] elements = content.split(separator.get("Delimiter"));
         if(content.startsWith("UNA")){
             logger.info("This TP has been setup UNA.");
-            pmtConfig.setUna(elements[0]);
+//            pmtConfig.setUna(elements[0]);
+//            logger.info("UNA : "+pmtConfig.getUna());
+//            pmtConfig.setUnb(elements[1]);
+//            logger.info("UNB : " + pmtConfig.getUnb());
+//            pmtConfig.setUnh(elements[2]);
+//            logger.info("UNH : " + pmtConfig.getUnh());
+            pmtConfig.setUna(findValueInArrays(elements,"UNA"));
             logger.info("UNA : "+pmtConfig.getUna());
-            pmtConfig.setUnb(elements[1]);
+            pmtConfig.setUnb(findValueInArrays(elements,"UNB"));
             logger.info("UNB : " + pmtConfig.getUnb());
-            pmtConfig.setUnh(elements[2]);
+            pmtConfig.setUng(findValueInArrays(elements,"UNG"));
+            logger.info("UNG : " + pmtConfig.getUng());
+            pmtConfig.setUnh(findValueInArrays(elements,"UNH"));
             logger.info("UNH : " + pmtConfig.getUnh());
         }else {
-
             if(content.startsWith("ISA")){
-                pmtConfig.setIsa(elements[0]);
+                pmtConfig.setIsa(findValueInArrays(elements,"ISA"));
                 logger.info("ISA : " + pmtConfig.getIsa());
-                pmtConfig.setGs(elements[1]);
+                pmtConfig.setGs(findValueInArrays(elements,"GS"));
                 logger.info("GS : " + pmtConfig.getGs());
-                if(elements[2].startsWith("ST")){
-                    pmtConfig.setTxnIndentifier(elements[2].split(String.format("\\%s", pmtConfig.getSeperator()))[1]);
-                }
+//                if(elements[2].startsWith("ST")){
+//                    pmtConfig.setTxnIndentifier(elements[2].split(String.format("\\%s", pmtConfig.getSeperator()))[1]);
+//                }
+                String st = findValueInArrays(elements,"ST");
+                pmtConfig.setTxnIndentifier(st.split(String.format("\\%s", pmtConfig.getSeperator()))[1]);
                 logger.info("ST02 : " + pmtConfig.getTxnIndentifier());
             }else if(content.startsWith("UNB")){
-                pmtConfig.setUnb(elements[0]);
+                pmtConfig.setUnb(findValueInArrays(elements,"UNB"));
                 logger.info("UNB : " + pmtConfig.getUnb());
-                pmtConfig.setUnh(elements[1]);
+                pmtConfig.setUng(findValueInArrays(elements,"UNG"));
+                logger.info("UNG : " + pmtConfig.getUng());
+                pmtConfig.setUnh(findValueInArrays(elements,"UNH"));
                 logger.info("UNH : " + pmtConfig.getUnh());
             }
 
