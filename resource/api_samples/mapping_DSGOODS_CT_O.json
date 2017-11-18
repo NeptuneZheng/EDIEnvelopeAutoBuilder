@@ -1,0 +1,7 @@
+{
+  "fullClassName": "cs.b2b.mapping.scripts.CUS_CS2CTXML_315_DSGOODS",
+  "TP_ID": "DSGOODS",
+  "MSG_TYPE_ID": "CT",
+  "DIR_ID": "O",
+  "MSG_FMT_ID": "X.12"
+}

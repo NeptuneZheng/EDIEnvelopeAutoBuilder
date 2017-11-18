@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="b2b-beluga-ediparser-1.9.8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/b2b-beluga-ediparser-1.9.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-configuration-1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/edtftpj-pro.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ftp4j-1.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jms.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsch-0.1.43.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ojdbc14_g.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-ooxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-ooxml-schemas.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tibjms.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/openxml4j.jar!/" />
+    </SOURCES>
+  </library>
+</component>

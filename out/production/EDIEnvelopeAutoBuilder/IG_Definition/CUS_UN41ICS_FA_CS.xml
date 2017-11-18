@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Beluga Parser Definition XML -->
+<!-- Created By: Raymond -->
+<E2XDefinition xmlns="http://www.cargosmart.com/b2b/transformparser/e2x" EscapeChar="?" ElementType="delimited" RecordDelimiter="0x27 0x0d 0x0a" ElementDelimiter="+" SubElementDelimiter=":" isSuppressEmptyNodes="true" isEdifact="true" isFieldValueTrimRightSpace="true" isFieldValueTrimLeadingSpace="true" OutXMLTargetNameSpace="" OutXMLTargetNameSpacePrefix="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Component Name="CONTRL">
+    <Component Name="UNA" TagIdentifier="UNA" minOccurs="0">
+      <Field Name="UNA_01"/>
+      <Field Name="UNA_02"/>
+      <Field Name="UNA_03"/>
+      <Field Name="UNA_04"/>
+      <Field Name="UNA_05"/>
+      <Field Name="UNA_06"/>
+    </Component>
+    <Component Name="UNB" TagIdentifier="UNB" minOccurs="0">
+      <Field Name="S001_01" minOccurs="0">
+        <SubField Name="E0001_01" minOccurs="0" MinLength="4" MaxLength="4"/>
+        <SubField Name="E0002_02" minOccurs="0" MinLength="1" MaxLength="1"/>
+        <SubField Name="E0080_03" minOccurs="0" MinLength="1" MaxLength="6"/>
+        <SubField Name="E0133_04" minOccurs="0" MinLength="1" MaxLength="3"/>
+        <SubField Name="E0076_05" minOccurs="0" MinLength="2" MaxLength="2"/>
+      </Field>
+      <Field Name="S002_02" minOccurs="0">
+        <SubField Name="E0004_01" minOccurs="0" MinLength="1" MaxLength="35"/>
+        <SubField Name="E0007_02" minOccurs="0" MinLength="1" MaxLength="4"/>
+        <SubField Name="E0008_03" minOccurs="0" MinLength="1" MaxLength="35"/>
+        <SubField Name="E0042_04" minOccurs="0" MinLength="1" MaxLength="35"/>
+      </Field>
+      <Field Name="S003_03" minOccurs="0">
+        <SubField Name="E0010_01" minOccurs="0" MinLength="1" MaxLength="35"/>
+        <SubField Name="E0007_02" minOccurs="0" MinLength="1" MaxLength="4"/>
+        <SubField Name="E0014_03" minOccurs="0" MinLength="1" MaxLength="35"/>
+        <SubField Name="E0046_04" minOccurs="0" MinLength="1" MaxLength="35"/>
+      </Field>
+      <Field Name="S004_04" minOccurs="0">
+        <SubField Name="E0017_01" minOccurs="0"/>
+        <SubField Name="E0019_02" minOccurs="0"/>
+      </Field>
+      <Field Name="E0020_05" minOccurs="0" MinLength="1" MaxLength="14"/>
+      <Field Name="S005_06" minOccurs="0">
+        <SubField Name="E0022_01" minOccurs="0" MinLength="1" MaxLength="14"/>
+        <SubField Name="E0025_02" minOccurs="0" MinLength="2" MaxLength="2"/>
+      </Field>
+      <Field Name="E0026_07" minOccurs="0" MinLength="1" MaxLength="14"/>
+      <Field Name="E0029_08" minOccurs="0" MinLength="1" MaxLength="1"/>
+      <Field Name="E0031_09" minOccurs="0"/>
+      <Field Name="E0032_10" minOccurs="0" MinLength="1" MaxLength="35"/>
+      <Field Name="E0035_11" minOccurs="0"/>
+    </Component>
+    <Component Name="UNG" TagIdentifier="UNG" minOccurs="0">
+      <Field Name="E0038_01" minOccurs="0" MinLength="1" MaxLength="6"/>
+      <Field Name="S006_02" minOccurs="0">
+        <SubField Name="E0040_01" minOccurs="0" MinLength="1" MaxLength="35"/>
+        <SubField Name="E0007_02" minOccurs="0" MinLength="1" MaxLength="4"/>
+      </Field>
+      <Field Name="S007_03" minOccurs="0">
+        <SubField Name="E0044_01" minOccurs="0" MinLength="1" MaxLength="35"/>
+        <SubField Name="E0007_02" minOccurs="0" MinLength="1" MaxLength="4"/>
+      </Field>
+      <Field Name="S004_04" minOccurs="0">
+        <SubField Name="E0017_01" minOccurs="0"/>
+        <SubField Name="E0019_02" minOccurs="0"/>
+      </Field>
+      <Field Name="E0048_05" minOccurs="0" MinLength="1" MaxLength="14"/>
+      <Field Name="E0051_06" minOccurs="0" MinLength="1" MaxLength="3"/>
+      <Field Name="S008_07" minOccurs="0">
+        <SubField Name="E0052_01" minOccurs="0" MinLength="1" MaxLength="3"/>
+        <SubField Name="E0054_02" minOccurs="0" MinLength="1" MaxLength="3"/>
+        <SubField Name="E0057_03" minOccurs="0" MinLength="1" MaxLength="6"/>
+      </Field>
+      <Field Name="E0058_08" minOccurs="0" MinLength="1" MaxLength="14"/>
+    </Component>
+    <!-- for txn envelop behavior, when IsTransactionEnvelope='true', then OnValidationFailBehaviour possible value are: 'FailCompleteMessage' or 'IgnoreProblematicTransactions' -->
+    <Component Name="Group_UNH" IsTransactionEnvelope="true" OnValidationFailBehaviour="IgnoreProblematicTransactions" maxOccurs="unbounded">
+      <Component Name="UNH" TagIdentifier="UNH">
+        <Field Name="E0062_01" MinLength="1" MaxLength="14"/>
+        <Field Name="S009_02">
+          <SubField Name="E0065_01" MinLength="1" MaxLength="6"/>
+          <SubField Name="E0052_02" MinLength="1" MaxLength="3"/>
+          <SubField Name="E0054_03" MinLength="1" MaxLength="3"/>
+          <SubField Name="E0051_04" MinLength="1" MaxLength="3"/>
+          <SubField Name="E0057_05" minOccurs="0" MinLength="1" MaxLength="6"/>
+          <SubField Name="E0110_06" minOccurs="0" MinLength="1" MaxLength="6"/>
+          <SubField Name="E0113_07" minOccurs="0" MinLength="1" MaxLength="6"/>
+        </Field>
+        <Field Name="E0068_03" minOccurs="0" MinLength="1" MaxLength="35"/>
+        <Field Name="S010_04" minOccurs="0">
+          <SubField Name="E0070_01"/>
+          <SubField Name="E0073_02" minOccurs="0" MinLength="1" MaxLength="1"/>
+        </Field>
+        <Field Name="S016_05" minOccurs="0">
+          <SubField Name="E0115_01" MinLength="1" MaxLength="14"/>
+          <SubField Name="E0116_02" minOccurs="0" MinLength="1" MaxLength="3"/>
+          <SubField Name="E0118_03" minOccurs="0" MinLength="1" MaxLength="3"/>
+          <SubField Name="E0051_04" minOccurs="0" MinLength="1" MaxLength="3"/>
+        </Field>
+        <Field Name="S017_06" minOccurs="0">
+          <SubField Name="E0121_01" MinLength="1" MaxLength="14"/>
+          <SubField Name="E0122_02" minOccurs="0" MinLength="1" MaxLength="3"/>
+          <SubField Name="E0124_03" minOccurs="0" MinLength="1" MaxLength="3"/>
+          <SubField Name="E0051_04" minOccurs="0" MinLength="1" MaxLength="3"/>
+        </Field>
+        <Field Name="S018_07" minOccurs="0">
+          <SubField Name="E0127_01" MinLength="1" MaxLength="14"/>
+          <SubField Name="E0128_02" minOccurs="0" MinLength="1" MaxLength="3"/>
+          <SubField Name="E0130_03" minOccurs="0" MinLength="1" MaxLength="3"/>
+          <SubField Name="E0051_04" minOccurs="0" MinLength="1" MaxLength="3"/>
+        </Field>
+      </Component>
+      <Component Name="UCI" TagIdentifier="UCI">
+        <Field Name="E0020_01" MinLength="1" MaxLength="14"/>
+        <Field Name="S002_02">
+          <SubField Name="E0004_01" MinLength="1" MaxLength="35"/>
+          <SubField Name="E0007_02" minOccurs="0" MinLength="1" MaxLength="4"/>
+          <SubField Name="E0008_03" minOccurs="0" MinLength="1" MaxLength="35"/>
+          <SubField Name="E0042_04" minOccurs="0" MinLength="1" MaxLength="35"/>
+        </Field>
+        <Field Name="S003_03">
+          <SubField Name="E0010_01" MinLength="1" MaxLength="35"/>
+          <SubField Name="E0007_02" minOccurs="0" MinLength="1" MaxLength="4"/>
+          <SubField Name="E0014_03" minOccurs="0" MinLength="1" MaxLength="35"/>
+          <SubField Name="E0046_04" minOccurs="0" MinLength="1" MaxLength="35"/>
+        </Field>
+        <Field Name="E0083_04" MinLength="1" MaxLength="3"/>
+        <Field Name="E0085_05" minOccurs="0" MinLength="1" MaxLength="3"/>
+        <Field Name="E0135_06" minOccurs="0" MinLength="1" MaxLength="3"/>
+        <Field Name="S011_07" minOccurs="0">
+          <SubField Name="E0098_01"/>
+          <SubField Name="E0104_02" minOccurs="0"/>
+          <SubField Name="E0136_03" minOccurs="0"/>
+        </Field>
+        <Field Name="E0534_08" minOccurs="0" MinLength="1" MaxLength="14"/>
+        <Field Name="E0138_09" minOccurs="0"/>
+      </Component>
+      <Component Name="Group1_UCM" ObjID="Group1" minOccurs="0" maxOccurs="999999">
+        <Component Name="UCM" TagIdentifier="UCM">
+          <Field Name="E0062_01" minOccurs="0" MinLength="1" MaxLength="14"/>
+          <Field Name="S009_02" minOccurs="0">
+            <SubField Name="E0065_01" MinLength="1" MaxLength="6"/>
+            <SubField Name="E0052_02" MinLength="1" MaxLength="3"/>
+            <SubField Name="E0054_03" MinLength="1" MaxLength="3"/>
+            <SubField Name="E0051_04" MinLength="1" MaxLength="3"/>
+            <SubField Name="E0057_05" minOccurs="0" MinLength="1" MaxLength="6"/>
+            <SubField Name="E0110_06" minOccurs="0" MinLength="1" MaxLength="6"/>
+            <SubField Name="E0113_07" minOccurs="0" MinLength="1" MaxLength="6"/>
+          </Field>
+          <Field Name="E0083_03" MinLength="1" MaxLength="3"/>
+          <Field Name="E0085_04" minOccurs="0" MinLength="1" MaxLength="3"/>
+          <Field Name="E0135_05" minOccurs="0" MinLength="1" MaxLength="3"/>
+          <Field Name="S011_06" minOccurs="0">
+            <SubField Name="E0098_01"/>
+            <SubField Name="E0104_02" minOccurs="0"/>
+            <SubField Name="E0136_03" minOccurs="0"/>
+          </Field>
+          <Field Name="E0800_07" minOccurs="0" MinLength="1" MaxLength="35"/>
+          <Field Name="S020_08" minOccurs="0" maxOccurs="99">
+            <SubField Name="E0813_01" MinLength="1" MaxLength="3"/>
+            <SubField Name="E0802_02" MinLength="1" MaxLength="35"/>
+          </Field>
+          <Field Name="E0534_09" minOccurs="0" MinLength="1" MaxLength="14"/>
+          <Field Name="E0138_10" minOccurs="0"/>
+        </Component>
+        <Component Name="Group2_UCS" ObjID="Group2" minOccurs="0" maxOccurs="999">
+          <Component Name="UCS" TagIdentifier="UCS">
+            <Field Name="E0096_01"/>
+            <Field Name="E0085_02" minOccurs="0" MinLength="1" MaxLength="3"/>
+          </Component>
+          <Component Name="UCD" TagIdentifier="UCD" minOccurs="0" maxOccurs="99">
+            <Field Name="E0085_01" MinLength="1" MaxLength="3"/>
+            <Field Name="S011_02">
+              <SubField Name="E0098_01"/>
+              <SubField Name="E0104_02" minOccurs="0"/>
+              <SubField Name="E0136_03" minOccurs="0"/>
+            </Field>
+          </Component>
+        </Component>
+      </Component>
+      <Component Name="Group3_UCF" ObjID="Group3" minOccurs="0" maxOccurs="999999">
+        <Component Name="UCF" TagIdentifier="UCF">
+          <Field Name="E0048_01" MinLength="1" MaxLength="14"/>
+          <Field Name="S006_02" minOccurs="0">
+            <SubField Name="E0040_01" MinLength="1" MaxLength="35"/>
+            <SubField Name="E0007_02" minOccurs="0" MinLength="1" MaxLength="4"/>
+          </Field>
+          <Field Name="S007_03" minOccurs="0">
+            <SubField Name="E0044_01" MinLength="1" MaxLength="35"/>
+            <SubField Name="E0007_02" minOccurs="0" MinLength="1" MaxLength="4"/>
+          </Field>
+          <Field Name="E0083_04" MinLength="1" MaxLength="3"/>
+          <Field Name="E0085_05" minOccurs="0" MinLength="1" MaxLength="3"/>
+          <Field Name="E0135_06" minOccurs="0" MinLength="1" MaxLength="3"/>
+          <Field Name="S011_07" minOccurs="0">
+            <SubField Name="E0098_01"/>
+            <SubField Name="E0104_02" minOccurs="0"/>
+            <SubField Name="E0136_03" minOccurs="0"/>
+          </Field>
+          <Field Name="E0534_08" minOccurs="0" MinLength="1" MaxLength="14"/>
+          <Field Name="E0138_09" minOccurs="0"/>
+        </Component>
+        <Component Name="Group4_UCM" ObjID="Group4" minOccurs="0" maxOccurs="999999">
+          <Component Name="UCM" TagIdentifier="UCM">
+            <Field Name="E0062_01" minOccurs="0" MinLength="1" MaxLength="14"/>
+            <Field Name="S009_02" minOccurs="0">
+              <SubField Name="E0065_01" MinLength="1" MaxLength="6"/>
+              <SubField Name="E0052_02" MinLength="1" MaxLength="3"/>
+              <SubField Name="E0054_03" MinLength="1" MaxLength="3"/>
+              <SubField Name="E0051_04" MinLength="1" MaxLength="3"/>
+              <SubField Name="E0057_05" minOccurs="0" MinLength="1" MaxLength="6"/>
+              <SubField Name="E0110_06" minOccurs="0" MinLength="1" MaxLength="6"/>
+              <SubField Name="E0113_07" minOccurs="0" MinLength="1" MaxLength="6"/>
+            </Field>
+            <Field Name="E0083_03" MinLength="1" MaxLength="3"/>
+            <Field Name="E0085_04" minOccurs="0" MinLength="1" MaxLength="3"/>
+            <Field Name="E0135_05" minOccurs="0" MinLength="1" MaxLength="3"/>
+            <Field Name="S011_06" minOccurs="0">
+              <SubField Name="E0098_01"/>
+              <SubField Name="E0104_02" minOccurs="0"/>
+              <SubField Name="E0136_03" minOccurs="0"/>
+            </Field>
+            <Field Name="E0800_07" minOccurs="0" MinLength="1" MaxLength="35"/>
+            <Field Name="S020_08" minOccurs="0" maxOccurs="99">
+              <SubField Name="E0813_01" MinLength="1" MaxLength="3"/>
+              <SubField Name="E0802_02" MinLength="1" MaxLength="35"/>
+            </Field>
+            <Field Name="E0534_09" minOccurs="0" MinLength="1" MaxLength="14"/>
+            <Field Name="E0138_10" minOccurs="0"/>
+          </Component>
+          <Component Name="Group5_UCS" ObjID="Group5" minOccurs="0" maxOccurs="999">
+            <Component Name="UCS" TagIdentifier="UCS">
+              <Field Name="E0096_01"/>
+              <Field Name="E0085_02" minOccurs="0" MinLength="1" MaxLength="3"/>
+            </Component>
+            <Component Name="UCD" TagIdentifier="UCD" minOccurs="0" maxOccurs="99">
+              <Field Name="E0085_01" MinLength="1" MaxLength="3"/>
+              <Field Name="S011_02">
+                <SubField Name="E0098_01"/>
+                <SubField Name="E0104_02" minOccurs="0"/>
+                <SubField Name="E0136_03" minOccurs="0"/>
+              </Field>
+            </Component>
+          </Component>
+        </Component>
+      </Component>
+      <Component Name="UNT" TagIdentifier="UNT">
+        <Field Name="E0074_01"/>
+        <Field Name="E0062_02" MinLength="1" MaxLength="14"/>
+      </Component>
+    </Component>
+    <Component Name="UNE" TagIdentifier="UNE" minOccurs="0">
+      <Field Name="E0060_01" minOccurs="0"/>
+      <Field Name="E0048_02" minOccurs="0" MinLength="1" MaxLength="14"/>
+    </Component>
+    <Component Name="UNZ" TagIdentifier="UNZ" minOccurs="0">
+      <Field Name="E0036_01" minOccurs="0"/>
+      <Field Name="E0020_02" minOccurs="0" MinLength="1" MaxLength="14"/>
+    </Component>
+  </Component>
+</E2XDefinition>

@@ -1,0 +1,2027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Beluga Parser Definition XML -->
+<!-- Created By: Henry -->
+<E2XDefinition xmlns="http://www.cargosmart.com/b2b/transformparser/e2x" ElementType="positional" RecordDelimiter="0x0d 0x0a" isSuppressEmptyNodes="true" isFieldValueTrimRightSpace="false" OutXMLTargetNameSpace="" OutXMLTargetNameSpacePrefix="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Component Name="IOCMUIF">
+    <Component Name="HEADER" TagIdentifier="HEADER         " minOccurs="0">
+      <Field Name="FileId_01" minOccurs="0" Length="8" PositionOffset="15"/>
+    </Component>
+    <Component Name="Loop_AAAA" ObjID="_______AAAA" IsTransactionEnvelope="true" OnValidationFailBehaviour="IgnoreProblematicTransactions" minOccurs="0" maxOccurs="9999">
+      <Component Name="AAAA" TagIdentifier="       AAAA    " minOccurs="0">
+        <Field Name="FileId_01" minOccurs="0" Length="8" PositionOffset="15"/>
+        <Field Name="ExternalCustomsId_02" minOccurs="0" Length="6"/>
+        <Field Name="TestingIndicator_03" minOccurs="0" Length="1"/>
+        <Field Name="Filler_04" minOccurs="0" Length="1"/>
+        <Field Name="EDICustomsMessageId_05" minOccurs="0" Length="10"/>
+        <Field Name="EDICustomsId_06" minOccurs="0" Length="15"/>
+        <Field Name="FileCreationDate_07" minOccurs="0" Length="8"/>
+        <Field Name="FileCreationTime_08" minOccurs="0" Length="6"/>
+        <Field Name="EDIPartnerName_09" minOccurs="0" Length="35"/>
+        <Field Name="EDIPartnerDate_10" minOccurs="0" Length="8"/>
+        <Field Name="EDIPartnerTime_11" minOccurs="0" Length="6"/>
+        <Field Name="ReferenceNo_12" minOccurs="0" Length="21"/>
+        <Field Name="ReferenceNoOfAnOriginalMessage_13" minOccurs="0" Length="21"/>
+        <Field Name="MessageFunction_14" minOccurs="0" Length="2"/>
+        <Field Name="SequenceNo_15" minOccurs="0" Length="6"/>
+        <Field Name="SenderReference_16" minOccurs="0" Length="35"/>
+        <Field Name="SenderReferenceVersion_17" minOccurs="0" Length="6"/>
+        <Field Name="FileName_18" minOccurs="0" Length="40"/>
+      </Component>
+      <Component Name="MI01" TagIdentifier="MI01           " minOccurs="0">
+        <Field Name="UserID_01" minOccurs="0" Length="20" PositionOffset="15"/>
+        <Field Name="UserCode_02" minOccurs="0" Length="20"/>
+        <Field Name="UserPassword_03" minOccurs="0" Length="20"/>
+        <Field Name="SCAC_04" minOccurs="0" Length="4"/>
+        <Field Name="SenderId_05" minOccurs="0" Length="35"/>
+        <Field Name="RecipientId_06" minOccurs="0" Length="35"/>
+        <Field Name="Filler_07" minOccurs="0" Length="101"/>
+      </Component>
+      <Component Name="VY01" TagIdentifier="VY01           " minOccurs="0">
+        <Field Name="ServiceCode_01" minOccurs="0" Length="4" PositionOffset="15"/>
+        <Field Name="VesselCode_02" minOccurs="0" Length="3"/>
+        <Field Name="VoyageNo_03" minOccurs="0" Length="3"/>
+        <Field Name="Direction_04" minOccurs="0" Length="1"/>
+        <Field Name="CallPort_05" minOccurs="0" Length="5"/>
+        <Field Name="CallNumber_06" minOccurs="0" Length="2"/>
+        <Field Name="NextPort_07" minOccurs="0" Length="5"/>
+        <Field Name="LastPort_08" minOccurs="0" Length="5"/>
+        <Field Name="ETADate_09" minOccurs="0" Length="8"/>
+        <Field Name="ETATime_10" minOccurs="0" Length="6"/>
+        <Field Name="ATADate_11" minOccurs="0" Length="8"/>
+        <Field Name="ATATime_12" minOccurs="0" Length="6"/>
+        <Field Name="ETDDate_13" minOccurs="0" Length="8"/>
+        <Field Name="ETDTime_14" minOccurs="0" Length="6"/>
+        <Field Name="ATDDate_15" minOccurs="0" Length="8"/>
+        <Field Name="ATDTime_16" minOccurs="0" Length="6"/>
+        <Field Name="ATDDateOfLastPort_17" minOccurs="0" Length="8"/>
+        <Field Name="ATDTimeOfLastPort_18" minOccurs="0" Length="6"/>
+        <Field Name="NoOfMessager_19" minOccurs="0" Length="2"/>
+        <Field Name="MajorCargoType_20" minOccurs="0" Length="8"/>
+        <Field Name="Filler_21" minOccurs="0" Length="2"/>
+        <Field Name="ModeOfTransportation_22" minOccurs="0" Length="2"/>
+        <Field Name="VesselStayNumber_23" minOccurs="0" Length="10"/>
+        <Field Name="PortOfInitialArrival_24" minOccurs="0" Length="5"/>
+        <Field Name="ExternalVoyageNumber_25" minOccurs="0" Length="8"/>
+        <Field Name="NoOfCrew_26" minOccurs="0" Length="2"/>
+        <Field Name="AtTerminal_27" minOccurs="0" Length="5"/>
+        <Field Name="ImportExportIndicator_28" minOccurs="0" Length="1"/>
+      </Component>
+      <Component Name="VY02" TagIdentifier="VY02           " minOccurs="0">
+        <Field Name="VesselName_01" minOccurs="0" Length="30" PositionOffset="15"/>
+        <Field Name="LloydsNumber_02" minOccurs="0" Length="20"/>
+        <Field Name="CallSign_03" minOccurs="0" Length="10"/>
+        <Field Name="VesselOwnerName_04" minOccurs="0" Length="30"/>
+        <Field Name="Flag_05" minOccurs="0" Length="3"/>
+        <Field Name="VesselRegistrationDate_06" minOccurs="0" Length="8"/>
+        <Field Name="VesselRegistrationNumber_07" minOccurs="0" Length="20"/>
+      </Component>
+      <Component Name="VY02C" TagIdentifier="VY02C          " minOccurs="0">
+        <Field Name="ChineseVesselName_01" minOccurs="0" Length="30" PositionOffset="15"/>
+        <Field Name="ChineseTrafficMode_02" minOccurs="0" Length="4"/>
+        <Field Name="ChineseCorporationName_03" minOccurs="0" Length="50"/>
+        <Field Name="Filler_04" minOccurs="0" Length="151"/>
+      </Component>
+      <Component Name="VY03" TagIdentifier="VY03           " minOccurs="0">
+        <Field Name="VesselNetTon_01" minOccurs="0" Length="8" PositionOffset="15"/>
+        <Field Name="VesselGrossTon_02" minOccurs="0" Length="8"/>
+        <Field Name="VesselCargoWeight_03" minOccurs="0" Length="8"/>
+        <Field Name="VesselCargoWeightUnit_04" minOccurs="0" Length="3"/>
+        <Field Name="SummerDeadWeightTon_05" minOccurs="0" Length="12"/>
+        <Field Name="VesselSummerDraught_06" minOccurs="0" Length="7"/>
+        <Field Name="VesselWinterDraught_07" minOccurs="0" Length="7"/>
+        <Field Name="VesselCaptain_08" minOccurs="0" Length="30"/>
+        <Field Name="VesselLength_09" minOccurs="0" Length="7"/>
+        <Field Name="VesselLengthUnit_10" minOccurs="0" Length="2"/>
+        <Field Name="VesselOperator_11" minOccurs="0" Length="4"/>
+        <Field Name="VesselCharterCode_12" minOccurs="0" Length="3"/>
+        <Field Name="CertificateNumberOfSafetyOfShip_13" minOccurs="0" Length="10"/>
+        <Field Name="ExpiryDateOfCertificateSafetyOfShip_14" minOccurs="0" Length="8"/>
+        <Field Name="CertificateNumberOfSafetyOfRadio_15" minOccurs="0" Length="10"/>
+        <Field Name="ExpiryDateOfCertificateSafetyOfRadio_16" minOccurs="0" Length="8"/>
+        <Field Name="CertificateNumberOfSafetyOfEquipments_17" minOccurs="0" Length="10"/>
+        <Field Name="ExpiryDateOfCertificateSafetyOfEquipment_18" minOccurs="0" Length="8"/>
+        <Field Name="CertificateNumberOfLoadLine_19" minOccurs="0" Length="10"/>
+        <Field Name="ExpiryDateOfCertificateLoadLine_20" minOccurs="0" Length="8"/>
+        <Field Name="CertificateNumberOfDerat_21" minOccurs="0" Length="10"/>
+        <Field Name="ExpiryDateOfCertificateDerat_22" minOccurs="0" Length="8"/>
+        <Field Name="CertificateNumberOfMaritimeDeclarationOfHealth_23" minOccurs="0" Length="10"/>
+        <Field Name="ExpiryDateOfCertificateMaritimeDeclarationOfHealth_24" minOccurs="0" Length="8"/>
+        <Field Name="CertificateNumberOfCivilLiabilityOfOil_25" minOccurs="0" Length="10"/>
+        <Field Name="ExpiryDateOfCertificateCivilLiabilityOfOil_26" minOccurs="0" Length="8"/>
+      </Component>
+      <Component Name="VY04" TagIdentifier="VY04           " minOccurs="0" maxOccurs="99">
+        <Field Name="PortSequenceNo1_01" minOccurs="0" Length="4" PositionOffset="15"/>
+        <Field Name="PortCode1_02" minOccurs="0" Length="5"/>
+        <Field Name="PortQualifier1_03" minOccurs="0" Length="7"/>
+        <Field Name="CallNo1_04" minOccurs="0" Length="2"/>
+        <Field Name="ETADate1_05" minOccurs="0" Length="8"/>
+        <Field Name="ETATime1_06" minOccurs="0" Length="6"/>
+        <Field Name="ATADate1_07" minOccurs="0" Length="8"/>
+        <Field Name="ATATime1_08" minOccurs="0" Length="6"/>
+        <Field Name="OverseasPortIndicator1_09" minOccurs="0" Length="1"/>
+        <Field Name="PortSequenceNo2_10" minOccurs="0" Length="4"/>
+        <Field Name="PortCode2_11" minOccurs="0" Length="5"/>
+        <Field Name="PortQualifier2_12" minOccurs="0" Length="7"/>
+        <Field Name="CallNo2_13" minOccurs="0" Length="2"/>
+        <Field Name="ETADate2_14" minOccurs="0" Length="8"/>
+        <Field Name="ETATime2_15" minOccurs="0" Length="6"/>
+        <Field Name="ATADate2_16" minOccurs="0" Length="8"/>
+        <Field Name="ATATime2_17" minOccurs="0" Length="6"/>
+        <Field Name="OverseasPortIndicator2_18" minOccurs="0" Length="1"/>
+        <Field Name="PortSequenceNo3_19" minOccurs="0" Length="4"/>
+        <Field Name="PortCode3_20" minOccurs="0" Length="5"/>
+        <Field Name="PortQualifier3_21" minOccurs="0" Length="7"/>
+        <Field Name="CallNo3_22" minOccurs="0" Length="2"/>
+        <Field Name="ETADate3_23" minOccurs="0" Length="8"/>
+        <Field Name="ETATime3_24" minOccurs="0" Length="6"/>
+        <Field Name="ATADate3_25" minOccurs="0" Length="8"/>
+        <Field Name="ATATime3_26" minOccurs="0" Length="6"/>
+        <Field Name="OverseasPortIndicator3_27" minOccurs="0" Length="1"/>
+        <Field Name="PortSequenceNo4_28" minOccurs="0" Length="4"/>
+        <Field Name="PortCode4_29" minOccurs="0" Length="5"/>
+        <Field Name="PortQualifier4_30" minOccurs="0" Length="7"/>
+        <Field Name="CallNo4_31" minOccurs="0" Length="2"/>
+        <Field Name="ETADate4_32" minOccurs="0" Length="8"/>
+        <Field Name="ETATime4_33" minOccurs="0" Length="6"/>
+        <Field Name="ATADate4_34" minOccurs="0" Length="8"/>
+        <Field Name="ATATime4_35" minOccurs="0" Length="6"/>
+        <Field Name="OverseasPortIndicator4_36" minOccurs="0" Length="1"/>
+        <Field Name="PortSequenceNo5_37" minOccurs="0" Length="4"/>
+        <Field Name="PortCode5_38" minOccurs="0" Length="5"/>
+        <Field Name="PortQualifier5_39" minOccurs="0" Length="7"/>
+        <Field Name="CallNo5_40" minOccurs="0" Length="2"/>
+        <Field Name="ETADate5_41" minOccurs="0" Length="8"/>
+        <Field Name="ETATime5_42" minOccurs="0" Length="6"/>
+        <Field Name="ATADate5_43" minOccurs="0" Length="8"/>
+        <Field Name="ATATime5_44" minOccurs="0" Length="6"/>
+        <Field Name="OverseasPortIndicator5_45" minOccurs="0" Length="1"/>
+      </Component>
+      <Component Name="VY05" TagIdentifier="VY05           " minOccurs="0">
+        <Field Name="BerthName_01" minOccurs="0" Length="17" PositionOffset="15"/>
+        <Field Name="VesselReportNumber_02" minOccurs="0" Length="10"/>
+        <Field Name="CarrierAssignedCode_03" minOccurs="0" Length="6"/>
+        <Field Name="FullPartManifestIndicator_04" minOccurs="0" Length="1"/>
+        <Field Name="BerthId_05" minOccurs="0" Length="17"/>
+        <Field Name="FirstCountryOfDestination_06" minOccurs="0" Length="2"/>
+        <Field Name="CustomsStatePortCode_07" minOccurs="0" Length="2"/>
+        <Field Name="CustomsOfficeCode_08" minOccurs="0" Length="2"/>
+        <Field Name="CountryDescription_09" minOccurs="0" Length="30"/>
+        <Field Name="CargoCarrierCode_10" minOccurs="0" Length="6"/>
+        <Field Name="OperationPlace_11" minOccurs="0" Length="2"/>
+        <Field Name="BerthWhafBuoyCode_12" minOccurs="0" Length="8"/>
+        <Field Name="TotalNoOfConsignments_13" minOccurs="0" Length="5"/>
+        <Field Name="TotalNoOfEmptyContainers_14" minOccurs="0" Length="5"/>
+        <Field Name="TotalNoOfFullContainers_15" minOccurs="0" Length="5"/>
+        <Field Name="ShippingCoCode_16" minOccurs="0" Length="10"/>
+        <Field Name="VesselNumber_17" minOccurs="0" Length="9"/>
+        <Field Name="CallingFacility_18" minOccurs="0" Length="5"/>
+        <Field Name="MainManifestNumber_19" minOccurs="0" Length="35"/>
+        <Field Name="ConsolidatedReferenceNo_20" minOccurs="0" Length="35"/>
+        <Field Name="TransactionSetControlNumber_21" minOccurs="0" Length="9"/>
+        <Field Name="UVRN_22" minOccurs="0" Length="14"/>
+      </Component>
+      <Component Name="VY05DE" TagIdentifier="VY05DE         " minOccurs="0">
+        <Field Name="BerthName_01" minOccurs="0" Length="34" PositionOffset="15"/>
+        <Field Name="BerthId_02" minOccurs="0" Length="17"/>
+        <Field Name="Filler_03" minOccurs="0" Length="86"/>
+        <Field Name="CallingFacility_04" minOccurs="0" Length="5"/>
+        <Field Name="Filler_05" minOccurs="0" Length="79"/>
+        <Field Name="UVRN_06" minOccurs="0" Length="14"/>
+      </Component>
+      <Component Name="VY06" TagIdentifier="VY06           " minOccurs="0" maxOccurs="99">
+        <Field Name="PartyQualifier_01" minOccurs="0" Length="3" PositionOffset="15"/>
+        <Field Name="AgentCode_02" minOccurs="0" Length="17"/>
+        <Field Name="Name_03" minOccurs="0" Length="35"/>
+        <Field Name="Address1_04" minOccurs="0" Length="35"/>
+        <Field Name="Address2_05" minOccurs="0" Length="35"/>
+        <Field Name="Address3_06" minOccurs="0" Length="35"/>
+        <Field Name="Address4_07" minOccurs="0" Length="35"/>
+        <Field Name="CityName_08" minOccurs="0" Length="35"/>
+        <Field Name="State_09" minOccurs="0" Length="2"/>
+        <Field Name="PostalCode_10" minOccurs="0" Length="12"/>
+        <Field Name="Country_11" minOccurs="0" Length="2"/>
+        <Field Name="ConsortiumPartnerCarrierCode_12" minOccurs="0" Length="4"/>
+        <Field Name="SlotCharterId_13" minOccurs="0" Length="11"/>
+        <Field Name="ContactPerson_14" minOccurs="0" Length="35"/>
+        <Field Name="TelephoneNo_15" minOccurs="0" Length="14"/>
+        <Field Name="AgentBranchCode_16" minOccurs="0" Length="4"/>
+        <Field Name="Filler_17" minOccurs="0" Length="21"/>
+      </Component>
+      <Component Name="VY07" TagIdentifier="VY07           " minOccurs="0" maxOccurs="9">
+        <Field Name="PortCode_01" minOccurs="0" Length="5" PositionOffset="15"/>
+        <Field Name="PortQualifier_02" minOccurs="0" Length="1"/>
+        <Field Name="FacilityCode_03" minOccurs="0" Length="5"/>
+        <Field Name="ETADate_04" minOccurs="0" Length="8"/>
+        <Field Name="ETATime_05" minOccurs="0" Length="6"/>
+        <Field Name="ATADate_06" minOccurs="0" Length="8"/>
+        <Field Name="ATATime_07" minOccurs="0" Length="6"/>
+        <Field Name="StevedoreCode_08" minOccurs="0" Length="11"/>
+        <Field Name="TotalTonWeight_09" minOccurs="0" Length="11"/>
+        <Field Name="CTOEstablishmentId_10" minOccurs="0" Length="5"/>
+        <Field Name="CargoDischargeIndicator_11" minOccurs="0" Length="1"/>
+        <Field Name="LineActionCode_12" minOccurs="0" Length="1"/>
+        <Field Name="ETDDate_13" minOccurs="0" Length="8"/>
+        <Field Name="ETDTime_14" minOccurs="0" Length="6"/>
+        <Field Name="CustomsOfficeEntry1_15" minOccurs="0" Length="8"/>
+        <Field Name="CustomsOfficeEntry2_16" minOccurs="0" Length="8"/>
+        <Field Name="CustomsOfficeEntry3_17" minOccurs="0" Length="8"/>
+        <Field Name="CustomsOfficeEntry4_18" minOccurs="0" Length="8"/>
+        <Field Name="CustomsOfficeEntry5_19" minOccurs="0" Length="8"/>
+        <Field Name="CustomsOfficeEntry6_20" minOccurs="0" Length="8"/>
+        <Field Name="CustomsOfficeEntry7_21" minOccurs="0" Length="8"/>
+        <Field Name="CustomsOfficeEntry8_22" minOccurs="0" Length="8"/>
+        <Field Name="CustomsOfficeEntry9_23" minOccurs="0" Length="8"/>
+        <Field Name="CustomsOfficeEntry10_24" minOccurs="0" Length="8"/>
+        <Field Name="Filler_25" minOccurs="0" Length="73"/>
+      </Component>
+      <Component Name="VY08" TagIdentifier="VY08           " minOccurs="0">
+        <Field Name="LastForeignPort_01" minOccurs="0" Length="5" PositionOffset="15"/>
+        <Field Name="DateOfDepartureFromTheLastForeignPort_02" minOccurs="0" Length="8"/>
+        <Field Name="ForeignLoadPortToUSCS_03" minOccurs="0" Length="5"/>
+        <Field Name="ATDDateAtForeignLoadPort_04" minOccurs="0" Length="8"/>
+        <Field Name="ATDTimeAtForeignLoadPort_05" minOccurs="0" Length="6"/>
+        <Field Name="ReferenceNumberforPKG_06" minOccurs="0" Length="35"/>
+        <Field Name="LoadingContainerCount_07" minOccurs="0" Length="4"/>
+        <Field Name="DischargeContainerCount_08" minOccurs="0" Length="4"/>
+        <Field Name="CallPortDescription_09" minOccurs="0" Length="30"/>
+        <Field Name="EntryPoint_10" minOccurs="0" Length="30"/>
+        <Field Name="VesselType_11" minOccurs="0" Length="2"/>
+        <Field Name="VesselCapacity_12" minOccurs="0" Length="5"/>
+        <Field Name="VesselYearBuilt_13" minOccurs="0" Length="4"/>
+        <Field Name="PlaceOfRegistration_14" minOccurs="0" Length="5"/>
+        <Field Name="VesselLongName_15" minOccurs="0" Length="35"/>
+        <Field Name="CustomsOfficeDeclared_16" minOccurs="0" Length="8"/>
+        <Field Name="CustomsOfficeActual_17" minOccurs="0" Length="8"/>
+        <Field Name="CountryOfCustomsOfficeDeclared_18" minOccurs="0" Length="2"/>
+        <Field Name="Filler_19" minOccurs="0" Length="31"/>
+      </Component>
+      <Component Name="VY09" TagIdentifier="VY09           " minOccurs="0" maxOccurs="9">
+        <Field Name="EquipmentType_01" minOccurs="0" Length="4" PositionOffset="15"/>
+        <Field Name="TotalNoOfContainer_02" minOccurs="0" Length="4"/>
+        <Field Name="TotalNoOfTEU_03" minOccurs="0" Length="4"/>
+        <Field Name="Filler_04" minOccurs="0" Length="223"/>
+      </Component>
+      <Component Name="VY10" TagIdentifier="VY10           " minOccurs="0" maxOccurs="9">
+        <Field Name="PortSequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+        <Field Name="TerminalName_02" minOccurs="0" Length="35"/>
+        <Field Name="Filler_03" minOccurs="0" Length="196"/>
+      </Component>
+      <Component Name="VY11" TagIdentifier="VY11           " minOccurs="0">
+        <Field Name="ReceiverCode1_01" minOccurs="0" Length="13" PositionOffset="15"/>
+        <Field Name="ReceiverCode2_02" minOccurs="0" Length="13"/>
+        <Field Name="ReceiverCode3_03" minOccurs="0" Length="13"/>
+        <Field Name="ReceiverCode4_04" minOccurs="0" Length="13"/>
+        <Field Name="ReceiverCode5_05" minOccurs="0" Length="13"/>
+        <Field Name="ReceiverCode6_06" minOccurs="0" Length="13"/>
+        <Field Name="ReceiverCode7_07" minOccurs="0" Length="13"/>
+        <Field Name="ReceiverCode8_08" minOccurs="0" Length="13"/>
+        <Field Name="Filler_09" minOccurs="0" Length="131"/>
+      </Component>
+      <Component Name="CT01_CT01" ObjID="CT01" minOccurs="0" maxOccurs="9999">
+        <Component Name="CT01" TagIdentifier="CT01           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="ContainerNo_02" minOccurs="0" Length="12"/>
+          <Field Name="VINNumber_03" minOccurs="0" Length="10"/>
+          <Field Name="OOCLOwnedIndicator_04" minOccurs="0" Length="1"/>
+          <Field Name="ResponsiblePartyCodeForNonOOCLConatiner_05" minOccurs="0" Length="10"/>
+          <Field Name="FCLIndicator_06" minOccurs="0" Length="1"/>
+          <Field Name="LCLIndicator_07" minOccurs="0" Length="1"/>
+          <Field Name="FCXIndicator_08" minOccurs="0" Length="1"/>
+          <Field Name="BreakBulkIndicator_09" minOccurs="0" Length="1"/>
+          <Field Name="TrafficMode_10" minOccurs="0" Length="2"/>
+          <Field Name="NoofPackage_11" minOccurs="0" Length="9"/>
+          <Field Name="PackageUnit_12" minOccurs="0" Length="3"/>
+          <Field Name="Bay_13" minOccurs="0" Length="3"/>
+          <Field Name="Row_14" minOccurs="0" Length="2"/>
+          <Field Name="Tier_15" minOccurs="0" Length="2"/>
+          <Field Name="SizeType_16" minOccurs="0" Length="4"/>
+          <Field Name="CabotageIndicator_17" minOccurs="0" Length="1"/>
+          <Field Name="ContainerStatus_18" minOccurs="0" Length="1"/>
+          <Field Name="ContainerMovement_19" minOccurs="0" Length="1"/>
+          <Field Name="ContainerCheckDigit_20" minOccurs="0" Length="1"/>
+          <Field Name="ContainerTareWeight_21" minOccurs="0" Length="10"/>
+          <Field Name="ContainerTareWeightUnit_22" minOccurs="0" Length="3"/>
+          <Field Name="ContainerGrossWeight_23" minOccurs="0" Length="10"/>
+          <Field Name="ContainerGrossWeightUnit_24" minOccurs="0" Length="3"/>
+          <Field Name="ContainerMaterial_25" minOccurs="0" Length="1"/>
+          <Field Name="ReeferIndicator_26" minOccurs="0" Length="1"/>
+          <Field Name="NegativeTemperatureInd_27" minOccurs="0" Length="1"/>
+          <Field Name="ReeferTemperature_28" minOccurs="0" Length="6"/>
+          <Field Name="ReeferTemperatureUnit_29" minOccurs="0" Length="1"/>
+          <Field Name="OverHeight_30" minOccurs="0" Length="1"/>
+          <Field Name="OverLength_31" minOccurs="0" Length="1"/>
+          <Field Name="OverwidthRight_32" minOccurs="0" Length="1"/>
+          <Field Name="OverwidthLeft_33" minOccurs="0" Length="1"/>
+          <Field Name="UnderbondIndicator_34" minOccurs="0" Length="1"/>
+          <Field Name="SOCIndicator_35" minOccurs="0" Length="1"/>
+          <Field Name="DirectDeliveryIndicator_36" minOccurs="0" Length="1"/>
+          <Field Name="ContainerRemarks_37" minOccurs="0" Length="57"/>
+          <Field Name="SpecialHandleCode_38" minOccurs="0" Length="3"/>
+          <Field Name="ArticleNumber_39" minOccurs="0" Length="20"/>
+          <Field Name="InlandMoveType_40" minOccurs="0" Length="7"/>
+          <Field Name="InlandMoveID_41" minOccurs="0" Length="20"/>
+          <Field Name="PlaceOfDelivery_42" minOccurs="0" Length="5"/>
+          <Field Name="PortofDischarge_43" minOccurs="0" Length="5"/>
+          <Field Name="PortofLoading_44" minOccurs="0" Length="5"/>
+          <Field Name="FinalDestination_45" minOccurs="0" Length="5"/>
+        </Component>
+        <Component Name="CT02" TagIdentifier="CT02           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="UnderbondMovementType_02" minOccurs="0" Length="1"/>
+          <Field Name="FromPremiseID_03" minOccurs="0" Length="25"/>
+          <Field Name="ToPremiseID_04" minOccurs="0" Length="25"/>
+          <Field Name="UnderbondLloydsNumber_05" minOccurs="0" Length="7"/>
+          <Field Name="UnderbondVoyageNumber_06" minOccurs="0" Length="8"/>
+          <Field Name="PersonalEffectInd_07" minOccurs="0" Length="1"/>
+          <Field Name="TimberInd_08" minOccurs="0" Length="1"/>
+          <Field Name="WarehouseCode_09" minOccurs="0" Length="8"/>
+          <Field Name="OverHeight_10" minOccurs="0" Length="4"/>
+          <Field Name="OverwidthRight_11" minOccurs="0" Length="4"/>
+          <Field Name="OverwidthLeft_12" minOccurs="0" Length="4"/>
+          <Field Name="ContainerType_13" minOccurs="0" Length="4"/>
+          <Field Name="UnderbondRequestReason_14" minOccurs="0" Length="3"/>
+          <Field Name="UnderbondModeofMovement_15" minOccurs="0" Length="3"/>
+          <Field Name="UnderbondTransshipmentOverseasDestinationPort_16" minOccurs="0" Length="5"/>
+          <Field Name="LineAction_17" minOccurs="0" Length="3"/>
+          <Field Name="AttachedEquipmentInd_18" minOccurs="0" Length="1"/>
+          <Field Name="ProhibitedPackagingInd_19" minOccurs="0" Length="1"/>
+          <Field Name="QuarantineCode_20" minOccurs="0" Length="1"/>
+          <Field Name="ContainerOperator_21" minOccurs="0" Length="35"/>
+          <Field Name="OverlengthFrontLeft_22" minOccurs="0" Length="4"/>
+          <Field Name="OverlengthBackRight_23" minOccurs="0" Length="4"/>
+          <Field Name="TrafficModeDescription_24" minOccurs="0" Length="10"/>
+          <Field Name="ContainerWeight_25" minOccurs="0" Length="11"/>
+          <Field Name="BNumber_26" minOccurs="0" Length="35"/>
+          <Field Name="ContainerGrossWeight_27" minOccurs="0" Length="11"/>
+          <Field Name="ContainerGrossWeightUnit_28" minOccurs="0" Length="3"/>
+          <Field Name="RackIndicator_29" minOccurs="0" Length="4"/>
+          <Field Name="Filler_30" minOccurs="0" Length="5"/>
+        </Component>
+        <Component Name="CT03" TagIdentifier="CT03           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="ContainerOperator_02" minOccurs="0" Length="4"/>
+          <Field Name="BlockCode_03" minOccurs="0" Length="6"/>
+          <Field Name="Filler_04" minOccurs="0" Length="8"/>
+          <Field Name="VesselCode_05" minOccurs="0" Length="3"/>
+          <Field Name="VoyageNo_06" minOccurs="0" Length="3"/>
+          <Field Name="Direction_07" minOccurs="0" Length="1"/>
+          <Field Name="CallPort_08" minOccurs="0" Length="5"/>
+          <Field Name="VesselName_09" minOccurs="0" Length="30"/>
+          <Field Name="LloydsNumber_10" minOccurs="0" Length="20"/>
+          <Field Name="Activity_11" minOccurs="0" Length="2"/>
+          <Field Name="EventDate_12" minOccurs="0" Length="8"/>
+          <Field Name="EventTime_13" minOccurs="0" Length="6"/>
+          <Field Name="CurrentLocation_14" minOccurs="0" Length="5"/>
+          <Field Name="CurrentLocationName_15" minOccurs="0" Length="30"/>
+          <Field Name="BookingNumber_16" minOccurs="0" Length="12"/>
+          <Field Name="IEISEntryDate_17" minOccurs="0" Length="8"/>
+          <Field Name="IEISEntryTime_18" minOccurs="0" Length="6"/>
+          <Field Name="HarmonizedCode_19" minOccurs="0" Length="12"/>
+          <Field Name="CargoNature_20" minOccurs="0" Length="2"/>
+          <Field Name="FullDescription_21" minOccurs="0" Length="60"/>
+        </Component>
+        <Component Name="SL01" TagIdentifier="SL01           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="Type1_02" minOccurs="0" Length="2"/>
+          <Field Name="SealNo1_03" minOccurs="0" Length="15"/>
+          <Field Name="Type2_04" minOccurs="0" Length="2"/>
+          <Field Name="SealNo2_05" minOccurs="0" Length="15"/>
+          <Field Name="Type3_06" minOccurs="0" Length="2"/>
+          <Field Name="SealNo3_07" minOccurs="0" Length="15"/>
+          <Field Name="Type4_08" minOccurs="0" Length="2"/>
+          <Field Name="SealNo4_09" minOccurs="0" Length="15"/>
+          <Field Name="Type5_10" minOccurs="0" Length="2"/>
+          <Field Name="SealNo5_11" minOccurs="0" Length="15"/>
+          <Field Name="Type6_12" minOccurs="0" Length="2"/>
+          <Field Name="SealNo6_13" minOccurs="0" Length="15"/>
+          <Field Name="Type7_14" minOccurs="0" Length="2"/>
+          <Field Name="SealNo7_15" minOccurs="0" Length="15"/>
+          <Field Name="Type8_16" minOccurs="0" Length="2"/>
+          <Field Name="SealNo8_17" minOccurs="0" Length="15"/>
+          <Field Name="Type9_18" minOccurs="0" Length="2"/>
+          <Field Name="SealNo9_19" minOccurs="0" Length="15"/>
+          <Field Name="Type10_20" minOccurs="0" Length="2"/>
+          <Field Name="SealNo10_21" minOccurs="0" Length="15"/>
+          <Field Name="Type11_22" minOccurs="0" Length="2"/>
+          <Field Name="SealNo11_23" minOccurs="0" Length="15"/>
+          <Field Name="Type12_24" minOccurs="0" Length="2"/>
+          <Field Name="SealNo12_25" minOccurs="0" Length="15"/>
+        </Component>
+        <Component Name="INTMDL01" TagIdentifier="INTMDL01       " minOccurs="0" maxOccurs="9">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="InboundIntermodelFacility_02" minOccurs="0" Length="5"/>
+        </Component>
+        <Component Name="BA11_BA11" ObjID="BA11" minOccurs="0" maxOccurs="9999">
+          <Component Name="BA11" TagIdentifier="BA11           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="BLNoOrBKNo_02" minOccurs="0" Length="12"/>
+            <Field Name="MasterBLNumber_03" minOccurs="0" Length="12"/>
+            <Field Name="CustomsOfficeofManifestOrigin_04" minOccurs="0" Length="5"/>
+            <Field Name="CustomsOfficeofManifestDestination_05" minOccurs="0" Length="5"/>
+            <Field Name="PortofLoadingOriginal_06" minOccurs="0" Length="5"/>
+            <Field Name="SpecificCircumstanceIndicator_07" minOccurs="0" Length="1"/>
+            <Field Name="TrafficMode_08" minOccurs="0" Length="2"/>
+            <Field Name="Filler_09" minOccurs="0" Length="2"/>
+            <Field Name="PlaceofReceiptDescription_10" minOccurs="0" Length="60"/>
+            <Field Name="PlaceofReceiptCityCode_11" minOccurs="0" Length="5"/>
+            <Field Name="PlaceofReceiptStateCode_12" minOccurs="0" Length="5"/>
+            <Field Name="PlaceofReceiptCountryCode_13" minOccurs="0" Length="3"/>
+            <Field Name="FinalDestination_14" minOccurs="0" Length="60"/>
+            <Field Name="FinalDestinationCityCode_15" minOccurs="0" Length="5"/>
+            <Field Name="FinalDestinationStateCode_16" minOccurs="0" Length="5"/>
+            <Field Name="FinalDestinationCountryCode_17" minOccurs="0" Length="3"/>
+            <Field Name="ShipperExportDeclarationFlag_18" minOccurs="0" Length="1"/>
+            <Field Name="PreviousPOLATD_19" minOccurs="0" Length="8"/>
+            <Field Name="BLBoundType_20" minOccurs="0" Length="1"/>
+            <Field Name="BLType_21" minOccurs="0" Length="1"/>
+            <Field Name="NVOCCType_22" minOccurs="0" Length="3"/>
+            <Field Name="TransportMovementCode_23" minOccurs="0" Length="1"/>
+            <Field Name="CustomsProcedureCode_24" minOccurs="0" Length="3"/>
+            <Field Name="FDAIndicator_25" minOccurs="0" Length="1"/>
+            <Field Name="FIRMSCode_26" minOccurs="0" Length="4"/>
+            <Field Name="GroupCode_27" minOccurs="0" Length="3"/>
+            <Field Name="SCAC_28" minOccurs="0" Length="8"/>
+            <Field Name="StorageRequestCode_29" minOccurs="0" Length="1"/>
+            <Field Name="ModeofTransport_30" minOccurs="0" Length="3"/>
+            <Field Name="TallyFlag_31" minOccurs="0" Length="1"/>
+          </Component>
+          <Component Name="BA12" TagIdentifier="BA12           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="TSPortofLoadDischarge_02" minOccurs="0" Length="5"/>
+            <Field Name="PortofDischarge_03" minOccurs="0" Length="5"/>
+            <Field Name="PortofDischargeStateCode_04" minOccurs="0" Length="5"/>
+            <Field Name="PartnerCode_05" minOccurs="0" Length="18"/>
+            <Field Name="ReeferCargo_06" minOccurs="0" Length="1"/>
+            <Field Name="FruitandVegetable_07" minOccurs="0" Length="1"/>
+            <Field Name="Placeoflodgmentofdocuments_08" minOccurs="0" Length="60"/>
+            <Field Name="SeawayBillInd_09" minOccurs="0" Length="1"/>
+            <Field Name="WasterCargo_10" minOccurs="0" Length="1"/>
+            <Field Name="WoodPackage_11" minOccurs="0" Length="1"/>
+            <Field Name="TotalGrossWeight_12" minOccurs="0" Length="11"/>
+            <Field Name="GrossWeightUnit_13" minOccurs="0" Length="3"/>
+            <Field Name="TotalNumberofPackage_14" minOccurs="0" Length="9"/>
+            <Field Name="PackageUnit_15" minOccurs="0" Length="3"/>
+            <Field Name="TotalNumberofContainer_16" minOccurs="0" Length="4"/>
+            <Field Name="UnloadPlace_17" minOccurs="0" Length="5"/>
+            <Field Name="PackageUnitAbbreviation_18" minOccurs="0" Length="11"/>
+            <Field Name="ArticleNumber_19" minOccurs="0" Length="20"/>
+            <Field Name="InlandMoveType_20" minOccurs="0" Length="7"/>
+            <Field Name="InlandMoveID_21" minOccurs="0" Length="20"/>
+          </Component>
+          <Component Name="BA13" TagIdentifier="BA13           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="PortofLoadingDescription_02" minOccurs="0" Length="60"/>
+            <Field Name="PortofLoadingStateCode_03" minOccurs="0" Length="5"/>
+            <Field Name="PortofLoadingCountryCode_04" minOccurs="0" Length="3"/>
+            <Field Name="PortofDischargeDescription_05" minOccurs="0" Length="60"/>
+            <Field Name="PortofDischargeCountryCode_06" minOccurs="0" Length="3"/>
+            <Field Name="CallingFacility_07" minOccurs="0" Length="5"/>
+            <Field Name="TransshipmentIndicator_08" minOccurs="0" Length="1"/>
+            <Field Name="FinalDestinationCountryName_09" minOccurs="0" Length="12"/>
+            <Field Name="ExportLicenseNumber_10" minOccurs="0" Length="30"/>
+            <Field Name="OnboardDate_11" minOccurs="0" Length="8"/>
+            <Field Name="BLIssueDate_12" minOccurs="0" Length="8"/>
+            <Field Name="CustomsReturnReferenceNumber_13" minOccurs="0" Length="35"/>
+            <Field Name="ReferenceNumber_14" minOccurs="0" Length="21"/>
+            <Field Name="OriginalReferenceNo_15" minOccurs="0" Length="21"/>
+            <Field Name="EstimatedDateofLoading_16" minOccurs="0" Length="8"/>
+            <Field Name="EstimatedTimeofLoading_17" minOccurs="0" Length="4"/>
+            <Field Name="SupplementaryIndicator_18" minOccurs="0" Length="1"/>
+            <Field Name="SupplementaryReferenceNumber_19" minOccurs="0" Length="25"/>
+            <Field Name="FacilityDescription_20" minOccurs="0" Length="35"/>
+            <Field Name="PlaceofReceiptUNLOCODE_21" minOccurs="0" Length="5"/>
+            <Field Name="FinalDestinationUNLOCODE_22" minOccurs="0" Length="5"/>
+            <Field Name="PortofLoading_23" minOccurs="0" Length="6"/>
+            <Field Name="PortofDischarge_24" minOccurs="0" Length="6"/>
+            <Field Name="PlaceofReceiptCountryName_25" minOccurs="0" Length="25"/>
+            <Field Name="FreightForwarderIndicator_26" minOccurs="0" Length="1"/>
+            <Field Name="FirstLocalPort_27" minOccurs="0" Length="5"/>
+            <Field Name="PreCarriagePortofLoading_28" minOccurs="0" Length="5"/>
+            <Field Name="SONo_29" minOccurs="0" Length="14"/>
+            <Field Name="IEType_30" minOccurs="0" Length="1"/>
+            <Field Name="Yard_31" minOccurs="0" Length="5"/>
+            <Field Name="DischargePlace_32" minOccurs="0" Length="8"/>
+            <Field Name="MasterBLReference_33" minOccurs="0" Length="20"/>
+            <Field Name="TotalGrossWeight_34" minOccurs="0" Length="12"/>
+            <Field Name="GrossWeightUnit_35" minOccurs="0" Length="3"/>
+            <Field Name="TSPortofLoadCountryCode_36" minOccurs="0" Length="3"/>
+            <Field Name="ChangeDescription_37" minOccurs="0" Length="60"/>
+            <Field Name="ReferenceNumberforPKG_38" minOccurs="0" Length="35"/>
+            <Field Name="MasterBLSCAC_39" minOccurs="0" Length="4"/>
+            <Field Name="HouseBLNumber_40" minOccurs="0" Length="35"/>
+            <Field Name="TransshipmentPlaceCode_41" minOccurs="0" Length="11"/>
+            <Field Name="PlaceofDestinationTransitCode_42" minOccurs="0" Length="11"/>
+            <Field Name="HouseBLSCAC_43" minOccurs="0" Length="4"/>
+            <Field Name="Filler_44" minOccurs="0" Length="5"/>
+          </Component>
+          <Component Name="BA14" TagIdentifier="BA14           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="E2ndNotifyParty1_02" minOccurs="0" Length="4"/>
+            <Field Name="E2ndNotifyParty2_03" minOccurs="0" Length="4"/>
+            <Field Name="E2ndNotifyParty3_04" minOccurs="0" Length="4"/>
+            <Field Name="E2ndNotifyParty4_05" minOccurs="0" Length="4"/>
+            <Field Name="E2ndNotifyParty5_06" minOccurs="0" Length="4"/>
+            <Field Name="E2ndNotifyParty6_07" minOccurs="0" Length="4"/>
+            <Field Name="E2ndNotifyParty7_08" minOccurs="0" Length="4"/>
+            <Field Name="E2ndNotifyParty8_09" minOccurs="0" Length="4"/>
+            <Field Name="CargoValue_10" minOccurs="0" Length="11"/>
+            <Field Name="Filler_11" minOccurs="0" Length="188"/>
+          </Component>
+          <Component Name="BA15" TagIdentifier="BA15           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="ExportClearanceNumber_02" minOccurs="0" Length="35"/>
+            <Field Name="ExemptionGoodCode_03" minOccurs="0" Length="35"/>
+            <Field Name="CustomsReferenceNumber_04" minOccurs="0" Length="35"/>
+            <Field Name="NoOfContainer_05" minOccurs="0" Length="7"/>
+            <Field Name="LineAction_06" minOccurs="0" Length="3"/>
+            <Field Name="InterchangeControlReference_07" minOccurs="0" Length="14"/>
+            <Field Name="SenderReference_08" minOccurs="0" Length="35"/>
+            <Field Name="SenderReferenceVersion_09" minOccurs="0" Length="9"/>
+            <Field Name="MessageFunctionCode_10" minOccurs="0" Length="2"/>
+            <Field Name="PrincipalAgentID_11" minOccurs="0" Length="11"/>
+            <Field Name="ResponsiblePartyClientID_12" minOccurs="0" Length="11"/>
+            <Field Name="ExportType_13" minOccurs="0" Length="3"/>
+            <Field Name="CustomsOffice_14" minOccurs="0" Length="6"/>
+            <Field Name="DocumentDate_15" minOccurs="0" Length="8"/>
+            <Field Name="Filler_16" minOccurs="0" Length="17"/>
+          </Component>
+          <Component Name="PA11" TagIdentifier="PA11           " minOccurs="0" maxOccurs="9">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="PartyCode_02" minOccurs="0" Length="2"/>
+            <Field Name="AgentCode_03" minOccurs="0" Length="20"/>
+            <Field Name="State_04" minOccurs="0" Length="3"/>
+            <Field Name="Country_05" minOccurs="0" Length="3"/>
+            <Field Name="Name_06" minOccurs="0" Length="35"/>
+            <Field Name="PostalCode_07" minOccurs="0" Length="12"/>
+            <Field Name="TelephoneNo_08" minOccurs="0" Length="14"/>
+            <Field Name="FaxNo_09" minOccurs="0" Length="14"/>
+            <Field Name="ContactFirstName_10" minOccurs="0" Length="35"/>
+            <Field Name="ContactLastName_11" minOccurs="0" Length="35"/>
+            <Field Name="CityName_12" minOccurs="0" Length="35"/>
+            <Field Name="EmailID_13" minOccurs="0" Length="20"/>
+            <Field Name="SAPID_14" minOccurs="0" Length="10"/>
+            <Field Name="LongName_15" minOccurs="0" Length="70"/>
+            <Field Name="IDDCountryCode_16" minOccurs="0" Length="4"/>
+            <Field Name="IDDAreaCode_17" minOccurs="0" Length="4"/>
+            <Field Name="AgentBranchCode_18" minOccurs="0" Length="4"/>
+            <Field Name="BranchId_19" minOccurs="0" Length="6"/>
+            <Field Name="Filler_20" minOccurs="0" Length="5"/>
+          </Component>
+          <Component Name="PA12" TagIdentifier="PA12           " minOccurs="0" maxOccurs="9">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="PartyCode_02" minOccurs="0" Length="2"/>
+            <Field Name="Address1_03" minOccurs="0" Length="35"/>
+            <Field Name="Address2_04" minOccurs="0" Length="35"/>
+            <Field Name="Address3_05" minOccurs="0" Length="35"/>
+            <Field Name="Address4_06" minOccurs="0" Length="35"/>
+          </Component>
+          <Component Name="CG11" TagIdentifier="CG11           " minOccurs="0" maxOccurs="9999">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="ChargeType_02" minOccurs="0" Length="15"/>
+            <Field Name="FreightType_03" minOccurs="0" Length="5"/>
+            <Field Name="FreightChargeType_04" minOccurs="0" Length="20"/>
+            <Field Name="FreightTypeReferenceCode_05" minOccurs="0" Length="20"/>
+            <Field Name="BLFreightCalculationMethod_06" minOccurs="0" Length="20"/>
+            <Field Name="TotalAmount_07" minOccurs="0" Length="13"/>
+            <Field Name="PaymentLocation_08" minOccurs="0" Length="3"/>
+            <Field Name="Payer_09" minOccurs="0" Length="35"/>
+            <Field Name="PayerRole_10" minOccurs="0" Length="1"/>
+            <Field Name="Prepaid_11" minOccurs="0" Length="1"/>
+            <Field Name="DisplayinBL_12" minOccurs="0" Length="1"/>
+            <Field Name="Basis_13" minOccurs="0" Length="13"/>
+            <Field Name="Rate_14" minOccurs="0" Length="17"/>
+            <Field Name="Currency_15" minOccurs="0" Length="3"/>
+            <Field Name="BaseRate_16" minOccurs="0" Length="14"/>
+            <Field Name="BaseRateCurrency_17" minOccurs="0" Length="3"/>
+            <Field Name="PaymentCurrency_18" minOccurs="0" Length="3"/>
+            <Field Name="BasisUnit_19" minOccurs="0" Length="3"/>
+            <Field Name="PayableElsewhere_20" minOccurs="0" Length="1"/>
+            <Field Name="MethodofPayment_21" minOccurs="0" Length="3"/>
+            <Field Name="PrepaidAmount_22" minOccurs="0" Length="11"/>
+            <Field Name="Filler_23" minOccurs="0" Length="26"/>
+          </Component>
+          <Component Name="IT31_IT31" ObjID="IT31" minOccurs="0" maxOccurs="9999">
+            <Component Name="IT31" TagIdentifier="IT31           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="CountryofOriginofGoods_02" minOccurs="0" Length="3"/>
+              <Field Name="NoofPackage_03" minOccurs="0" Length="9"/>
+              <Field Name="PackageUnit_04" minOccurs="0" Length="3"/>
+              <Field Name="BriefDescriptions_05" minOccurs="0" Length="35"/>
+              <Field Name="FullDescriptions_06" minOccurs="0" Length="60"/>
+              <Field Name="NetWeight_07" minOccurs="0" Length="11"/>
+              <Field Name="NetWeightUnit_08" minOccurs="0" Length="3"/>
+              <Field Name="GrossWeight_09" minOccurs="0" Length="11"/>
+              <Field Name="GrossWeightUnit_10" minOccurs="0" Length="3"/>
+              <Field Name="Length_11" minOccurs="0" Length="9"/>
+              <Field Name="LengthUnit_12" minOccurs="0" Length="1"/>
+              <Field Name="Width_13" minOccurs="0" Length="9"/>
+              <Field Name="WidthUnit_14" minOccurs="0" Length="1"/>
+              <Field Name="Height_15" minOccurs="0" Length="9"/>
+              <Field Name="HeightUnit_16" minOccurs="0" Length="1"/>
+              <Field Name="Volume_17" minOccurs="0" Length="9"/>
+              <Field Name="VolumeUnit_18" minOccurs="0" Length="3"/>
+              <Field Name="TransshipmentInd_19" minOccurs="0" Length="1"/>
+              <Field Name="FumigationInd_20" minOccurs="0" Length="1"/>
+              <Field Name="PerishableInd_21" minOccurs="0" Length="1"/>
+              <Field Name="FlammableLiquidInd_22" minOccurs="0" Length="1"/>
+              <Field Name="PersonalEffectInd_23" minOccurs="0" Length="1"/>
+              <Field Name="TimberInd_24" minOccurs="0" Length="1"/>
+              <Field Name="HazardousInd_25" minOccurs="0" Length="1"/>
+              <Field Name="ReeferInd_26" minOccurs="0" Length="1"/>
+              <Field Name="NegativeTemperatureInd_27" minOccurs="0" Length="1"/>
+              <Field Name="ReeferTemperature_28" minOccurs="0" Length="6"/>
+              <Field Name="ReeferTemperatureUnit_29" minOccurs="0" Length="1"/>
+              <Field Name="DGInd_30" minOccurs="0" Length="1"/>
+              <Field Name="HarmonizedCode_31" minOccurs="0" Length="12"/>
+              <Field Name="CustomsStatusofGoods_32" minOccurs="0" Length="3"/>
+              <Field Name="CargoNature_33" minOccurs="0" Length="2"/>
+              <Field Name="ArticleNumber_34" minOccurs="0" Length="5"/>
+              <Field Name="InlandMoveID_35" minOccurs="0" Length="6"/>
+            </Component>
+            <Component Name="IT32" TagIdentifier="IT32           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="LineAction_02" minOccurs="0" Length="1"/>
+              <Field Name="PackageCodeDescription_03" minOccurs="0" Length="30"/>
+              <Field Name="CargoCode_04" minOccurs="0" Length="3"/>
+              <Field Name="TariffNumber_05" minOccurs="0" Length="10"/>
+              <Field Name="GensetType_06" minOccurs="0" Length="2"/>
+              <Field Name="VentilationValue_07" minOccurs="0" Length="3"/>
+              <Field Name="VentilationScale_08" minOccurs="0" Length="3"/>
+              <Field Name="Filler_09" minOccurs="0" Length="179"/>
+            </Component>
+            <Component Name="DG31" TagIdentifier="DG31           " minOccurs="0" maxOccurs="999">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="ItemSequenceNo_02" minOccurs="0" Length="4"/>
+              <Field Name="IMCOClass_03" minOccurs="0" Length="4"/>
+              <Field Name="UNNo_04" minOccurs="0" Length="10"/>
+              <Field Name="FlashPointNegativeInd_05" minOccurs="0" Length="1"/>
+              <Field Name="FlashPoint_06" minOccurs="0" Length="6"/>
+              <Field Name="FlashPointUnit_07" minOccurs="0" Length="1"/>
+              <Field Name="DangerousGoodsLabel1_08" minOccurs="0" Length="30"/>
+              <Field Name="DangerousGoodsLabel2_09" minOccurs="0" Length="30"/>
+              <Field Name="DangerousGoodsLabel3_10" minOccurs="0" Length="30"/>
+              <Field Name="DangerousGoodsLabel4_11" minOccurs="0" Length="30"/>
+              <Field Name="TechnicalName_12" minOccurs="0" Length="180"/>
+              <Field Name="EmergencyContactName_13" minOccurs="0" Length="35"/>
+              <Field Name="EmergencyContactNumber1_14" minOccurs="0" Length="18"/>
+              <Field Name="ProperShippingName_15" minOccurs="0" Length="60"/>
+              <Field Name="IMCOPage_16" minOccurs="0" Length="8"/>
+              <Field Name="PackageGroup_17" minOccurs="0" Length="5"/>
+              <Field Name="MFAG_18" minOccurs="0" Length="10"/>
+              <Field Name="GrossWeight_19" minOccurs="0" Length="15"/>
+              <Field Name="GrossWeightUnit_20" minOccurs="0" Length="3"/>
+              <Field Name="NoofPackages_21" minOccurs="0" Length="9"/>
+              <Field Name="PackagingCode_22" minOccurs="0" Length="3"/>
+              <Field Name="EmergencyScheduledReference_23" minOccurs="0" Length="6"/>
+              <Field Name="MarinePollutant_24" minOccurs="0" Length="1"/>
+              <Field Name="NetExplosiveWeight_25" minOccurs="0" Length="15"/>
+              <Field Name="NetExplosiveWeightUnit_26" minOccurs="0" Length="3"/>
+              <Field Name="HandlingCode_27" minOccurs="0" Length="3"/>
+              <Field Name="HandlingInstruction_28" minOccurs="0" Length="122"/>
+              <Field Name="EmergencyContactNumber2_29" minOccurs="0" Length="18"/>
+              <Field Name="NetWeight_30" minOccurs="0" Length="11"/>
+              <Field Name="NetWeightUnit_31" minOccurs="0" Length="3"/>
+              <Field Name="PackageCodeDescription_32" minOccurs="0" Length="35"/>
+              <Field Name="FlashPointIndicator_33" minOccurs="0" Length="1"/>
+              <Field Name="StorageRequestCode_34" minOccurs="0" Length="1"/>
+              <Field Name="PackageGroupDescription_35" minOccurs="0" Length="5"/>
+              <Field Name="SubsidiaryRisk1_36" minOccurs="0" Length="8"/>
+              <Field Name="SubsidiaryRisk2_37" minOccurs="0" Length="8"/>
+            </Component>
+            <Component Name="ID31" TagIdentifier="ID31           " minOccurs="0" maxOccurs="9999">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="MarksandNos_02" minOccurs="0" Length="15"/>
+              <Field Name="ItemDescriptions_03" minOccurs="0" Length="70"/>
+            </Component>
+          </Component>
+          <Component Name="PV11" TagIdentifier="PV11           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="VesselCode_02" minOccurs="0" Length="3"/>
+            <Field Name="VoyageNo_03" minOccurs="0" Length="3"/>
+            <Field Name="Direction_04" minOccurs="0" Length="1"/>
+            <Field Name="ETADate_05" minOccurs="0" Length="8"/>
+            <Field Name="ATADate_06" minOccurs="0" Length="8"/>
+            <Field Name="VesselCallSign_07" minOccurs="0" Length="10"/>
+            <Field Name="VesselShippingCoCode_08" minOccurs="0" Length="7"/>
+            <Field Name="LloydsNumber_09" minOccurs="0" Length="7"/>
+            <Field Name="VesselNumber_10" minOccurs="0" Length="9"/>
+            <Field Name="VesselName_11" minOccurs="0" Length="30"/>
+            <Field Name="ExternalVoyageNumber_12" minOccurs="0" Length="8"/>
+            <Field Name="UVRN_13" minOccurs="0" Length="10"/>
+            <Field Name="VesselFlag_14" minOccurs="0" Length="3"/>
+            <Field Name="ETATime_15" minOccurs="0" Length="6"/>
+            <Field Name="ETDDate_16" minOccurs="0" Length="8"/>
+            <Field Name="ETDTime_17" minOccurs="0" Length="6"/>
+            <Field Name="Filler_18" minOccurs="0" Length="104"/>
+          </Component>
+          <Component Name="TS11" TagIdentifier="TS11           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="TSVesselCode_02" minOccurs="0" Length="3"/>
+            <Field Name="TSVesselLloydsNumber_03" minOccurs="0" Length="7"/>
+            <Field Name="TSCallsign_04" minOccurs="0" Length="10"/>
+            <Field Name="TSVoyageNumber_05" minOccurs="0" Length="8"/>
+            <Field Name="TSUVRN_06" minOccurs="0" Length="10"/>
+            <Field Name="TSVesselName_07" minOccurs="0" Length="30"/>
+            <Field Name="TSVesselFlag_08" minOccurs="0" Length="3"/>
+            <Field Name="TSVesselNumber_09" minOccurs="0" Length="9"/>
+            <Field Name="TSNextDischargePort_10" minOccurs="0" Length="5"/>
+            <Field Name="TSVesselETD_11" minOccurs="0" Length="8"/>
+            <Field Name="Filler_12" minOccurs="0" Length="138"/>
+          </Component>
+          <Component Name="BK11" TagIdentifier="BK11           " minOccurs="0" maxOccurs="9999">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="BookingNo_02" minOccurs="0" Length="12"/>
+          </Component>
+          <Component Name="BC11" TagIdentifier="BC11           " minOccurs="0" maxOccurs="99">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="SizeType_02" minOccurs="0" Length="4"/>
+            <Field Name="NumberofContainer_03" minOccurs="0" Length="4"/>
+            <Field Name="FullDescription_04" minOccurs="0" Length="60"/>
+            <Field Name="NumberofPackage_05" minOccurs="0" Length="9"/>
+            <Field Name="PackageUnit_06" minOccurs="0" Length="3"/>
+            <Field Name="GrossWeight_07" minOccurs="0" Length="11"/>
+            <Field Name="GrossWeightUnit_08" minOccurs="0" Length="3"/>
+            <Field Name="Volume_09" minOccurs="0" Length="9"/>
+            <Field Name="VolumeUnit_10" minOccurs="0" Length="3"/>
+            <Field Name="CargoNature_11" minOccurs="0" Length="2"/>
+            <Field Name="FCLIndicator_12" minOccurs="0" Length="1"/>
+            <Field Name="ContainerStatus_13" minOccurs="0" Length="1"/>
+            <Field Name="ReeferIndicator_14" minOccurs="0" Length="1"/>
+            <Field Name="NegativeTemperatureInd_15" minOccurs="0" Length="1"/>
+            <Field Name="ReeferTemperature_16" minOccurs="0" Length="6"/>
+            <Field Name="ReeferTemperatureUnit_17" minOccurs="0" Length="3"/>
+            <Field Name="IMCOClass_18" minOccurs="0" Length="4"/>
+            <Field Name="UNNo_19" minOccurs="0" Length="10"/>
+            <Field Name="Filler_20" minOccurs="0" Length="96"/>
+          </Component>
+          <Component Name="WB11" TagIdentifier="WB11           " minOccurs="0" maxOccurs="99">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="CPWaybillNo_02" minOccurs="0" Length="12"/>
+            <Field Name="CPWaybillInlandMoveID_03" minOccurs="0" Length="20"/>
+            <Field Name="CustomsEntryPort_04" minOccurs="0" Length="15"/>
+            <Field Name="CustomsDestinationPort_05" minOccurs="0" Length="15"/>
+          </Component>
+        </Component>
+        <Component Name="CTDG" TagIdentifier="CTDG           " minOccurs="0" maxOccurs="9">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="IMCOClass_02" minOccurs="0" Length="4"/>
+          <Field Name="UNNo_03" minOccurs="0" Length="4"/>
+          <Field Name="ProperShippingName_04" minOccurs="0" Length="60"/>
+          <Field Name="FlashpointNegativeIndicator_05" minOccurs="0" Length="1"/>
+          <Field Name="FlashPoint_06" minOccurs="0" Length="6"/>
+          <Field Name="FlashPointUnit_07" minOccurs="0" Length="1"/>
+          <Field Name="LastCargoSpecialInfo_08" minOccurs="0" Length="5"/>
+          <Field Name="FlashPointIndicator_09" minOccurs="0" Length="1"/>
+          <Field Name="Filler_10" minOccurs="0" Length="149"/>
+        </Component>
+        <Component Name="CT04" TagIdentifier="CT04           " minOccurs="0" maxOccurs="9999">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="VIN_02" minOccurs="0" Length="30"/>
+          <Field Name="NoOfRack_03" minOccurs="0" Length="6"/>
+          <Field Name="RackTypeDesc_04" minOccurs="0" Length="195"/>
+        </Component>
+        <Component Name="CS01" TagIdentifier="CS01           " minOccurs="0" maxOccurs="9">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="ExportCustomsStatus_02" minOccurs="0" Length="10"/>
+          <Field Name="MiscStandardType1_03" minOccurs="0" Length="40"/>
+          <Field Name="MiscTerminalType1_04" minOccurs="0" Length="40"/>
+          <Field Name="MiscValue1_05" minOccurs="0" Length="30"/>
+          <Field Name="MiscStandardType2_06" minOccurs="0" Length="40"/>
+          <Field Name="MiscTerminalType2_07" minOccurs="0" Length="40"/>
+          <Field Name="MiscValue2_08" minOccurs="0" Length="30"/>
+          <Field Name="MiscStandardType3_09" minOccurs="0" Length="40"/>
+          <Field Name="MiscTerminalType3_10" minOccurs="0" Length="40"/>
+          <Field Name="MiscValue3_11" minOccurs="0" Length="30"/>
+          <Field Name="Filler_12" minOccurs="0" Length="241"/>
+        </Component>
+        <Component Name="IT21_IT21" ObjID="IT21" minOccurs="0" maxOccurs="9999">
+          <Component Name="IT21" TagIdentifier="IT21           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="CountryofOriginofGoods_02" minOccurs="0" Length="3"/>
+            <Field Name="NoofPackage_03" minOccurs="0" Length="9"/>
+            <Field Name="PackageUnit_04" minOccurs="0" Length="3"/>
+            <Field Name="BriefDescriptions_05" minOccurs="0" Length="35"/>
+            <Field Name="FullDescriptions_06" minOccurs="0" Length="60"/>
+            <Field Name="NetWeight_07" minOccurs="0" Length="11"/>
+            <Field Name="NetWeightUnit_08" minOccurs="0" Length="3"/>
+            <Field Name="GrossWeight_09" minOccurs="0" Length="11"/>
+            <Field Name="GrossWeightUnit_10" minOccurs="0" Length="3"/>
+            <Field Name="Length_11" minOccurs="0" Length="9"/>
+            <Field Name="LengthUnit_12" minOccurs="0" Length="1"/>
+            <Field Name="Width_13" minOccurs="0" Length="9"/>
+            <Field Name="WidthUnit_14" minOccurs="0" Length="1"/>
+            <Field Name="Height_15" minOccurs="0" Length="9"/>
+            <Field Name="HeightUnit_16" minOccurs="0" Length="1"/>
+            <Field Name="Volume_17" minOccurs="0" Length="9"/>
+            <Field Name="VolumeUnit_18" minOccurs="0" Length="3"/>
+            <Field Name="TransshipmentInd_19" minOccurs="0" Length="1"/>
+            <Field Name="FumigationInd_20" minOccurs="0" Length="1"/>
+            <Field Name="PerishableInd_21" minOccurs="0" Length="1"/>
+            <Field Name="FlammableLiquidInd_22" minOccurs="0" Length="1"/>
+            <Field Name="PersonalEffectInd_23" minOccurs="0" Length="1"/>
+            <Field Name="TimberInd_24" minOccurs="0" Length="1"/>
+            <Field Name="HazardousInd_25" minOccurs="0" Length="1"/>
+            <Field Name="ReeferInd_26" minOccurs="0" Length="1"/>
+            <Field Name="NegativeTemperatureInd_27" minOccurs="0" Length="1"/>
+            <Field Name="ReeferTemperature_28" minOccurs="0" Length="6"/>
+            <Field Name="ReeferTemperatureUnit_29" minOccurs="0" Length="1"/>
+            <Field Name="DGInd_30" minOccurs="0" Length="1"/>
+            <Field Name="HarmonizedCode_31" minOccurs="0" Length="12"/>
+            <Field Name="CustomsStatusofGoods_32" minOccurs="0" Length="3"/>
+            <Field Name="CargoNature_33" minOccurs="0" Length="2"/>
+            <Field Name="ArticleNumber_34" minOccurs="0" Length="5"/>
+            <Field Name="InlandMoveID_35" minOccurs="0" Length="6"/>
+          </Component>
+          <Component Name="IT22" TagIdentifier="IT22           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="LineAction_02" minOccurs="0" Length="1"/>
+            <Field Name="PackageCodeDescription_03" minOccurs="0" Length="30"/>
+            <Field Name="CargoCode_04" minOccurs="0" Length="3"/>
+            <Field Name="TariffNumber_05" minOccurs="0" Length="10"/>
+            <Field Name="GensetType_06" minOccurs="0" Length="2"/>
+            <Field Name="VentilationValue_07" minOccurs="0" Length="3"/>
+            <Field Name="VentilationScale_08" minOccurs="0" Length="3"/>
+            <Field Name="Filler_09" minOccurs="0" Length="179"/>
+          </Component>
+          <Component Name="DG21" TagIdentifier="DG21           " minOccurs="0" maxOccurs="999">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="ItemSequenceNo_02" minOccurs="0" Length="4"/>
+            <Field Name="IMCOClass_03" minOccurs="0" Length="4"/>
+            <Field Name="UNNo_04" minOccurs="0" Length="10"/>
+            <Field Name="FlashPointNegativeInd_05" minOccurs="0" Length="1"/>
+            <Field Name="FlashPoint_06" minOccurs="0" Length="6"/>
+            <Field Name="FlashPointUnit_07" minOccurs="0" Length="1"/>
+            <Field Name="DangerousGoodsLabel1_08" minOccurs="0" Length="30"/>
+            <Field Name="DangerousGoodsLabel2_09" minOccurs="0" Length="30"/>
+            <Field Name="DangerousGoodsLabel3_10" minOccurs="0" Length="30"/>
+            <Field Name="DangerousGoodsLabel4_11" minOccurs="0" Length="30"/>
+            <Field Name="TechnicalName_12" minOccurs="0" Length="180"/>
+            <Field Name="EmergencyContactName_13" minOccurs="0" Length="35"/>
+            <Field Name="EmergencyContactNumber1_14" minOccurs="0" Length="18"/>
+            <Field Name="ProperShippingName_15" minOccurs="0" Length="60"/>
+            <Field Name="IMCOPage_16" minOccurs="0" Length="8"/>
+            <Field Name="PackageGroup_17" minOccurs="0" Length="5"/>
+            <Field Name="MFAG_18" minOccurs="0" Length="10"/>
+            <Field Name="GrossWeight_19" minOccurs="0" Length="15"/>
+            <Field Name="GrossWeightUnit_20" minOccurs="0" Length="3"/>
+            <Field Name="NoofPackages_21" minOccurs="0" Length="9"/>
+            <Field Name="PackagingCode_22" minOccurs="0" Length="3"/>
+            <Field Name="EmergencyScheduledReference_23" minOccurs="0" Length="6"/>
+            <Field Name="MarinePollutant_24" minOccurs="0" Length="1"/>
+            <Field Name="NetExplosiveWeight_25" minOccurs="0" Length="15"/>
+            <Field Name="NetExplosiveWeightUnit_26" minOccurs="0" Length="3"/>
+            <Field Name="HandlingCode_27" minOccurs="0" Length="3"/>
+            <Field Name="HandlingInstruction_28" minOccurs="0" Length="122"/>
+            <Field Name="EmergencyContactNumber2_29" minOccurs="0" Length="18"/>
+            <Field Name="NetWeight_30" minOccurs="0" Length="11"/>
+            <Field Name="NetWeightUnit_31" minOccurs="0" Length="3"/>
+            <Field Name="PackageCodeDescription_32" minOccurs="0" Length="35"/>
+            <Field Name="FlashPointIndicator_33" minOccurs="0" Length="1"/>
+            <Field Name="StorageRequestCode_34" minOccurs="0" Length="1"/>
+            <Field Name="PackageGroupDescription_35" minOccurs="0" Length="5"/>
+            <Field Name="SubsidiaryRisk1_36" minOccurs="0" Length="8"/>
+            <Field Name="SubsidiaryRisk2_37" minOccurs="0" Length="8"/>
+          </Component>
+          <Component Name="ID21" TagIdentifier="ID21           " minOccurs="0" maxOccurs="9999">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="MarksandNos_02" minOccurs="0" Length="15"/>
+            <Field Name="ItemDescriptions_03" minOccurs="0" Length="70"/>
+          </Component>
+          <Component Name="BA21_BA21" ObjID="BA21" minOccurs="0" maxOccurs="9999">
+            <Component Name="BA21" TagIdentifier="BA21           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="BLNoOrBKNo_02" minOccurs="0" Length="12"/>
+              <Field Name="MasterBLNumber_03" minOccurs="0" Length="12"/>
+              <Field Name="CustomsOfficeofManifestOrigin_04" minOccurs="0" Length="5"/>
+              <Field Name="CustomsOfficeofManifestDestination_05" minOccurs="0" Length="5"/>
+              <Field Name="PortofLoadingOriginal_06" minOccurs="0" Length="5"/>
+              <Field Name="SpecificCircumstanceIndicator_07" minOccurs="0" Length="1"/>
+              <Field Name="TrafficMode_08" minOccurs="0" Length="2"/>
+              <Field Name="Filler_09" minOccurs="0" Length="2"/>
+              <Field Name="PlaceofReceiptDescription_10" minOccurs="0" Length="60"/>
+              <Field Name="PlaceofReceiptCityCode_11" minOccurs="0" Length="5"/>
+              <Field Name="PlaceofReceiptStateCode_12" minOccurs="0" Length="5"/>
+              <Field Name="PlaceofReceiptCountryCode_13" minOccurs="0" Length="3"/>
+              <Field Name="FinalDestination_14" minOccurs="0" Length="60"/>
+              <Field Name="FinalDestinationCityCode_15" minOccurs="0" Length="5"/>
+              <Field Name="FinalDestinationStateCode_16" minOccurs="0" Length="5"/>
+              <Field Name="FinalDestinationCountryCode_17" minOccurs="0" Length="3"/>
+              <Field Name="ShipperExportDeclarationFlag_18" minOccurs="0" Length="1"/>
+              <Field Name="PreviousPOLATD_19" minOccurs="0" Length="8"/>
+              <Field Name="BLBoundType_20" minOccurs="0" Length="1"/>
+              <Field Name="BLType_21" minOccurs="0" Length="1"/>
+              <Field Name="NVOCCType_22" minOccurs="0" Length="3"/>
+              <Field Name="TransportMovementCode_23" minOccurs="0" Length="1"/>
+              <Field Name="CustomsProcedureCode_24" minOccurs="0" Length="3"/>
+              <Field Name="FDAIndicator_25" minOccurs="0" Length="1"/>
+              <Field Name="FIRMSCode_26" minOccurs="0" Length="4"/>
+              <Field Name="GroupCode_27" minOccurs="0" Length="3"/>
+              <Field Name="SCAC_28" minOccurs="0" Length="8"/>
+              <Field Name="StorageRequestCode_29" minOccurs="0" Length="1"/>
+              <Field Name="ModeofTransport_30" minOccurs="0" Length="3"/>
+              <Field Name="TallyFlag_31" minOccurs="0" Length="1"/>
+            </Component>
+            <Component Name="BA22" TagIdentifier="BA22           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="TSPortofLoadDischarge_02" minOccurs="0" Length="5"/>
+              <Field Name="PortofDischarge_03" minOccurs="0" Length="5"/>
+              <Field Name="PortofDischargeStateCode_04" minOccurs="0" Length="5"/>
+              <Field Name="PartnerCode_05" minOccurs="0" Length="18"/>
+              <Field Name="ReeferCargo_06" minOccurs="0" Length="1"/>
+              <Field Name="FruitandVegetable_07" minOccurs="0" Length="1"/>
+              <Field Name="Placeoflodgmentofdocuments_08" minOccurs="0" Length="60"/>
+              <Field Name="SeawayBillInd_09" minOccurs="0" Length="1"/>
+              <Field Name="WasterCargo_10" minOccurs="0" Length="1"/>
+              <Field Name="WoodPackage_11" minOccurs="0" Length="1"/>
+              <Field Name="TotalGrossWeight_12" minOccurs="0" Length="11"/>
+              <Field Name="GrossWeightUnit_13" minOccurs="0" Length="3"/>
+              <Field Name="TotalNumberofPackage_14" minOccurs="0" Length="9"/>
+              <Field Name="PackageUnit_15" minOccurs="0" Length="3"/>
+              <Field Name="TotalNumberofContainer_16" minOccurs="0" Length="4"/>
+              <Field Name="UnloadPlace_17" minOccurs="0" Length="5"/>
+              <Field Name="PackageUnitAbbreviation_18" minOccurs="0" Length="11"/>
+              <Field Name="ArticleNumber_19" minOccurs="0" Length="20"/>
+              <Field Name="InlandMoveType_20" minOccurs="0" Length="7"/>
+              <Field Name="InlandMoveID_21" minOccurs="0" Length="20"/>
+            </Component>
+            <Component Name="BA23" TagIdentifier="BA23           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="PortofLoadingDescription_02" minOccurs="0" Length="60"/>
+              <Field Name="PortofLoadingStateCode_03" minOccurs="0" Length="5"/>
+              <Field Name="PortofLoadingCountryCode_04" minOccurs="0" Length="3"/>
+              <Field Name="PortofDischargeDescription_05" minOccurs="0" Length="60"/>
+              <Field Name="PortofDischargeCountryCode_06" minOccurs="0" Length="3"/>
+              <Field Name="CallingFacility_07" minOccurs="0" Length="5"/>
+              <Field Name="TransshipmentIndicator_08" minOccurs="0" Length="1"/>
+              <Field Name="FinalDestinationCountryName_09" minOccurs="0" Length="12"/>
+              <Field Name="ExportLicenseNumber_10" minOccurs="0" Length="30"/>
+              <Field Name="OnboardDate_11" minOccurs="0" Length="8"/>
+              <Field Name="BLIssueDate_12" minOccurs="0" Length="8"/>
+              <Field Name="CustomsReturnReferenceNumber_13" minOccurs="0" Length="35"/>
+              <Field Name="ReferenceNumber_14" minOccurs="0" Length="21"/>
+              <Field Name="OriginalReferenceNo_15" minOccurs="0" Length="21"/>
+              <Field Name="EstimatedDateofLoading_16" minOccurs="0" Length="8"/>
+              <Field Name="EstimatedTimeofLoading_17" minOccurs="0" Length="4"/>
+              <Field Name="SupplementaryIndicator_18" minOccurs="0" Length="1"/>
+              <Field Name="SupplementaryReferenceNumber_19" minOccurs="0" Length="25"/>
+              <Field Name="FacilityDescription_20" minOccurs="0" Length="35"/>
+              <Field Name="PlaceofReceiptUNLOCODE_21" minOccurs="0" Length="5"/>
+              <Field Name="FinalDestinationUNLOCODE_22" minOccurs="0" Length="5"/>
+              <Field Name="PortofLoading_23" minOccurs="0" Length="6"/>
+              <Field Name="PortofDischarge_24" minOccurs="0" Length="6"/>
+              <Field Name="PlaceofReceiptCountryName_25" minOccurs="0" Length="25"/>
+              <Field Name="FreightForwarderIndicator_26" minOccurs="0" Length="1"/>
+              <Field Name="FirstLocalPort_27" minOccurs="0" Length="5"/>
+              <Field Name="PreCarriagePortofLoading_28" minOccurs="0" Length="5"/>
+              <Field Name="SONo_29" minOccurs="0" Length="14"/>
+              <Field Name="IEType_30" minOccurs="0" Length="1"/>
+              <Field Name="Yard_31" minOccurs="0" Length="5"/>
+              <Field Name="DischargePlace_32" minOccurs="0" Length="8"/>
+              <Field Name="MasterBLReference_33" minOccurs="0" Length="20"/>
+              <Field Name="TotalGrossWeight_34" minOccurs="0" Length="12"/>
+              <Field Name="GrossWeightUnit_35" minOccurs="0" Length="3"/>
+              <Field Name="TSPortofLoadCountryCode_36" minOccurs="0" Length="3"/>
+              <Field Name="ChangeDescription_37" minOccurs="0" Length="60"/>
+              <Field Name="ReferenceNumberforPKG_38" minOccurs="0" Length="35"/>
+              <Field Name="MasterBLSCAC_39" minOccurs="0" Length="4"/>
+              <Field Name="HouseBLNumber_40" minOccurs="0" Length="35"/>
+              <Field Name="TransshipmentPlaceCode_41" minOccurs="0" Length="11"/>
+              <Field Name="PlaceofDestinationTransitCode_42" minOccurs="0" Length="11"/>
+              <Field Name="HouseBLSCAC_43" minOccurs="0" Length="4"/>
+              <Field Name="Filler_44" minOccurs="0" Length="5"/>
+            </Component>
+            <Component Name="BA24" TagIdentifier="BA24           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="E2ndNotifyParty1_02" minOccurs="0" Length="4"/>
+              <Field Name="E2ndNotifyParty2_03" minOccurs="0" Length="4"/>
+              <Field Name="E2ndNotifyParty3_04" minOccurs="0" Length="4"/>
+              <Field Name="E2ndNotifyParty4_05" minOccurs="0" Length="4"/>
+              <Field Name="E2ndNotifyParty5_06" minOccurs="0" Length="4"/>
+              <Field Name="E2ndNotifyParty6_07" minOccurs="0" Length="4"/>
+              <Field Name="E2ndNotifyParty7_08" minOccurs="0" Length="4"/>
+              <Field Name="E2ndNotifyParty8_09" minOccurs="0" Length="4"/>
+              <Field Name="CargoValue_10" minOccurs="0" Length="11"/>
+              <Field Name="Filler_11" minOccurs="0" Length="188"/>
+            </Component>
+            <Component Name="BA25" TagIdentifier="BA25           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="ExportClearanceNumber_02" minOccurs="0" Length="35"/>
+              <Field Name="ExemptionGoodCode_03" minOccurs="0" Length="35"/>
+              <Field Name="CustomsReferenceNumber_04" minOccurs="0" Length="35"/>
+              <Field Name="NoOfContainer_05" minOccurs="0" Length="7"/>
+              <Field Name="LineAction_06" minOccurs="0" Length="3"/>
+              <Field Name="InterchangeControlReference_07" minOccurs="0" Length="14"/>
+              <Field Name="SenderReference_08" minOccurs="0" Length="35"/>
+              <Field Name="SenderReferenceVersion_09" minOccurs="0" Length="9"/>
+              <Field Name="MessageFunctionCode_10" minOccurs="0" Length="2"/>
+              <Field Name="PrincipalAgentID_11" minOccurs="0" Length="11"/>
+              <Field Name="ResponsiblePartyClientID_12" minOccurs="0" Length="11"/>
+              <Field Name="ExportType_13" minOccurs="0" Length="3"/>
+              <Field Name="CustomsOffice_14" minOccurs="0" Length="6"/>
+              <Field Name="DocumentDate_15" minOccurs="0" Length="8"/>
+              <Field Name="Filler_16" minOccurs="0" Length="17"/>
+            </Component>
+            <Component Name="PA21" TagIdentifier="PA21           " minOccurs="0" maxOccurs="9">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="PartyCode_02" minOccurs="0" Length="2"/>
+              <Field Name="AgentCode_03" minOccurs="0" Length="20"/>
+              <Field Name="State_04" minOccurs="0" Length="3"/>
+              <Field Name="Country_05" minOccurs="0" Length="3"/>
+              <Field Name="Name_06" minOccurs="0" Length="35"/>
+              <Field Name="PostalCode_07" minOccurs="0" Length="12"/>
+              <Field Name="TelephoneNo_08" minOccurs="0" Length="14"/>
+              <Field Name="FaxNo_09" minOccurs="0" Length="14"/>
+              <Field Name="ContactFirstName_10" minOccurs="0" Length="35"/>
+              <Field Name="ContactLastName_11" minOccurs="0" Length="35"/>
+              <Field Name="CityName_12" minOccurs="0" Length="35"/>
+              <Field Name="EmailID_13" minOccurs="0" Length="20"/>
+              <Field Name="SAPID_14" minOccurs="0" Length="10"/>
+              <Field Name="LongName_15" minOccurs="0" Length="70"/>
+              <Field Name="IDDCountryCode_16" minOccurs="0" Length="4"/>
+              <Field Name="IDDAreaCode_17" minOccurs="0" Length="4"/>
+              <Field Name="AgentBranchCode_18" minOccurs="0" Length="4"/>
+              <Field Name="BranchId_19" minOccurs="0" Length="6"/>
+              <Field Name="Filler_20" minOccurs="0" Length="5"/>
+            </Component>
+            <Component Name="PA22" TagIdentifier="PA22           " minOccurs="0" maxOccurs="9">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="PartyCode_02" minOccurs="0" Length="2"/>
+              <Field Name="Address1_03" minOccurs="0" Length="35"/>
+              <Field Name="Address2_04" minOccurs="0" Length="35"/>
+              <Field Name="Address3_05" minOccurs="0" Length="35"/>
+              <Field Name="Address4_06" minOccurs="0" Length="35"/>
+            </Component>
+            <Component Name="CG21" TagIdentifier="CG21           " minOccurs="0" maxOccurs="9999">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="ChargeType_02" minOccurs="0" Length="15"/>
+              <Field Name="FreightType_03" minOccurs="0" Length="5"/>
+              <Field Name="FreightChargeType_04" minOccurs="0" Length="20"/>
+              <Field Name="FreightTypeReferenceCode_05" minOccurs="0" Length="20"/>
+              <Field Name="BLFreightCalculationMethod_06" minOccurs="0" Length="20"/>
+              <Field Name="TotalAmount_07" minOccurs="0" Length="13"/>
+              <Field Name="PaymentLocation_08" minOccurs="0" Length="3"/>
+              <Field Name="Payer_09" minOccurs="0" Length="35"/>
+              <Field Name="PayerRole_10" minOccurs="0" Length="1"/>
+              <Field Name="Prepaid_11" minOccurs="0" Length="1"/>
+              <Field Name="DisplayinBL_12" minOccurs="0" Length="1"/>
+              <Field Name="Basis_13" minOccurs="0" Length="13"/>
+              <Field Name="Rate_14" minOccurs="0" Length="17"/>
+              <Field Name="Currency_15" minOccurs="0" Length="3"/>
+              <Field Name="BaseRate_16" minOccurs="0" Length="14"/>
+              <Field Name="BaseRateCurrency_17" minOccurs="0" Length="3"/>
+              <Field Name="PaymentCurrency_18" minOccurs="0" Length="3"/>
+              <Field Name="BasisUnit_19" minOccurs="0" Length="3"/>
+              <Field Name="PayableElsewhere_20" minOccurs="0" Length="1"/>
+              <Field Name="MethodofPayment_21" minOccurs="0" Length="3"/>
+              <Field Name="PrepaidAmount_22" minOccurs="0" Length="11"/>
+              <Field Name="Filler_23" minOccurs="0" Length="26"/>
+            </Component>
+            <Component Name="PV21" TagIdentifier="PV21           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="VesselCode_02" minOccurs="0" Length="3"/>
+              <Field Name="VoyageNo_03" minOccurs="0" Length="3"/>
+              <Field Name="Direction_04" minOccurs="0" Length="1"/>
+              <Field Name="ETADate_05" minOccurs="0" Length="8"/>
+              <Field Name="ATADate_06" minOccurs="0" Length="8"/>
+              <Field Name="VesselCallSign_07" minOccurs="0" Length="10"/>
+              <Field Name="VesselShippingCoCode_08" minOccurs="0" Length="7"/>
+              <Field Name="LloydsNumber_09" minOccurs="0" Length="7"/>
+              <Field Name="VesselNumber_10" minOccurs="0" Length="9"/>
+              <Field Name="VesselName_11" minOccurs="0" Length="30"/>
+              <Field Name="ExternalVoyageNumber_12" minOccurs="0" Length="8"/>
+              <Field Name="UVRN_13" minOccurs="0" Length="10"/>
+              <Field Name="VesselFlag_14" minOccurs="0" Length="3"/>
+              <Field Name="ETATime_15" minOccurs="0" Length="6"/>
+              <Field Name="ETDDate_16" minOccurs="0" Length="8"/>
+              <Field Name="ETDTime_17" minOccurs="0" Length="6"/>
+              <Field Name="Filler_18" minOccurs="0" Length="104"/>
+            </Component>
+            <Component Name="TS21" TagIdentifier="TS21           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="TSVesselCode_02" minOccurs="0" Length="3"/>
+              <Field Name="TSVesselLloydsNumber_03" minOccurs="0" Length="7"/>
+              <Field Name="TSCallsign_04" minOccurs="0" Length="10"/>
+              <Field Name="TSVoyageNumber_05" minOccurs="0" Length="8"/>
+              <Field Name="TSUVRN_06" minOccurs="0" Length="10"/>
+              <Field Name="TSVesselName_07" minOccurs="0" Length="30"/>
+              <Field Name="TSVesselFlag_08" minOccurs="0" Length="3"/>
+              <Field Name="TSVesselNumber_09" minOccurs="0" Length="9"/>
+              <Field Name="TSNextDischargePort_10" minOccurs="0" Length="5"/>
+              <Field Name="TSVesselETD_11" minOccurs="0" Length="8"/>
+              <Field Name="Filler_12" minOccurs="0" Length="138"/>
+            </Component>
+            <Component Name="BK21" TagIdentifier="BK21           " minOccurs="0" maxOccurs="9999">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="BookingNo_02" minOccurs="0" Length="12"/>
+            </Component>
+            <Component Name="BC21" TagIdentifier="BC21           " minOccurs="0" maxOccurs="99">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="SizeType_02" minOccurs="0" Length="4"/>
+              <Field Name="NumberofContainer_03" minOccurs="0" Length="4"/>
+              <Field Name="FullDescription_04" minOccurs="0" Length="60"/>
+              <Field Name="NumberofPackage_05" minOccurs="0" Length="9"/>
+              <Field Name="PackageUnit_06" minOccurs="0" Length="3"/>
+              <Field Name="GrossWeight_07" minOccurs="0" Length="11"/>
+              <Field Name="GrossWeightUnit_08" minOccurs="0" Length="3"/>
+              <Field Name="Volume_09" minOccurs="0" Length="9"/>
+              <Field Name="VolumeUnit_10" minOccurs="0" Length="3"/>
+              <Field Name="CargoNature_11" minOccurs="0" Length="2"/>
+              <Field Name="FCLIndicator_12" minOccurs="0" Length="1"/>
+              <Field Name="ContainerStatus_13" minOccurs="0" Length="1"/>
+              <Field Name="ReeferIndicator_14" minOccurs="0" Length="1"/>
+              <Field Name="NegativeTemperatureInd_15" minOccurs="0" Length="1"/>
+              <Field Name="ReeferTemperature_16" minOccurs="0" Length="6"/>
+              <Field Name="ReeferTemperatureUnit_17" minOccurs="0" Length="3"/>
+              <Field Name="IMCOClass_18" minOccurs="0" Length="4"/>
+              <Field Name="UNNo_19" minOccurs="0" Length="10"/>
+              <Field Name="Filler_20" minOccurs="0" Length="96"/>
+            </Component>
+            <Component Name="WB21" TagIdentifier="WB21           " minOccurs="0" maxOccurs="99">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="CPWaybillNo_02" minOccurs="0" Length="12"/>
+              <Field Name="CPWaybillInlandMoveID_03" minOccurs="0" Length="20"/>
+              <Field Name="CustomsEntryPort_04" minOccurs="0" Length="15"/>
+              <Field Name="CustomsDestinationPort_05" minOccurs="0" Length="15"/>
+            </Component>
+          </Component>
+        </Component>
+      </Component>
+      <Component Name="BA01_BA01" ObjID="BA01" minOccurs="0" maxOccurs="9999">
+        <Component Name="BA01" TagIdentifier="BA01           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="BLNoOrBKNo_02" minOccurs="0" Length="12"/>
+          <Field Name="MasterBLNumber_03" minOccurs="0" Length="12"/>
+          <Field Name="CustomsOfficeofManifestOrigin_04" minOccurs="0" Length="5"/>
+          <Field Name="CustomsOfficeofManifestDestination_05" minOccurs="0" Length="5"/>
+          <Field Name="PortofLoadingOriginal_06" minOccurs="0" Length="5"/>
+          <Field Name="SpecificCircumstanceIndicator_07" minOccurs="0" Length="1"/>
+          <Field Name="TrafficMode_08" minOccurs="0" Length="2"/>
+          <Field Name="Filler_09" minOccurs="0" Length="2"/>
+          <Field Name="PlaceofReceiptDescription_10" minOccurs="0" Length="60"/>
+          <Field Name="PlaceofReceiptCityCode_11" minOccurs="0" Length="5"/>
+          <Field Name="PlaceofReceiptStateCode_12" minOccurs="0" Length="5"/>
+          <Field Name="PlaceofReceiptCountryCode_13" minOccurs="0" Length="3"/>
+          <Field Name="FinalDestination_14" minOccurs="0" Length="60"/>
+          <Field Name="FinalDestinationCityCode_15" minOccurs="0" Length="5"/>
+          <Field Name="FinalDestinationStateCode_16" minOccurs="0" Length="5"/>
+          <Field Name="FinalDestinationCountryCode_17" minOccurs="0" Length="3"/>
+          <Field Name="ShipperExportDeclarationFlag_18" minOccurs="0" Length="1"/>
+          <Field Name="PreviousPOLATD_19" minOccurs="0" Length="8"/>
+          <Field Name="BLBoundType_20" minOccurs="0" Length="1"/>
+          <Field Name="BLType_21" minOccurs="0" Length="1"/>
+          <Field Name="NVOCCType_22" minOccurs="0" Length="3"/>
+          <Field Name="TransportMovementCode_23" minOccurs="0" Length="1"/>
+          <Field Name="CustomsProcedureCode_24" minOccurs="0" Length="3"/>
+          <Field Name="FDAIndicator_25" minOccurs="0" Length="1"/>
+          <Field Name="FIRMSCode_26" minOccurs="0" Length="4"/>
+          <Field Name="GroupCode_27" minOccurs="0" Length="3"/>
+          <Field Name="SCAC_28" minOccurs="0" Length="8"/>
+          <Field Name="StorageRequestCode_29" minOccurs="0" Length="1"/>
+          <Field Name="ModeofTransport_30" minOccurs="0" Length="3"/>
+          <Field Name="TallyFlag_31" minOccurs="0" Length="1"/>
+        </Component>
+        <Component Name="BA02" TagIdentifier="BA02           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="TSPortofLoadDischarge_02" minOccurs="0" Length="5"/>
+          <Field Name="PortofDischarge_03" minOccurs="0" Length="5"/>
+          <Field Name="PortofDischargeStateCode_04" minOccurs="0" Length="5"/>
+          <Field Name="PartnerCode_05" minOccurs="0" Length="18"/>
+          <Field Name="ReeferCargo_06" minOccurs="0" Length="1"/>
+          <Field Name="FruitandVegetable_07" minOccurs="0" Length="1"/>
+          <Field Name="Placeoflodgmentofdocuments_08" minOccurs="0" Length="60"/>
+          <Field Name="SeawayBillInd_09" minOccurs="0" Length="1"/>
+          <Field Name="WasterCargo_10" minOccurs="0" Length="1"/>
+          <Field Name="WoodPackage_11" minOccurs="0" Length="1"/>
+          <Field Name="TotalGrossWeight_12" minOccurs="0" Length="11"/>
+          <Field Name="GrossWeightUnit_13" minOccurs="0" Length="3"/>
+          <Field Name="TotalNumberofPackage_14" minOccurs="0" Length="9"/>
+          <Field Name="PackageUnit_15" minOccurs="0" Length="3"/>
+          <Field Name="TotalNumberofContainer_16" minOccurs="0" Length="4"/>
+          <Field Name="UnloadPlace_17" minOccurs="0" Length="5"/>
+          <Field Name="PackageUnitAbbreviation_18" minOccurs="0" Length="11"/>
+          <Field Name="ArticleNumber_19" minOccurs="0" Length="20"/>
+          <Field Name="InlandMoveType_20" minOccurs="0" Length="7"/>
+          <Field Name="InlandMoveID_21" minOccurs="0" Length="20"/>
+        </Component>
+        <Component Name="BA03" TagIdentifier="BA03           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="PortofLoadingDescription_02" minOccurs="0" Length="60"/>
+          <Field Name="PortofLoadingStateCode_03" minOccurs="0" Length="5"/>
+          <Field Name="PortofLoadingCountryCode_04" minOccurs="0" Length="3"/>
+          <Field Name="PortofDischargeDescription_05" minOccurs="0" Length="60"/>
+          <Field Name="PortofDischargeCountryCode_06" minOccurs="0" Length="3"/>
+          <Field Name="CallingFacility_07" minOccurs="0" Length="5"/>
+          <Field Name="TransshipmentIndicator_08" minOccurs="0" Length="1"/>
+          <Field Name="FinalDestinationCountryName_09" minOccurs="0" Length="12"/>
+          <Field Name="ExportLicenseNumber_10" minOccurs="0" Length="30"/>
+          <Field Name="OnboardDate_11" minOccurs="0" Length="8"/>
+          <Field Name="BLIssueDate_12" minOccurs="0" Length="8"/>
+          <Field Name="CustomsReturnReferenceNumber_13" minOccurs="0" Length="35"/>
+          <Field Name="ReferenceNumber_14" minOccurs="0" Length="21"/>
+          <Field Name="OriginalReferenceNo_15" minOccurs="0" Length="21"/>
+          <Field Name="EstimatedDateofLoading_16" minOccurs="0" Length="8"/>
+          <Field Name="EstimatedTimeofLoading_17" minOccurs="0" Length="4"/>
+          <Field Name="SupplementaryIndicator_18" minOccurs="0" Length="1"/>
+          <Field Name="SupplementaryReferenceNumber_19" minOccurs="0" Length="25"/>
+          <Field Name="FacilityDescription_20" minOccurs="0" Length="35"/>
+          <Field Name="PlaceofReceiptUNLOCODE_21" minOccurs="0" Length="5"/>
+          <Field Name="FinalDestinationUNLOCODE_22" minOccurs="0" Length="5"/>
+          <Field Name="PortofLoading_23" minOccurs="0" Length="6"/>
+          <Field Name="PortofDischarge_24" minOccurs="0" Length="6"/>
+          <Field Name="PlaceofReceiptCountryName_25" minOccurs="0" Length="25"/>
+          <Field Name="FreightForwarderIndicator_26" minOccurs="0" Length="1"/>
+          <Field Name="FirstLocalPort_27" minOccurs="0" Length="5"/>
+          <Field Name="PreCarriagePortofLoading_28" minOccurs="0" Length="5"/>
+          <Field Name="SONo_29" minOccurs="0" Length="14"/>
+          <Field Name="IEType_30" minOccurs="0" Length="1"/>
+          <Field Name="Yard_31" minOccurs="0" Length="5"/>
+          <Field Name="DischargePlace_32" minOccurs="0" Length="8"/>
+          <Field Name="MasterBLReference_33" minOccurs="0" Length="20"/>
+          <Field Name="TotalGrossWeight_34" minOccurs="0" Length="12"/>
+          <Field Name="GrossWeightUnit_35" minOccurs="0" Length="3"/>
+          <Field Name="TSPortofLoadCountryCode_36" minOccurs="0" Length="3"/>
+          <Field Name="ChangeDescription_37" minOccurs="0" Length="60"/>
+          <Field Name="ReferenceNumberforPKG_38" minOccurs="0" Length="35"/>
+          <Field Name="MasterBLSCAC_39" minOccurs="0" Length="4"/>
+          <Field Name="HouseBLNumber_40" minOccurs="0" Length="35"/>
+          <Field Name="TransshipmentPlaceCode_41" minOccurs="0" Length="11"/>
+          <Field Name="PlaceofDestinationTransitCode_42" minOccurs="0" Length="11"/>
+          <Field Name="HouseBLSCAC_43" minOccurs="0" Length="4"/>
+          <Field Name="Filler_44" minOccurs="0" Length="5"/>
+        </Component>
+        <Component Name="BA03DE" TagIdentifier="BA03DE         " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="PortofLoadingDescription_02" minOccurs="0" Length="60"/>
+          <Field Name="PortofLoadingStateCode_03" minOccurs="0" Length="5"/>
+          <Field Name="PortofLoadingCountryCode_04" minOccurs="0" Length="3"/>
+          <Field Name="PortofDischargeDescription_05" minOccurs="0" Length="60"/>
+          <Field Name="PortofDischargeCountryCode_06" minOccurs="0" Length="3"/>
+          <Field Name="CallingFacility_07" minOccurs="0" Length="5"/>
+          <Field Name="TransshipmentIndicator_08" minOccurs="0" Length="1"/>
+          <Field Name="FinalDestinationCountryName_09" minOccurs="0" Length="12"/>
+          <Field Name="ExportLicenseNumber_10" minOccurs="0" Length="30"/>
+          <Field Name="OnboardDate_11" minOccurs="0" Length="8"/>
+          <Field Name="BLIssueDate_12" minOccurs="0" Length="8"/>
+          <Field Name="CustomsReturnReferenceNumber_13" minOccurs="0" Length="35"/>
+          <Field Name="ReferenceNumber_14" minOccurs="0" Length="21"/>
+          <Field Name="OriginalReferenceNo_15" minOccurs="0" Length="21"/>
+          <Field Name="EstimatedDateofLoading_16" minOccurs="0" Length="8"/>
+          <Field Name="EstimatedTimeofLoading_17" minOccurs="0" Length="4"/>
+          <Field Name="SupplementaryIndicator_18" minOccurs="0" Length="1"/>
+          <Field Name="SupplementaryReferenceNumber_19" minOccurs="0" Length="25"/>
+          <Field Name="FacilityDescription_20" minOccurs="0" Length="35"/>
+          <Field Name="PlaceofReceiptUNLOCODE_21" minOccurs="0" Length="5"/>
+          <Field Name="FinalDestinationUNLOCODE_22" minOccurs="0" Length="5"/>
+          <Field Name="PortofLoading_23" minOccurs="0" Length="6"/>
+          <Field Name="PortofDischarge_24" minOccurs="0" Length="6"/>
+          <Field Name="PlaceofReceiptCountryName_25" minOccurs="0" Length="25"/>
+          <Field Name="FreightForwarderIndicator_26" minOccurs="0" Length="1"/>
+          <Field Name="FirstLocalPort_27" minOccurs="0" Length="5"/>
+          <Field Name="PreCarriagePortofLoading_28" minOccurs="0" Length="5"/>
+          <Field Name="Filler_29" minOccurs="0" Length="30"/>
+          <Field Name="FirstCustomsOfficeOfEntryWithinEU_30" minOccurs="0" Length="30"/>
+          <Field Name="FirstPortOfEntryWithinEU_31" minOccurs="0" Length="3"/>
+          <Field Name="FirstCustomsOfficeOfEntryWithEta_32" minOccurs="0" Length="14"/>
+          <Field Name="FirstCustomsOfficeOfEntryWithEtd_33" minOccurs="0" Length="14"/>
+          <Field Name="TransshipmentPolEtd_34" minOccurs="0" Length="14"/>
+          <Field Name="EmptyReturnContainerDepot_35" minOccurs="0" Length="35"/>
+          <Field Name="FirstPortOfEntryWithinEUName_36" minOccurs="0" Length="35"/>
+          <Field Name="FeederName_37" minOccurs="0" Length="1"/>
+          <Field Name="TransshipmentVesselService_38" minOccurs="0" Length="4"/>
+          <Field Name="TransshipmentVesselExternalVoyageNumber_39" minOccurs="0" Length="8"/>
+          <Field Name="TransshipmentVesselFlag_40" minOccurs="0" Length="2"/>
+          <Field Name="TransshipmentVesselLloydsNumber_41" minOccurs="0" Length="20"/>
+          <Field Name="TransshipmentVesselName_42" minOccurs="0" Length="21"/>
+        </Component>
+        <Component Name="BA04" TagIdentifier="BA04           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="E2ndNotifyParty1_02" minOccurs="0" Length="4"/>
+          <Field Name="E2ndNotifyParty2_03" minOccurs="0" Length="4"/>
+          <Field Name="E2ndNotifyParty3_04" minOccurs="0" Length="4"/>
+          <Field Name="E2ndNotifyParty4_05" minOccurs="0" Length="4"/>
+          <Field Name="E2ndNotifyParty5_06" minOccurs="0" Length="4"/>
+          <Field Name="E2ndNotifyParty6_07" minOccurs="0" Length="4"/>
+          <Field Name="E2ndNotifyParty7_08" minOccurs="0" Length="4"/>
+          <Field Name="E2ndNotifyParty8_09" minOccurs="0" Length="4"/>
+          <Field Name="CargoValue_10" minOccurs="0" Length="11"/>
+          <Field Name="TSPortDescription_11" minOccurs="0" Length="60"/>
+          <Field Name="Filler_12" minOccurs="0" Length="128"/>
+        </Component>
+        <Component Name="BA05" TagIdentifier="BA05           " minOccurs="0" maxOccurs="99">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="ExportClearanceNumber_02" minOccurs="0" Length="35"/>
+          <Field Name="ExemptionGoodCode_03" minOccurs="0" Length="35"/>
+          <Field Name="CustomsReferenceNumber_04" minOccurs="0" Length="35"/>
+          <Field Name="NoOfContainer_05" minOccurs="0" Length="7"/>
+          <Field Name="LineAction_06" minOccurs="0" Length="3"/>
+          <Field Name="InterchangeControlReference_07" minOccurs="0" Length="14"/>
+          <Field Name="SenderReference_08" minOccurs="0" Length="35"/>
+          <Field Name="SenderReferenceVersion_09" minOccurs="0" Length="9"/>
+          <Field Name="MessageFunctionCode_10" minOccurs="0" Length="2"/>
+          <Field Name="PrincipalAgentID_11" minOccurs="0" Length="11"/>
+          <Field Name="ResponsiblePartyClientID_12" minOccurs="0" Length="11"/>
+          <Field Name="ExportType_13" minOccurs="0" Length="3"/>
+          <Field Name="CustomsOffice_14" minOccurs="0" Length="6"/>
+          <Field Name="DocumentDate_15" minOccurs="0" Length="8"/>
+          <Field Name="Filler_16" minOccurs="0" Length="17"/>
+        </Component>
+        <Component Name="BA06" TagIdentifier="BA06           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="ImporterQualifier_02" minOccurs="0" Length="3"/>
+          <Field Name="ImporterNumber_03" minOccurs="0" Length="15"/>
+          <Field Name="DateofBirth_04" minOccurs="0" Length="8"/>
+          <Field Name="ISFImporter_05" minOccurs="0" Length="20"/>
+          <Field Name="ISFBondIndicator_06" minOccurs="0" Length="1"/>
+          <Field Name="CountryofIssuance_07" minOccurs="0" Length="2"/>
+          <Field Name="Agent_08" minOccurs="0" Length="15"/>
+          <Field Name="SuretyCode_09" minOccurs="0" Length="15"/>
+          <Field Name="USCBPEntryNumber_10" minOccurs="0" Length="15"/>
+          <Field Name="ShipmentTypeCode_11" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode1_12" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode2_13" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode3_14" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode4_15" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode5_16" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode6_17" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode7_18" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode8_19" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode9_20" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode10_21" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode11_22" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode12_23" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode13_24" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode14_25" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode15_26" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode16_27" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode17_28" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode18_29" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode19_30" minOccurs="0" Length="2"/>
+          <Field Name="RoutingCountryCode20_31" minOccurs="0" Length="2"/>
+          <Field Name="ControlRefNo_32" minOccurs="0" Length="14"/>
+          <Field Name="UniqueConsignmentReference_33" minOccurs="0" Length="35"/>
+          <Field Name="Filler_34" minOccurs="0" Length="46"/>
+        </Component>
+        <Component Name="BA07" TagIdentifier="BA07           " minOccurs="0" maxOccurs="9999">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="ExportLicenseNumber_02" minOccurs="0" Length="35"/>
+          <Field Name="NumberofPackage_03" minOccurs="0" Length="9"/>
+          <Field Name="PackageUnit_04" minOccurs="0" Length="3"/>
+          <Field Name="GrossWeight_05" minOccurs="0" Length="12"/>
+          <Field Name="GrossWeightUnit_06" minOccurs="0" Length="3"/>
+          <Field Name="Splitshipmentindicator_07" minOccurs="0" Length="1"/>
+          <Field Name="Sequentialnumberofsplitshipment_08" minOccurs="0" Length="1"/>
+          <Field Name="Combinedpackingcode_09" minOccurs="0" Length="3"/>
+          <Field Name="NumberofCombinedPackage_10" minOccurs="0" Length="9"/>
+          <Field Name="CombinedPackageUnit_11" minOccurs="0" Length="3"/>
+          <Field Name="Filler_12" minOccurs="0" Length="152"/>
+        </Component>
+        <Component Name="PA01" TagIdentifier="PA01           " minOccurs="0" maxOccurs="99">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="PartyCode_02" minOccurs="0" Length="2"/>
+          <Field Name="AgentCode_03" minOccurs="0" Length="20"/>
+          <Field Name="State_04" minOccurs="0" Length="3"/>
+          <Field Name="Country_05" minOccurs="0" Length="3"/>
+          <Field Name="Name_06" minOccurs="0" Length="35"/>
+          <Field Name="PostalCode_07" minOccurs="0" Length="12"/>
+          <Field Name="TelephoneNo_08" minOccurs="0" Length="14"/>
+          <Field Name="FaxNo_09" minOccurs="0" Length="14"/>
+          <Field Name="ContactFirstName_10" minOccurs="0" Length="35"/>
+          <Field Name="ContactLastName_11" minOccurs="0" Length="35"/>
+          <Field Name="CityName_12" minOccurs="0" Length="35"/>
+          <Field Name="EmailID_13" minOccurs="0" Length="20"/>
+          <Field Name="SAPID_14" minOccurs="0" Length="10"/>
+          <Field Name="LongName_15" minOccurs="0" Length="70"/>
+          <Field Name="IDDCountryCode_16" minOccurs="0" Length="4"/>
+          <Field Name="IDDAreaCode_17" minOccurs="0" Length="4"/>
+          <Field Name="AgentBranchCode_18" minOccurs="0" Length="4"/>
+          <Field Name="BranchId_19" minOccurs="0" Length="6"/>
+          <Field Name="Filler_20" minOccurs="0" Length="5"/>
+        </Component>
+        <Component Name="PA02" TagIdentifier="PA02           " minOccurs="0" maxOccurs="99">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="PartyCode_02" minOccurs="0" Length="2"/>
+          <Field Name="Address1_03" minOccurs="0" Length="35"/>
+          <Field Name="Address2_04" minOccurs="0" Length="35"/>
+          <Field Name="Address3_05" minOccurs="0" Length="35"/>
+          <Field Name="Address4_06" minOccurs="0" Length="35"/>
+        </Component>
+        <Component Name="PA03" TagIdentifier="PA03           " minOccurs="0" maxOccurs="99">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="PartyCode_02" minOccurs="0" Length="2"/>
+          <Field Name="AddressQualifier1_03" minOccurs="0" Length="2"/>
+          <Field Name="Address1_04" minOccurs="0" Length="35"/>
+          <Field Name="AddressQualifier2_05" minOccurs="0" Length="2"/>
+          <Field Name="Address2_06" minOccurs="0" Length="35"/>
+          <Field Name="AddressQualifier3_07" minOccurs="0" Length="2"/>
+          <Field Name="Address3_08" minOccurs="0" Length="35"/>
+          <Field Name="AddressQualifier4_09" minOccurs="0" Length="2"/>
+          <Field Name="Address4_10" minOccurs="0" Length="35"/>
+          <Field Name="AddressQualifier5_11" minOccurs="0" Length="2"/>
+          <Field Name="Address5_12" minOccurs="0" Length="35"/>
+          <Field Name="AddressQualifier6_13" minOccurs="0" Length="2"/>
+          <Field Name="Address6_14" minOccurs="0" Length="35"/>
+          <Field Name="Filler_15" minOccurs="0" Length="7"/>
+        </Component>
+        <Component Name="PA04" TagIdentifier="PA04           " minOccurs="0" maxOccurs="99">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="PartyCode_02" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber1_03" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin1_04" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber2_05" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin2_06" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber3_07" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin3_08" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber4_09" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin4_10" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber5_11" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin5_12" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber6_13" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin6_14" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber7_15" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin7_16" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber8_17" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin8_18" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber9_19" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin9_20" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber10_21" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin10_22" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber11_23" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin11_24" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber12_25" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin12_26" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber13_27" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin13_28" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber14_29" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin14_30" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber15_31" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin15_32" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber16_33" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin16_34" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber17_35" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin17_36" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber18_37" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin18_38" minOccurs="0" Length="2"/>
+          <Field Name="HarmonizedNumber19_39" minOccurs="0" Length="10"/>
+          <Field Name="CountryofOrigin19_40" minOccurs="0" Length="2"/>
+          <Field Name="Filler_41" minOccurs="0" Length="1"/>
+        </Component>
+        <Component Name="CG01" TagIdentifier="CG01           " minOccurs="0" maxOccurs="9999">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="ChargeType_02" minOccurs="0" Length="15"/>
+          <Field Name="FreightType_03" minOccurs="0" Length="5"/>
+          <Field Name="FreightChargeType_04" minOccurs="0" Length="20"/>
+          <Field Name="FreightTypeReferenceCode_05" minOccurs="0" Length="20"/>
+          <Field Name="BLFreightCalculationMethod_06" minOccurs="0" Length="20"/>
+          <Field Name="TotalAmount_07" minOccurs="0" Length="13"/>
+          <Field Name="PaymentLocation_08" minOccurs="0" Length="3"/>
+          <Field Name="Payer_09" minOccurs="0" Length="35"/>
+          <Field Name="PayerRole_10" minOccurs="0" Length="1"/>
+          <Field Name="Prepaid_11" minOccurs="0" Length="1"/>
+          <Field Name="DisplayinBL_12" minOccurs="0" Length="1"/>
+          <Field Name="Basis_13" minOccurs="0" Length="13"/>
+          <Field Name="Rate_14" minOccurs="0" Length="17"/>
+          <Field Name="Currency_15" minOccurs="0" Length="3"/>
+          <Field Name="BaseRate_16" minOccurs="0" Length="14"/>
+          <Field Name="BaseRateCurrency_17" minOccurs="0" Length="3"/>
+          <Field Name="PaymentCurrency_18" minOccurs="0" Length="3"/>
+          <Field Name="BasisUnit_19" minOccurs="0" Length="3"/>
+          <Field Name="PayableElsewhere_20" minOccurs="0" Length="1"/>
+          <Field Name="MethodofPayment_21" minOccurs="0" Length="3"/>
+          <Field Name="PrepaidAmount_22" minOccurs="0" Length="11"/>
+          <Field Name="Filler_23" minOccurs="0" Length="26"/>
+        </Component>
+        <Component Name="CT11_CT11" ObjID="CT11" minOccurs="0" maxOccurs="9999">
+          <Component Name="CT11" TagIdentifier="CT11           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="ContainerNo_02" minOccurs="0" Length="12"/>
+            <Field Name="VINNumber_03" minOccurs="0" Length="10"/>
+            <Field Name="OOCLOwnedIndicator_04" minOccurs="0" Length="1"/>
+            <Field Name="ResponsiblePartyCodeForNonOOCLConatiner_05" minOccurs="0" Length="10"/>
+            <Field Name="FCLIndicator_06" minOccurs="0" Length="1"/>
+            <Field Name="LCLIndicator_07" minOccurs="0" Length="1"/>
+            <Field Name="FCXIndicator_08" minOccurs="0" Length="1"/>
+            <Field Name="BreakBulkIndicator_09" minOccurs="0" Length="1"/>
+            <Field Name="TrafficMode_10" minOccurs="0" Length="2"/>
+            <Field Name="NoofPackage_11" minOccurs="0" Length="9"/>
+            <Field Name="PackageUnit_12" minOccurs="0" Length="3"/>
+            <Field Name="Bay_13" minOccurs="0" Length="3"/>
+            <Field Name="Row_14" minOccurs="0" Length="2"/>
+            <Field Name="Tier_15" minOccurs="0" Length="2"/>
+            <Field Name="SizeType_16" minOccurs="0" Length="4"/>
+            <Field Name="CabotageIndicator_17" minOccurs="0" Length="1"/>
+            <Field Name="ContainerStatus_18" minOccurs="0" Length="1"/>
+            <Field Name="ContainerMovement_19" minOccurs="0" Length="1"/>
+            <Field Name="ContainerCheckDigit_20" minOccurs="0" Length="1"/>
+            <Field Name="ContainerTareWeight_21" minOccurs="0" Length="10"/>
+            <Field Name="ContainerTareWeightUnit_22" minOccurs="0" Length="3"/>
+            <Field Name="ContainerGrossWeight_23" minOccurs="0" Length="10"/>
+            <Field Name="ContainerGrossWeightUnit_24" minOccurs="0" Length="3"/>
+            <Field Name="ContainerMaterial_25" minOccurs="0" Length="1"/>
+            <Field Name="ReeferIndicator_26" minOccurs="0" Length="1"/>
+            <Field Name="NegativeTemperatureInd_27" minOccurs="0" Length="1"/>
+            <Field Name="ReeferTemperature_28" minOccurs="0" Length="6"/>
+            <Field Name="ReeferTemperatureUnit_29" minOccurs="0" Length="1"/>
+            <Field Name="OverHeight_30" minOccurs="0" Length="1"/>
+            <Field Name="OverLength_31" minOccurs="0" Length="1"/>
+            <Field Name="OverwidthRight_32" minOccurs="0" Length="1"/>
+            <Field Name="OverwidthLeft_33" minOccurs="0" Length="1"/>
+            <Field Name="UnderbondIndicator_34" minOccurs="0" Length="1"/>
+            <Field Name="SOCIndicator_35" minOccurs="0" Length="1"/>
+            <Field Name="DirectDeliveryIndicator_36" minOccurs="0" Length="1"/>
+            <Field Name="ContainerRemarks_37" minOccurs="0" Length="57"/>
+            <Field Name="SpecialHandleCode_38" minOccurs="0" Length="3"/>
+            <Field Name="ArticleNumber_39" minOccurs="0" Length="20"/>
+            <Field Name="InlandMoveType_40" minOccurs="0" Length="7"/>
+            <Field Name="InlandMoveID_41" minOccurs="0" Length="20"/>
+            <Field Name="PlaceOfDelivery_42" minOccurs="0" Length="5"/>
+            <Field Name="PortofDischarge_43" minOccurs="0" Length="5"/>
+            <Field Name="PortofLoading_44" minOccurs="0" Length="5"/>
+            <Field Name="FinalDestination_45" minOccurs="0" Length="5"/>
+          </Component>
+          <Component Name="CT12" TagIdentifier="CT12           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="UnderbondMovementType_02" minOccurs="0" Length="1"/>
+            <Field Name="FromPremiseID_03" minOccurs="0" Length="25"/>
+            <Field Name="ToPremiseID_04" minOccurs="0" Length="25"/>
+            <Field Name="UnderbondLloydsNumber_05" minOccurs="0" Length="7"/>
+            <Field Name="UnderbondVoyageNumber_06" minOccurs="0" Length="8"/>
+            <Field Name="PersonalEffectInd_07" minOccurs="0" Length="1"/>
+            <Field Name="TimberInd_08" minOccurs="0" Length="1"/>
+            <Field Name="WarehouseCode_09" minOccurs="0" Length="8"/>
+            <Field Name="OverHeight_10" minOccurs="0" Length="4"/>
+            <Field Name="OverwidthRight_11" minOccurs="0" Length="4"/>
+            <Field Name="OverwidthLeft_12" minOccurs="0" Length="4"/>
+            <Field Name="ContainerType_13" minOccurs="0" Length="4"/>
+            <Field Name="UnderbondRequestReason_14" minOccurs="0" Length="3"/>
+            <Field Name="UnderbondModeofMovement_15" minOccurs="0" Length="3"/>
+            <Field Name="UnderbondTransshipmentOverseasDestinationPort_16" minOccurs="0" Length="5"/>
+            <Field Name="LineAction_17" minOccurs="0" Length="3"/>
+            <Field Name="AttachedEquipmentInd_18" minOccurs="0" Length="1"/>
+            <Field Name="ProhibitedPackagingInd_19" minOccurs="0" Length="1"/>
+            <Field Name="QuarantineCode_20" minOccurs="0" Length="1"/>
+            <Field Name="ContainerOperator_21" minOccurs="0" Length="35"/>
+            <Field Name="OverlengthFrontLeft_22" minOccurs="0" Length="4"/>
+            <Field Name="OverlengthBackRight_23" minOccurs="0" Length="4"/>
+            <Field Name="TrafficModeDescription_24" minOccurs="0" Length="10"/>
+            <Field Name="ContainerWeight_25" minOccurs="0" Length="11"/>
+            <Field Name="BNumber_26" minOccurs="0" Length="35"/>
+            <Field Name="ContainerGrossWeight_27" minOccurs="0" Length="11"/>
+            <Field Name="ContainerGrossWeightUnit_28" minOccurs="0" Length="3"/>
+            <Field Name="RackIndicator_29" minOccurs="0" Length="4"/>
+            <Field Name="Filler_30" minOccurs="0" Length="5"/>
+          </Component>
+          <Component Name="SL11" TagIdentifier="SL11           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="Type1_02" minOccurs="0" Length="2"/>
+            <Field Name="SealNo1_03" minOccurs="0" Length="15"/>
+            <Field Name="Type2_04" minOccurs="0" Length="2"/>
+            <Field Name="SealNo2_05" minOccurs="0" Length="15"/>
+            <Field Name="Type3_06" minOccurs="0" Length="2"/>
+            <Field Name="SealNo3_07" minOccurs="0" Length="15"/>
+            <Field Name="Type4_08" minOccurs="0" Length="2"/>
+            <Field Name="SealNo4_09" minOccurs="0" Length="15"/>
+            <Field Name="Type5_10" minOccurs="0" Length="2"/>
+            <Field Name="SealNo5_11" minOccurs="0" Length="15"/>
+            <Field Name="Type6_12" minOccurs="0" Length="2"/>
+            <Field Name="SealNo6_13" minOccurs="0" Length="15"/>
+            <Field Name="Type7_14" minOccurs="0" Length="2"/>
+            <Field Name="SealNo7_15" minOccurs="0" Length="15"/>
+            <Field Name="Type8_16" minOccurs="0" Length="2"/>
+            <Field Name="SealNo8_17" minOccurs="0" Length="15"/>
+            <Field Name="Type9_18" minOccurs="0" Length="2"/>
+            <Field Name="SealNo9_19" minOccurs="0" Length="15"/>
+            <Field Name="Type10_20" minOccurs="0" Length="2"/>
+            <Field Name="SealNo10_21" minOccurs="0" Length="15"/>
+            <Field Name="Type11_22" minOccurs="0" Length="2"/>
+            <Field Name="SealNo11_23" minOccurs="0" Length="15"/>
+            <Field Name="Type12_24" minOccurs="0" Length="2"/>
+            <Field Name="SealNo12_25" minOccurs="0" Length="15"/>
+          </Component>
+          <Component Name="CT14" TagIdentifier="CT14           " minOccurs="0" maxOccurs="9999">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="VIN_02" minOccurs="0" Length="30"/>
+            <Field Name="NoOfRack_03" minOccurs="0" Length="6"/>
+            <Field Name="RackTypeDesc_04" minOccurs="0" Length="195"/>
+          </Component>
+          <Component Name="INTMDL11" TagIdentifier="INTMDL11       " minOccurs="0" maxOccurs="9">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="InboundIntermodelFacility_02" minOccurs="0" Length="5"/>
+          </Component>
+          <Component Name="LP01_LP01" ObjID="LP01" minOccurs="0" maxOccurs="9999">
+            <Component Name="LP01" TagIdentifier="LP01           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="BLNumber_02" minOccurs="0" Length="12"/>
+              <Field Name="ContainerSequence_03" minOccurs="0" Length="4"/>
+              <Field Name="ItemSequence_04" minOccurs="0" Length="4"/>
+              <Field Name="LoadingSequence_05" minOccurs="0" Length="4"/>
+              <Field Name="NoofPackage_06" minOccurs="0" Length="9"/>
+              <Field Name="PackageUnit_07" minOccurs="0" Length="3"/>
+              <Field Name="Weight_08" minOccurs="0" Length="10"/>
+              <Field Name="WeightUnit_09" minOccurs="0" Length="3"/>
+              <Field Name="Measurement_10" minOccurs="0" Length="10"/>
+              <Field Name="MeasurementUnit_11" minOccurs="0" Length="3"/>
+            </Component>
+            <Component Name="IT11" TagIdentifier="IT11           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="CountryofOriginofGoods_02" minOccurs="0" Length="3"/>
+              <Field Name="NoofPackage_03" minOccurs="0" Length="9"/>
+              <Field Name="PackageUnit_04" minOccurs="0" Length="3"/>
+              <Field Name="BriefDescriptions_05" minOccurs="0" Length="35"/>
+              <Field Name="FullDescriptions_06" minOccurs="0" Length="60"/>
+              <Field Name="NetWeight_07" minOccurs="0" Length="11"/>
+              <Field Name="NetWeightUnit_08" minOccurs="0" Length="3"/>
+              <Field Name="GrossWeight_09" minOccurs="0" Length="11"/>
+              <Field Name="GrossWeightUnit_10" minOccurs="0" Length="3"/>
+              <Field Name="Length_11" minOccurs="0" Length="9"/>
+              <Field Name="LengthUnit_12" minOccurs="0" Length="1"/>
+              <Field Name="Width_13" minOccurs="0" Length="9"/>
+              <Field Name="WidthUnit_14" minOccurs="0" Length="1"/>
+              <Field Name="Height_15" minOccurs="0" Length="9"/>
+              <Field Name="HeightUnit_16" minOccurs="0" Length="1"/>
+              <Field Name="Volume_17" minOccurs="0" Length="9"/>
+              <Field Name="VolumeUnit_18" minOccurs="0" Length="3"/>
+              <Field Name="TransshipmentInd_19" minOccurs="0" Length="1"/>
+              <Field Name="FumigationInd_20" minOccurs="0" Length="1"/>
+              <Field Name="PerishableInd_21" minOccurs="0" Length="1"/>
+              <Field Name="FlammableLiquidInd_22" minOccurs="0" Length="1"/>
+              <Field Name="PersonalEffectInd_23" minOccurs="0" Length="1"/>
+              <Field Name="TimberInd_24" minOccurs="0" Length="1"/>
+              <Field Name="HazardousInd_25" minOccurs="0" Length="1"/>
+              <Field Name="ReeferInd_26" minOccurs="0" Length="1"/>
+              <Field Name="NegativeTemperatureInd_27" minOccurs="0" Length="1"/>
+              <Field Name="ReeferTemperature_28" minOccurs="0" Length="6"/>
+              <Field Name="ReeferTemperatureUnit_29" minOccurs="0" Length="1"/>
+              <Field Name="DGInd_30" minOccurs="0" Length="1"/>
+              <Field Name="HarmonizedCode_31" minOccurs="0" Length="12"/>
+              <Field Name="CustomsStatusofGoods_32" minOccurs="0" Length="3"/>
+              <Field Name="CargoNature_33" minOccurs="0" Length="2"/>
+              <Field Name="ArticleNumber_34" minOccurs="0" Length="5"/>
+              <Field Name="InlandMoveID_35" minOccurs="0" Length="6"/>
+            </Component>
+            <Component Name="IT12" TagIdentifier="IT12           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="LineAction_02" minOccurs="0" Length="1"/>
+              <Field Name="PackageCodeDescription_03" minOccurs="0" Length="30"/>
+              <Field Name="CargoCode_04" minOccurs="0" Length="3"/>
+              <Field Name="TariffNumber_05" minOccurs="0" Length="10"/>
+              <Field Name="GensetType_06" minOccurs="0" Length="2"/>
+              <Field Name="VentilationValue_07" minOccurs="0" Length="3"/>
+              <Field Name="VentilationScale_08" minOccurs="0" Length="3"/>
+              <Field Name="Filler_09" minOccurs="0" Length="179"/>
+            </Component>
+            <Component Name="DG11" TagIdentifier="DG11           " minOccurs="0" maxOccurs="999">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="ItemSequenceNo_02" minOccurs="0" Length="4"/>
+              <Field Name="IMCOClass_03" minOccurs="0" Length="4"/>
+              <Field Name="UNNo_04" minOccurs="0" Length="10"/>
+              <Field Name="FlashPointNegativeInd_05" minOccurs="0" Length="1"/>
+              <Field Name="FlashPoint_06" minOccurs="0" Length="6"/>
+              <Field Name="FlashPointUnit_07" minOccurs="0" Length="1"/>
+              <Field Name="DangerousGoodsLabel1_08" minOccurs="0" Length="30"/>
+              <Field Name="DangerousGoodsLabel2_09" minOccurs="0" Length="30"/>
+              <Field Name="DangerousGoodsLabel3_10" minOccurs="0" Length="30"/>
+              <Field Name="DangerousGoodsLabel4_11" minOccurs="0" Length="30"/>
+              <Field Name="TechnicalName_12" minOccurs="0" Length="180"/>
+              <Field Name="EmergencyContactName_13" minOccurs="0" Length="35"/>
+              <Field Name="EmergencyContactNumber1_14" minOccurs="0" Length="18"/>
+              <Field Name="ProperShippingName_15" minOccurs="0" Length="60"/>
+              <Field Name="IMCOPage_16" minOccurs="0" Length="8"/>
+              <Field Name="PackageGroup_17" minOccurs="0" Length="5"/>
+              <Field Name="MFAG_18" minOccurs="0" Length="10"/>
+              <Field Name="GrossWeight_19" minOccurs="0" Length="15"/>
+              <Field Name="GrossWeightUnit_20" minOccurs="0" Length="3"/>
+              <Field Name="NoofPackages_21" minOccurs="0" Length="9"/>
+              <Field Name="PackagingCode_22" minOccurs="0" Length="3"/>
+              <Field Name="EmergencyScheduledReference_23" minOccurs="0" Length="6"/>
+              <Field Name="MarinePollutant_24" minOccurs="0" Length="1"/>
+              <Field Name="NetExplosiveWeight_25" minOccurs="0" Length="15"/>
+              <Field Name="NetExplosiveWeightUnit_26" minOccurs="0" Length="3"/>
+              <Field Name="HandlingCode_27" minOccurs="0" Length="3"/>
+              <Field Name="HandlingInstruction_28" minOccurs="0" Length="122"/>
+              <Field Name="EmergencyContactNumber2_29" minOccurs="0" Length="18"/>
+              <Field Name="NetWeight_30" minOccurs="0" Length="11"/>
+              <Field Name="NetWeightUnit_31" minOccurs="0" Length="3"/>
+              <Field Name="PackageCodeDescription_32" minOccurs="0" Length="35"/>
+              <Field Name="FlashPointIndicator_33" minOccurs="0" Length="1"/>
+              <Field Name="StorageRequestCode_34" minOccurs="0" Length="1"/>
+              <Field Name="PackageGroupDescription_35" minOccurs="0" Length="5"/>
+              <Field Name="SubsidiaryRisk1_36" minOccurs="0" Length="8"/>
+              <Field Name="SubsidiaryRisk2_37" minOccurs="0" Length="8"/>
+            </Component>
+            <Component Name="ID11" TagIdentifier="ID11           " minOccurs="0" maxOccurs="9999">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="MarksandNos_02" minOccurs="0" Length="15"/>
+              <Field Name="ItemDescriptions_03" minOccurs="0" Length="70"/>
+            </Component>
+          </Component>
+        </Component>
+        <Component Name="IT01_IT01" ObjID="IT01" minOccurs="0" maxOccurs="9999">
+          <Component Name="IT01" TagIdentifier="IT01           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="CountryofOriginofGoods_02" minOccurs="0" Length="3"/>
+            <Field Name="NoofPackage_03" minOccurs="0" Length="9"/>
+            <Field Name="PackageUnit_04" minOccurs="0" Length="3"/>
+            <Field Name="BriefDescriptions_05" minOccurs="0" Length="35"/>
+            <Field Name="FullDescriptions_06" minOccurs="0" Length="60"/>
+            <Field Name="NetWeight_07" minOccurs="0" Length="11"/>
+            <Field Name="NetWeightUnit_08" minOccurs="0" Length="3"/>
+            <Field Name="GrossWeight_09" minOccurs="0" Length="11"/>
+            <Field Name="GrossWeightUnit_10" minOccurs="0" Length="3"/>
+            <Field Name="Length_11" minOccurs="0" Length="9"/>
+            <Field Name="LengthUnit_12" minOccurs="0" Length="1"/>
+            <Field Name="Width_13" minOccurs="0" Length="9"/>
+            <Field Name="WidthUnit_14" minOccurs="0" Length="1"/>
+            <Field Name="Height_15" minOccurs="0" Length="9"/>
+            <Field Name="HeightUnit_16" minOccurs="0" Length="1"/>
+            <Field Name="Volume_17" minOccurs="0" Length="9"/>
+            <Field Name="VolumeUnit_18" minOccurs="0" Length="3"/>
+            <Field Name="TransshipmentInd_19" minOccurs="0" Length="1"/>
+            <Field Name="FumigationInd_20" minOccurs="0" Length="1"/>
+            <Field Name="PerishableInd_21" minOccurs="0" Length="1"/>
+            <Field Name="FlammableLiquidInd_22" minOccurs="0" Length="1"/>
+            <Field Name="PersonalEffectInd_23" minOccurs="0" Length="1"/>
+            <Field Name="TimberInd_24" minOccurs="0" Length="1"/>
+            <Field Name="HazardousInd_25" minOccurs="0" Length="1"/>
+            <Field Name="ReeferInd_26" minOccurs="0" Length="1"/>
+            <Field Name="NegativeTemperatureInd_27" minOccurs="0" Length="1"/>
+            <Field Name="ReeferTemperature_28" minOccurs="0" Length="6"/>
+            <Field Name="ReeferTemperatureUnit_29" minOccurs="0" Length="1"/>
+            <Field Name="DGInd_30" minOccurs="0" Length="1"/>
+            <Field Name="HarmonizedCode_31" minOccurs="0" Length="12"/>
+            <Field Name="CustomsStatusofGoods_32" minOccurs="0" Length="3"/>
+            <Field Name="CargoNature_33" minOccurs="0" Length="2"/>
+            <Field Name="ArticleNumber_34" minOccurs="0" Length="5"/>
+            <Field Name="InlandMoveID_35" minOccurs="0" Length="6"/>
+          </Component>
+          <Component Name="IT02" TagIdentifier="IT02           " minOccurs="0">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="LineAction_02" minOccurs="0" Length="1"/>
+            <Field Name="PackageCodeDescription_03" minOccurs="0" Length="30"/>
+            <Field Name="CargoCode_04" minOccurs="0" Length="3"/>
+            <Field Name="TariffNumber_05" minOccurs="0" Length="10"/>
+            <Field Name="GensetType_06" minOccurs="0" Length="2"/>
+            <Field Name="VentilationValue_07" minOccurs="0" Length="3"/>
+            <Field Name="VentilationScale_08" minOccurs="0" Length="3"/>
+            <Field Name="Filler_09" minOccurs="0" Length="179"/>
+          </Component>
+          <Component Name="IT03" TagIdentifier="IT03           " minOccurs="0" maxOccurs="99">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="DescriptionRecordNo_02" minOccurs="0" Length="4"/>
+            <Field Name="CargoDescription_03" minOccurs="0" Length="200"/>
+            <Field Name="Filler_04" minOccurs="0" Length="27"/>
+          </Component>
+          <Component Name="DG01" TagIdentifier="DG01           " minOccurs="0" maxOccurs="999">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="ItemSequenceNo_02" minOccurs="0" Length="4"/>
+            <Field Name="IMCOClass_03" minOccurs="0" Length="4"/>
+            <Field Name="UNNo_04" minOccurs="0" Length="10"/>
+            <Field Name="FlashPointNegativeInd_05" minOccurs="0" Length="1"/>
+            <Field Name="FlashPoint_06" minOccurs="0" Length="6"/>
+            <Field Name="FlashPointUnit_07" minOccurs="0" Length="1"/>
+            <Field Name="DangerousGoodsLabel1_08" minOccurs="0" Length="30"/>
+            <Field Name="DangerousGoodsLabel2_09" minOccurs="0" Length="30"/>
+            <Field Name="DangerousGoodsLabel3_10" minOccurs="0" Length="30"/>
+            <Field Name="DangerousGoodsLabel4_11" minOccurs="0" Length="30"/>
+            <Field Name="TechnicalName_12" minOccurs="0" Length="180"/>
+            <Field Name="EmergencyContactName_13" minOccurs="0" Length="35"/>
+            <Field Name="EmergencyContactNumber1_14" minOccurs="0" Length="18"/>
+            <Field Name="ProperShippingName_15" minOccurs="0" Length="60"/>
+            <Field Name="IMCOPage_16" minOccurs="0" Length="8"/>
+            <Field Name="PackageGroup_17" minOccurs="0" Length="5"/>
+            <Field Name="MFAG_18" minOccurs="0" Length="10"/>
+            <Field Name="GrossWeight_19" minOccurs="0" Length="15"/>
+            <Field Name="GrossWeightUnit_20" minOccurs="0" Length="3"/>
+            <Field Name="NoofPackages_21" minOccurs="0" Length="9"/>
+            <Field Name="PackagingCode_22" minOccurs="0" Length="3"/>
+            <Field Name="EmergencyScheduledReference_23" minOccurs="0" Length="6"/>
+            <Field Name="MarinePollutant_24" minOccurs="0" Length="1"/>
+            <Field Name="NetExplosiveWeight_25" minOccurs="0" Length="15"/>
+            <Field Name="NetExplosiveWeightUnit_26" minOccurs="0" Length="3"/>
+            <Field Name="HandlingCode_27" minOccurs="0" Length="3"/>
+            <Field Name="HandlingInstruction_28" minOccurs="0" Length="122"/>
+            <Field Name="EmergencyContactNumber2_29" minOccurs="0" Length="18"/>
+            <Field Name="NetWeight_30" minOccurs="0" Length="11"/>
+            <Field Name="NetWeightUnit_31" minOccurs="0" Length="3"/>
+            <Field Name="PackageCodeDescription_32" minOccurs="0" Length="35"/>
+            <Field Name="FlashPointIndicator_33" minOccurs="0" Length="1"/>
+            <Field Name="StorageRequestCode_34" minOccurs="0" Length="1"/>
+            <Field Name="PackageGroupDescription_35" minOccurs="0" Length="5"/>
+            <Field Name="SubsidiaryRisk1_36" minOccurs="0" Length="8"/>
+            <Field Name="SubsidiaryRisk2_37" minOccurs="0" Length="8"/>
+          </Component>
+          <Component Name="ID01" TagIdentifier="ID01           " minOccurs="0" maxOccurs="9999">
+            <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+            <Field Name="MarksandNos_02" minOccurs="0" Length="15"/>
+            <Field Name="ItemDescriptions_03" minOccurs="0" Length="70"/>
+          </Component>
+          <Component Name="CT21_CT21" ObjID="CT21" minOccurs="0" maxOccurs="9999">
+            <Component Name="CT21" TagIdentifier="CT21           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="ContainerNo_02" minOccurs="0" Length="12"/>
+              <Field Name="VINNumber_03" minOccurs="0" Length="10"/>
+              <Field Name="OOCLOwnedIndicator_04" minOccurs="0" Length="1"/>
+              <Field Name="ResponsiblePartyCodeForNonOOCLConatiner_05" minOccurs="0" Length="10"/>
+              <Field Name="FCLIndicator_06" minOccurs="0" Length="1"/>
+              <Field Name="LCLIndicator_07" minOccurs="0" Length="1"/>
+              <Field Name="FCXIndicator_08" minOccurs="0" Length="1"/>
+              <Field Name="BreakBulkIndicator_09" minOccurs="0" Length="1"/>
+              <Field Name="TrafficMode_10" minOccurs="0" Length="2"/>
+              <Field Name="NoofPackage_11" minOccurs="0" Length="9"/>
+              <Field Name="PackageUnit_12" minOccurs="0" Length="3"/>
+              <Field Name="Bay_13" minOccurs="0" Length="3"/>
+              <Field Name="Row_14" minOccurs="0" Length="2"/>
+              <Field Name="Tier_15" minOccurs="0" Length="2"/>
+              <Field Name="SizeType_16" minOccurs="0" Length="4"/>
+              <Field Name="CabotageIndicator_17" minOccurs="0" Length="1"/>
+              <Field Name="ContainerStatus_18" minOccurs="0" Length="1"/>
+              <Field Name="ContainerMovement_19" minOccurs="0" Length="1"/>
+              <Field Name="ContainerCheckDigit_20" minOccurs="0" Length="1"/>
+              <Field Name="ContainerTareWeight_21" minOccurs="0" Length="10"/>
+              <Field Name="ContainerTareWeightUnit_22" minOccurs="0" Length="3"/>
+              <Field Name="ContainerGrossWeight_23" minOccurs="0" Length="10"/>
+              <Field Name="ContainerGrossWeightUnit_24" minOccurs="0" Length="3"/>
+              <Field Name="ContainerMaterial_25" minOccurs="0" Length="1"/>
+              <Field Name="ReeferIndicator_26" minOccurs="0" Length="1"/>
+              <Field Name="NegativeTemperatureInd_27" minOccurs="0" Length="1"/>
+              <Field Name="ReeferTemperature_28" minOccurs="0" Length="6"/>
+              <Field Name="ReeferTemperatureUnit_29" minOccurs="0" Length="1"/>
+              <Field Name="OverHeight_30" minOccurs="0" Length="1"/>
+              <Field Name="OverLength_31" minOccurs="0" Length="1"/>
+              <Field Name="OverwidthRight_32" minOccurs="0" Length="1"/>
+              <Field Name="OverwidthLeft_33" minOccurs="0" Length="1"/>
+              <Field Name="UnderbondIndicator_34" minOccurs="0" Length="1"/>
+              <Field Name="SOCIndicator_35" minOccurs="0" Length="1"/>
+              <Field Name="DirectDeliveryIndicator_36" minOccurs="0" Length="1"/>
+              <Field Name="ContainerRemarks_37" minOccurs="0" Length="57"/>
+              <Field Name="SpecialHandleCode_38" minOccurs="0" Length="3"/>
+              <Field Name="ArticleNumber_39" minOccurs="0" Length="20"/>
+              <Field Name="InlandMoveType_40" minOccurs="0" Length="7"/>
+              <Field Name="InlandMoveID_41" minOccurs="0" Length="20"/>
+              <Field Name="PlaceOfDelivery_42" minOccurs="0" Length="5"/>
+              <Field Name="PortofDischarge_43" minOccurs="0" Length="5"/>
+              <Field Name="PortofLoading_44" minOccurs="0" Length="5"/>
+              <Field Name="FinalDestination_45" minOccurs="0" Length="5"/>
+            </Component>
+            <Component Name="CT22" TagIdentifier="CT22           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="UnderbondMovementType_02" minOccurs="0" Length="1"/>
+              <Field Name="FromPremiseID_03" minOccurs="0" Length="25"/>
+              <Field Name="ToPremiseID_04" minOccurs="0" Length="25"/>
+              <Field Name="UnderbondLloydsNumber_05" minOccurs="0" Length="7"/>
+              <Field Name="UnderbondVoyageNumber_06" minOccurs="0" Length="8"/>
+              <Field Name="PersonalEffectInd_07" minOccurs="0" Length="1"/>
+              <Field Name="TimberInd_08" minOccurs="0" Length="1"/>
+              <Field Name="WarehouseCode_09" minOccurs="0" Length="8"/>
+              <Field Name="OverHeight_10" minOccurs="0" Length="4"/>
+              <Field Name="OverwidthRight_11" minOccurs="0" Length="4"/>
+              <Field Name="OverwidthLeft_12" minOccurs="0" Length="4"/>
+              <Field Name="ContainerType_13" minOccurs="0" Length="4"/>
+              <Field Name="UnderbondRequestReason_14" minOccurs="0" Length="3"/>
+              <Field Name="UnderbondModeofMovement_15" minOccurs="0" Length="3"/>
+              <Field Name="UnderbondTransshipmentOverseasDestinationPort_16" minOccurs="0" Length="5"/>
+              <Field Name="LineAction_17" minOccurs="0" Length="3"/>
+              <Field Name="AttachedEquipmentInd_18" minOccurs="0" Length="1"/>
+              <Field Name="ProhibitedPackagingInd_19" minOccurs="0" Length="1"/>
+              <Field Name="QuarantineCode_20" minOccurs="0" Length="1"/>
+              <Field Name="ContainerOperator_21" minOccurs="0" Length="35"/>
+              <Field Name="OverlengthFrontLeft_22" minOccurs="0" Length="4"/>
+              <Field Name="OverlengthBackRight_23" minOccurs="0" Length="4"/>
+              <Field Name="TrafficModeDescription_24" minOccurs="0" Length="10"/>
+              <Field Name="ContainerWeight_25" minOccurs="0" Length="11"/>
+              <Field Name="BNumber_26" minOccurs="0" Length="35"/>
+              <Field Name="ContainerGrossWeight_27" minOccurs="0" Length="11"/>
+              <Field Name="ContainerGrossWeightUnit_28" minOccurs="0" Length="3"/>
+              <Field Name="RackIndicator_29" minOccurs="0" Length="4"/>
+              <Field Name="Filler_30" minOccurs="0" Length="5"/>
+            </Component>
+            <Component Name="SL21" TagIdentifier="SL21           " minOccurs="0">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="Type1_02" minOccurs="0" Length="2"/>
+              <Field Name="SealNo1_03" minOccurs="0" Length="15"/>
+              <Field Name="Type2_04" minOccurs="0" Length="2"/>
+              <Field Name="SealNo2_05" minOccurs="0" Length="15"/>
+              <Field Name="Type3_06" minOccurs="0" Length="2"/>
+              <Field Name="SealNo3_07" minOccurs="0" Length="15"/>
+              <Field Name="Type4_08" minOccurs="0" Length="2"/>
+              <Field Name="SealNo4_09" minOccurs="0" Length="15"/>
+              <Field Name="Type5_10" minOccurs="0" Length="2"/>
+              <Field Name="SealNo5_11" minOccurs="0" Length="15"/>
+              <Field Name="Type6_12" minOccurs="0" Length="2"/>
+              <Field Name="SealNo6_13" minOccurs="0" Length="15"/>
+              <Field Name="Type7_14" minOccurs="0" Length="2"/>
+              <Field Name="SealNo7_15" minOccurs="0" Length="15"/>
+              <Field Name="Type8_16" minOccurs="0" Length="2"/>
+              <Field Name="SealNo8_17" minOccurs="0" Length="15"/>
+              <Field Name="Type9_18" minOccurs="0" Length="2"/>
+              <Field Name="SealNo9_19" minOccurs="0" Length="15"/>
+              <Field Name="Type10_20" minOccurs="0" Length="2"/>
+              <Field Name="SealNo10_21" minOccurs="0" Length="15"/>
+              <Field Name="Type11_22" minOccurs="0" Length="2"/>
+              <Field Name="SealNo11_23" minOccurs="0" Length="15"/>
+              <Field Name="Type12_24" minOccurs="0" Length="2"/>
+              <Field Name="SealNo12_25" minOccurs="0" Length="15"/>
+            </Component>
+            <Component Name="CT24" TagIdentifier="CT24           " minOccurs="0" maxOccurs="9999">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="VIN_02" minOccurs="0" Length="30"/>
+              <Field Name="NoOfRack_03" minOccurs="0" Length="6"/>
+              <Field Name="RackTypeDesc_04" minOccurs="0" Length="195"/>
+            </Component>
+            <Component Name="INTMDL21" TagIdentifier="INTMDL21       " minOccurs="0" maxOccurs="9">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="InboundIntermodelFacility_02" minOccurs="0" Length="5"/>
+            </Component>
+            <Component Name="LP11" TagIdentifier="LP11           " minOccurs="0" maxOccurs="9999">
+              <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+              <Field Name="ContainerNo_02" minOccurs="0" Length="12"/>
+              <Field Name="ContainerSequence_03" minOccurs="0" Length="4"/>
+              <Field Name="ItemSequence_04" minOccurs="0" Length="4"/>
+              <Field Name="LoadingSequence_05" minOccurs="0" Length="4"/>
+              <Field Name="NoofPackage_06" minOccurs="0" Length="9"/>
+              <Field Name="PackageUnit_07" minOccurs="0" Length="3"/>
+              <Field Name="Weight_08" minOccurs="0" Length="10"/>
+              <Field Name="WeightUnit_09" minOccurs="0" Length="3"/>
+              <Field Name="Measurement_10" minOccurs="0" Length="10"/>
+              <Field Name="MeasurementUnit_11" minOccurs="0" Length="3"/>
+            </Component>
+          </Component>
+        </Component>
+        <Component Name="PV01" TagIdentifier="PV01           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="VesselCode_02" minOccurs="0" Length="3"/>
+          <Field Name="VoyageNo_03" minOccurs="0" Length="3"/>
+          <Field Name="Direction_04" minOccurs="0" Length="1"/>
+          <Field Name="ETADate_05" minOccurs="0" Length="8"/>
+          <Field Name="ATADate_06" minOccurs="0" Length="8"/>
+          <Field Name="VesselCallSign_07" minOccurs="0" Length="10"/>
+          <Field Name="VesselShippingCoCode_08" minOccurs="0" Length="7"/>
+          <Field Name="LloydsNumber_09" minOccurs="0" Length="7"/>
+          <Field Name="VesselNumber_10" minOccurs="0" Length="9"/>
+          <Field Name="VesselName_11" minOccurs="0" Length="30"/>
+          <Field Name="ExternalVoyageNumber_12" minOccurs="0" Length="8"/>
+          <Field Name="UVRN_13" minOccurs="0" Length="10"/>
+          <Field Name="VesselFlag_14" minOccurs="0" Length="3"/>
+          <Field Name="ETATime_15" minOccurs="0" Length="6"/>
+          <Field Name="ETDDate_16" minOccurs="0" Length="8"/>
+          <Field Name="ETDTime_17" minOccurs="0" Length="6"/>
+          <Field Name="Filler_18" minOccurs="0" Length="104"/>
+        </Component>
+        <Component Name="TS01" TagIdentifier="TS01           " minOccurs="0">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="TSVesselCode_02" minOccurs="0" Length="3"/>
+          <Field Name="TSVesselLloydsNumber_03" minOccurs="0" Length="7"/>
+          <Field Name="TSCallsign_04" minOccurs="0" Length="10"/>
+          <Field Name="TSVoyageNumber_05" minOccurs="0" Length="8"/>
+          <Field Name="TSUVRN_06" minOccurs="0" Length="10"/>
+          <Field Name="TSVesselName_07" minOccurs="0" Length="30"/>
+          <Field Name="TSVesselFlag_08" minOccurs="0" Length="3"/>
+          <Field Name="TSVesselNumber_09" minOccurs="0" Length="9"/>
+          <Field Name="TSNextDischargePort_10" minOccurs="0" Length="5"/>
+          <Field Name="TSVesselETD_11" minOccurs="0" Length="8"/>
+          <Field Name="Filler_12" minOccurs="0" Length="138"/>
+        </Component>
+        <Component Name="BK01" TagIdentifier="BK01           " minOccurs="0" maxOccurs="9999">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="BookingNo_02" minOccurs="0" Length="12"/>
+        </Component>
+        <Component Name="BC01" TagIdentifier="BC01           " minOccurs="0" maxOccurs="99">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="SizeType_02" minOccurs="0" Length="4"/>
+          <Field Name="NumberofContainer_03" minOccurs="0" Length="4"/>
+          <Field Name="FullDescription_04" minOccurs="0" Length="60"/>
+          <Field Name="NumberofPackage_05" minOccurs="0" Length="9"/>
+          <Field Name="PackageUnit_06" minOccurs="0" Length="3"/>
+          <Field Name="GrossWeight_07" minOccurs="0" Length="11"/>
+          <Field Name="GrossWeightUnit_08" minOccurs="0" Length="3"/>
+          <Field Name="Volume_09" minOccurs="0" Length="9"/>
+          <Field Name="VolumeUnit_10" minOccurs="0" Length="3"/>
+          <Field Name="CargoNature_11" minOccurs="0" Length="2"/>
+          <Field Name="FCLIndicator_12" minOccurs="0" Length="1"/>
+          <Field Name="ContainerStatus_13" minOccurs="0" Length="1"/>
+          <Field Name="ReeferIndicator_14" minOccurs="0" Length="1"/>
+          <Field Name="NegativeTemperatureInd_15" minOccurs="0" Length="1"/>
+          <Field Name="ReeferTemperature_16" minOccurs="0" Length="6"/>
+          <Field Name="ReeferTemperatureUnit_17" minOccurs="0" Length="3"/>
+          <Field Name="IMCOClass_18" minOccurs="0" Length="4"/>
+          <Field Name="UNNo_19" minOccurs="0" Length="10"/>
+          <Field Name="Filler_20" minOccurs="0" Length="96"/>
+        </Component>
+        <Component Name="WB01" TagIdentifier="WB01           " minOccurs="0" maxOccurs="99">
+          <Field Name="SequenceNo_01" minOccurs="0" Length="4" PositionOffset="15"/>
+          <Field Name="CPWaybillNo_02" minOccurs="0" Length="12"/>
+          <Field Name="CPWaybillInlandMoveID_03" minOccurs="0" Length="20"/>
+          <Field Name="CustomsEntryPort_04" minOccurs="0" Length="15"/>
+          <Field Name="CustomsDestinationPort_05" minOccurs="0" Length="15"/>
+        </Component>
+      </Component>
+      <Component Name="S9999" TagIdentifier="9999           " minOccurs="0">
+        <Field Name="FileId_01" minOccurs="0" Length="8" PositionOffset="15"/>
+        <Field Name="RecordCount_02" minOccurs="0" Length="7"/>
+        <Field Name="ContainerCount_03" minOccurs="0" Length="7"/>
+        <Field Name="BLCount_04" minOccurs="0" Length="7"/>
+        <Field Name="SenderId_05" minOccurs="0" Length="35"/>
+        <Field Name="Filler_06" minOccurs="0" Length="171"/>
+      </Component>
+    </Component>
+  </Component>
+</E2XDefinition>

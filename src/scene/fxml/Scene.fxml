@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="BASELINE_CENTER" hgap="10" prefHeight="658.0" prefWidth="527.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scene.controller.Controller">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="446.0" minWidth="446.0" prefWidth="446.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+    <AnchorPane prefHeight="279.0" prefWidth="446.0">
+         <children>
+            <Text fill="#e8e2e2" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TP_Message:" underline="true" />
+            <Label layoutX="27.0" layoutY="48.0" text="TP_ID：" textFill="#22bbe1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tp_id" layoutX="178.0" layoutY="45.0" />
+            <Label layoutX="26.0" layoutY="79.0" text="ReplacementChar:" textFill="#22bbe1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ReplacementChar" layoutX="178.0" layoutY="77.0" />
+            <Label layoutX="24.0" layoutY="187.0" text="Formate:" textFill="#22bbe1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <VBox layoutX="178.0" layoutY="171.0" />
+            <Label layoutX="26.0" layoutY="113.0" text="IGDefination:" textFill="#22bbe1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="IGDefination" layoutX="178.0" layoutY="111.0" text="CUS_4010_315_CS.xml" />
+            <Label layoutX="26.0" layoutY="146.0" text="InptuFilePath:" textFill="#22bbe1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="formateBox" blendMode="SRC_ATOP" cache="true" layoutX="178.0" layoutY="185.0" prefWidth="150.0" />
+            <TextField fx:id="inputFilePath" layoutX="178.0" layoutY="144.0" text="D:\kukri_sql\EDI\" />
+            <Label layoutX="24.0" layoutY="218.0" text="Message_Type:" textFill="#22bbe1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="messageType" blendMode="SRC_ATOP" cache="true" layoutX="178.0" layoutY="216.0" prefWidth="150.0" />
+            <Label layoutX="22.0" layoutY="253.0" text="DBEnviroment:" textFill="#22bbe1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="dbEnviroment" blendMode="SRC_ATOP" cache="true" layoutX="178.0" layoutY="252.0" prefWidth="150.0" />
+            <Button fx:id="runButton" layoutX="372.0" layoutY="250.0" mnemonicParsing="false" onAction="#runFunction" prefHeight="25.0" prefWidth="80.0" text="BuildJson" textAlignment="CENTER" textFill="#222020">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <ProgressIndicator fx:id="buildJsonProgress" layoutX="478.0" layoutY="246.0" progress="0.0" style="-fx-progress-color: #32cd32;" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <TextArea fx:id="textArea" depthTest="ENABLE" maxHeight="300.0" minHeight="250.0" pickOnBounds="false" prefHeight="800.0" prefWidth="446.0" GridPane.rowIndex="2">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextArea>
+      <Text fill="#f5f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Header Message :" underline="true" wrappingWidth="95.13671875" GridPane.rowIndex="1" />
+      <Separator prefHeight="10.0" prefWidth="446.0" GridPane.rowIndex="4" />
+      <Label text="MappingScriptPath:" textFill="#1cc2e8" translateX="20.0" GridPane.rowIndex="6">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="26.0" layoutY="388.0" text="CommonUtilPath:" textFill="#26b1d3" translateX="20.0" GridPane.rowIndex="8">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="buildSQL" mnemonicParsing="false" onAction="#genSQL" prefHeight="25.0" prefWidth="80.0" text="BuildSQL" textAlignment="CENTER" textFill="#222020" translateX="373.0" GridPane.rowIndex="11">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button fx:id="mappingChoose" mnemonicParsing="false" onAction="#getMappingScriptPath" text="Folder" translateX="400.0" GridPane.rowIndex="6" />
+      <Button fx:id="utilChoose" mnemonicParsing="false" onAction="#getCommonUtiltPath" text="Folder" translateX="400.0" GridPane.rowIndex="8" />
+      <TextField fx:id="mappingScriptPath" maxWidth="240.0" translateX="150.0" GridPane.rowIndex="6" />
+      <TextField fx:id="commonPath" maxWidth="240.0" translateX="150.0" GridPane.rowIndex="8" />
+      <Label text="Choose the file to be generate." textFill="#cedcdd" underline="true" GridPane.rowIndex="9">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="igCheckBox" mnemonicParsing="false" text="IG" textFill="#38bfb6" GridPane.rowIndex="10">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="mappingScriptCheckBox" mnemonicParsing="false" text="MappingScript" textFill="#26b5bf" translateX="100.0" GridPane.rowIndex="10">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="commonCheckBox" mnemonicParsing="false" text="Common" textFill="#4cebe8" translateX="250.0" GridPane.rowIndex="10">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <ProgressIndicator fx:id="buildSQLProgress" progress="0.0" style="-fx-progress-color: #32cd32;" GridPane.columnIndex="2" GridPane.columnSpan="6" GridPane.rowIndex="11" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </ProgressIndicator>
+      <!--<Line endX="350.0" fill="#77bf13" startX="-100.0" stroke="#171717" strokeWidth="2.0" GridPane.rowIndex="10" />!-->
+   </children>
+</GridPane>

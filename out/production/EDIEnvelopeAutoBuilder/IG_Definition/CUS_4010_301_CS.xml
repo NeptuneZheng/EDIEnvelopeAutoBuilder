@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Beluga Parser Definition XML -->
+<!-- Created By: Gawing -->
+<E2XDefinition xmlns="http://www.cargosmart.com/b2b/transformparser/e2x" ElementType="delimited" RecordDelimiter="0x7e 0x0d 0x0a" ElementDelimiter="*" SubElementDelimiter="" X12ReplacementChar="|" isSuppressEmptyNodes="true" isX12="true" isFieldValueTrimRightSpace="false" isFieldValueTrimLeadingSpace="false" OutXMLTargetNameSpace="" OutXMLTargetNameSpacePrefix="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Component Name="T301">
+    <Component Name="ISA" TagIdentifier="ISA" minOccurs="0">
+      <Field Name="I01_01" minOccurs="0" MinLength="2" MaxLength="2"/>
+      <Field Name="I02_02" minOccurs="0" MinLength="10" MaxLength="10"/>
+      <Field Name="I03_03" minOccurs="0" MinLength="2" MaxLength="2"/>
+      <Field Name="I04_04" minOccurs="0" MinLength="10" MaxLength="10"/>
+      <Field Name="I05_05" minOccurs="0" MinLength="2" MaxLength="2"/>
+      <Field Name="I06_06" minOccurs="0" MinLength="15" MaxLength="15"/>
+      <Field Name="I05_07" minOccurs="0" MinLength="2" MaxLength="2"/>
+      <Field Name="I07_08" minOccurs="0" MinLength="15" MaxLength="15"/>
+      <Field Name="I08_09" minOccurs="0" MinLength="6" MaxLength="6"/>
+      <Field Name="I09_10" minOccurs="0" MinLength="4" MaxLength="4"/>
+      <Field Name="I10_11" minOccurs="0" MinLength="1" MaxLength="1"/>
+      <Field Name="I11_12" minOccurs="0" MinLength="5" MaxLength="5"/>
+      <Field Name="I12_13" minOccurs="0" MinLength="9" MaxLength="9"/>
+      <Field Name="I13_14" minOccurs="0" MinLength="1" MaxLength="1"/>
+      <Field Name="I14_15" minOccurs="0" MinLength="1" MaxLength="1"/>
+      <Field Name="I15_16" minOccurs="0" MinLength="1" MaxLength="1"/>
+    </Component>
+    <Component Name="GS" TagIdentifier="GS" minOccurs="0">
+      <Field Name="E479_01" minOccurs="0" MinLength="2" MaxLength="2"/>
+      <Field Name="E142_02" minOccurs="0" MinLength="2" MaxLength="15"/>
+      <Field Name="E124_03" minOccurs="0" MinLength="2" MaxLength="15"/>
+      <Field Name="E373_04" minOccurs="0" MinLength="8" MaxLength="8"/>
+      <Field Name="E337_05" minOccurs="0" MinLength="4" MaxLength="8"/>
+      <Field Name="E28_06" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="9"/>
+      <Field Name="E455_07" minOccurs="0" MinLength="1" MaxLength="2"/>
+      <Field Name="E480_08" minOccurs="0" MinLength="1" MaxLength="12"/>
+    </Component>
+    <!-- for txn envelop behavior, when IsTransactionEnvelope='true', then OnValidationFailBehaviour possible value are: 'FailCompleteMessage' or 'IgnoreProblematicTransactions' -->
+    <Component Name="Loop_ST" IsTransactionEnvelope="true" OnValidationFailBehaviour="IgnoreProblematicTransactions" maxOccurs="unbounded">
+      <Component Name="ST" TagIdentifier="ST" minOccurs="0">
+        <Field Name="E143_01" minOccurs="0" MaxLength="3"/>
+        <Field Name="E329_02" minOccurs="0" MaxLength="9"/>
+      </Component>
+      <Component Name="B1" TagIdentifier="B1" minOccurs="0">
+        <Field Name="E140_01" minOccurs="0" MaxLength="4"/>
+        <Field Name="E145_02" minOccurs="0" MaxLength="30"/>
+        <Field Name="E373_03" minOccurs="0" MaxLength="8"/>
+        <Field Name="E558_04" minOccurs="0" MaxLength="1"/>
+      </Component>
+      <Component Name="G61" TagIdentifier="G61" minOccurs="0" maxOccurs="3">
+        <Field Name="E366_01" minOccurs="0" MaxLength="2"/>
+        <Field Name="E93_02" minOccurs="0" MaxLength="60"/>
+        <Field Name="E365_03" minOccurs="0" MaxLength="2"/>
+        <Field Name="E364_04" minOccurs="0" MaxLength="80"/>
+        <Field Name="E443_05" minOccurs="0" MaxLength="20"/>
+      </Component>
+      <Component Name="Y6" TagIdentifier="Y6" minOccurs="0" maxOccurs="2">
+        <Field Name="E313_01" minOccurs="0" MaxLength="2"/>
+        <Field Name="E151_02" minOccurs="0" MaxLength="20"/>
+        <Field Name="E275_03" minOccurs="0" MaxLength="8"/>
+      </Component>
+      <Component Name="Y3" TagIdentifier="Y3" minOccurs="0">
+        <Field Name="E13_01" minOccurs="0" MaxLength="17"/>
+        <Field Name="E140_02" minOccurs="0" MaxLength="4"/>
+        <Field Name="E373_03" minOccurs="0" MaxLength="8"/>
+        <Field Name="E373_04" minOccurs="0" MaxLength="8"/>
+        <Field Name="E154_05" minOccurs="0" MaxLength="9"/>
+        <Field Name="E112_06" minOccurs="0" MaxLength="14"/>
+        <Field Name="E373_07" minOccurs="0" MaxLength="8"/>
+        <Field Name="E337_08" minOccurs="0" MaxLength="8"/>
+        <Field Name="E91_09" minOccurs="0" MaxLength="2"/>
+        <Field Name="E375_10" minOccurs="0" MaxLength="2"/>
+        <Field Name="E623_11" minOccurs="0" MaxLength="2"/>
+      </Component>
+      <Component Name="Loop_Y4" ObjID="Y4" minOccurs="0" maxOccurs="10">
+        <Component Name="Y4" TagIdentifier="Y4" minOccurs="0">
+          <Field Name="E13_01" minOccurs="0" MaxLength="17"/>
+          <Field Name="E13_02" minOccurs="0" MaxLength="17"/>
+          <Field Name="E373_03" minOccurs="0" MaxLength="8"/>
+          <Field Name="E154_04" minOccurs="0" MaxLength="9"/>
+          <Field Name="E95_05" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="4"/>
+          <Field Name="E24_06" minOccurs="0" MaxLength="4"/>
+          <Field Name="E140_07" minOccurs="0" MaxLength="4"/>
+          <Field Name="E309_08" minOccurs="0" MaxLength="2"/>
+          <Field Name="E310_09" minOccurs="0" MaxLength="30"/>
+          <Field Name="E56_10" minOccurs="0" MaxLength="2"/>
+        </Component>
+        <Component Name="W09" TagIdentifier="W09" minOccurs="0">
+          <Field Name="E40_01" minOccurs="0" MaxLength="2"/>
+          <Field Name="E408_02" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="4"/>
+          <Field Name="E355_03" minOccurs="0" MaxLength="2"/>
+          <Field Name="E408_04" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="4"/>
+          <Field Name="E355_05" minOccurs="0" MaxLength="2"/>
+          <Field Name="E3_06" minOccurs="0" MaxLength="60"/>
+          <Field Name="E1122_07" minOccurs="0" MaxLength="1"/>
+          <Field Name="E488_08" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="3"/>
+          <Field Name="E380_09" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+        </Component>
+      </Component>
+      <Component Name="N9" TagIdentifier="N9" minOccurs="0" maxOccurs="100">
+        <Field Name="E128_01" minOccurs="0" MaxLength="3"/>
+        <Field Name="E127_02" minOccurs="0" MaxLength="80"/>
+        <Field Name="E369_03" minOccurs="0" MaxLength="45"/>
+        <Field Name="E373_04" minOccurs="0" MaxLength="8"/>
+        <Field Name="E337_05" minOccurs="0" MaxLength="8"/>
+        <Field Name="E623_06" minOccurs="0" MaxLength="2"/>
+        <Field Name="C040_07" minOccurs="0">
+          <SubField Name="E128_01" minOccurs="0" MaxLength="3"/>
+          <SubField Name="E127_02" minOccurs="0" MaxLength="80"/>
+          <SubField Name="E128_03" minOccurs="0" MaxLength="3"/>
+          <SubField Name="E127_04" minOccurs="0" MaxLength="80"/>
+          <SubField Name="E128_05" minOccurs="0" MaxLength="3"/>
+          <SubField Name="E127_06" minOccurs="0" MaxLength="80"/>
+        </Field>
+      </Component>
+      <Component Name="R2A" TagIdentifier="R2A" minOccurs="0" maxOccurs="25">
+        <Field Name="E133_01" minOccurs="0" MaxLength="2"/>
+        <Field Name="E1431_02" minOccurs="0" MaxLength="1"/>
+        <Field Name="E91_03" minOccurs="0" MaxLength="2"/>
+        <Field Name="E140_04" minOccurs="0" MaxLength="4"/>
+        <Field Name="E309_05" minOccurs="0" MaxLength="2"/>
+        <Field Name="E310_06" minOccurs="0" MaxLength="30"/>
+        <Field Name="E56_07" minOccurs="0" MaxLength="2"/>
+        <Field Name="E1_08" minOccurs="0" MaxLength="13"/>
+        <Field Name="E742_09" minOccurs="0" MaxLength="35"/>
+        <Field Name="E98_10" minOccurs="0" MaxLength="3"/>
+      </Component>
+      <Component Name="Loop_N1" ObjID="N1" minOccurs="0" maxOccurs="10">
+        <Component Name="N1" TagIdentifier="N1" minOccurs="0">
+          <Field Name="E98_01" minOccurs="0" MaxLength="3"/>
+          <Field Name="E93_02" minOccurs="0" MaxLength="60"/>
+          <Field Name="E66_03" minOccurs="0" MaxLength="2"/>
+          <Field Name="E67_04" minOccurs="0" MaxLength="80"/>
+          <Field Name="E706_05" minOccurs="0" MaxLength="2"/>
+          <Field Name="E98_06" minOccurs="0" MaxLength="3"/>
+        </Component>
+        <Component Name="N2" TagIdentifier="N2" minOccurs="0">
+          <Field Name="E93_01" minOccurs="0" MaxLength="60"/>
+          <Field Name="E93_02" minOccurs="0" MaxLength="60"/>
+        </Component>
+        <Component Name="N3" TagIdentifier="N3" minOccurs="0" maxOccurs="2">
+          <Field Name="E166_01" minOccurs="0" MaxLength="55"/>
+          <Field Name="E166_02" minOccurs="0" MaxLength="55"/>
+        </Component>
+        <Component Name="N4" TagIdentifier="N4" minOccurs="0">
+          <Field Name="E19_01" minOccurs="0" MaxLength="30"/>
+          <Field Name="E156_02" minOccurs="0" MaxLength="2"/>
+          <Field Name="E116_03" minOccurs="0" MaxLength="15"/>
+          <Field Name="E26_04" minOccurs="0" MaxLength="3"/>
+          <Field Name="E309_05" minOccurs="0" MaxLength="2"/>
+          <Field Name="E310_06" minOccurs="0" MaxLength="30"/>
+        </Component>
+        <Component Name="G61" TagIdentifier="G61" minOccurs="0" maxOccurs="3">
+          <Field Name="E366_01" minOccurs="0" MaxLength="2"/>
+          <Field Name="E93_02" minOccurs="0" MaxLength="60"/>
+          <Field Name="E365_03" minOccurs="0" MaxLength="2"/>
+          <Field Name="E364_04" minOccurs="0" MaxLength="80"/>
+          <Field Name="E443_05" minOccurs="0" MaxLength="20"/>
+        </Component>
+      </Component>
+      <Component Name="Loop_R4" ObjID="R4" minOccurs="0" maxOccurs="20">
+        <Component Name="R4" TagIdentifier="R4" minOccurs="0">
+          <Field Name="E115_01" minOccurs="0" MaxLength="1"/>
+          <Field Name="E309_02" minOccurs="0" MaxLength="2"/>
+          <Field Name="E310_03" minOccurs="0" MaxLength="30"/>
+          <Field Name="E114_04" minOccurs="0" MaxLength="24"/>
+          <Field Name="E26_05" minOccurs="0" MaxLength="3"/>
+          <Field Name="E174_06" minOccurs="0" MaxLength="30"/>
+          <Field Name="E113_07" minOccurs="0" MaxLength="4"/>
+          <Field Name="E156_08" minOccurs="0" MaxLength="2"/>
+        </Component>
+        <Component Name="DTM" TagIdentifier="DTM" minOccurs="0" maxOccurs="15">
+          <Field Name="E374_01" minOccurs="0" MaxLength="3"/>
+          <Field Name="E373_02" minOccurs="0" MaxLength="8"/>
+          <Field Name="E337_03" minOccurs="0" MaxLength="8"/>
+          <Field Name="E623_04" minOccurs="0" MaxLength="2"/>
+          <Field Name="E1250_05" minOccurs="0" MaxLength="3"/>
+          <Field Name="E1251_06" minOccurs="0" MaxLength="35"/>
+        </Component>
+      </Component>
+      <Component Name="W09" TagIdentifier="W09" minOccurs="0">
+        <Field Name="E40_01" minOccurs="0" MaxLength="2"/>
+        <Field Name="E408_02" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="4"/>
+        <Field Name="E355_03" minOccurs="0" MaxLength="2"/>
+        <Field Name="E408_04" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="4"/>
+        <Field Name="E355_05" minOccurs="0" MaxLength="2"/>
+        <Field Name="E3_06" minOccurs="0" MaxLength="60"/>
+        <Field Name="E1122_07" minOccurs="0" MaxLength="1"/>
+        <Field Name="E488_08" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="3"/>
+        <Field Name="E380_09" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+      </Component>
+      <Component Name="H3" TagIdentifier="H3" minOccurs="0" maxOccurs="6">
+        <Field Name="E152_01" minOccurs="0" MaxLength="3"/>
+        <Field Name="E153_02" minOccurs="0" MaxLength="30"/>
+        <Field Name="E241_03" minOccurs="0" MaxLength="4"/>
+        <Field Name="E242_04" minOccurs="0" MaxLength="7"/>
+        <Field Name="E257_05" minOccurs="0" MaxLength="1"/>
+      </Component>
+      <Component Name="EA" TagIdentifier="EA" minOccurs="0" maxOccurs="5">
+        <Field Name="E1402_01" minOccurs="0" MaxLength="3"/>
+        <Field Name="C001_02" minOccurs="0">
+          <SubField Name="E355_01" minOccurs="0" MaxLength="2"/>
+          <SubField Name="E1018_02" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+          <SubField Name="E649_03" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="10"/>
+          <SubField Name="E355_04" minOccurs="0" MaxLength="2"/>
+          <SubField Name="E1018_05" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+          <SubField Name="E649_06" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="10"/>
+          <SubField Name="E355_07" minOccurs="0" MaxLength="2"/>
+          <SubField Name="E1018_08" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+          <SubField Name="E649_09" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="10"/>
+          <SubField Name="E355_10" minOccurs="0" MaxLength="2"/>
+          <SubField Name="E1018_11" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+          <SubField Name="E649_12" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="10"/>
+          <SubField Name="E355_13" minOccurs="0" MaxLength="2"/>
+          <SubField Name="E1018_14" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+          <SubField Name="E649_15" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="10"/>
+        </Field>
+        <Field Name="E380_03" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+      </Component>
+      <Component Name="Loop_LX" ObjID="LX" minOccurs="0" maxOccurs="999">
+        <Component Name="LX" TagIdentifier="LX" minOccurs="0">
+          <Field Name="E554_01" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="6"/>
+        </Component>
+        <Component Name="N7" TagIdentifier="N7" minOccurs="0">
+          <Field Name="E206_01" minOccurs="0" MaxLength="4"/>
+          <Field Name="E207_02" minOccurs="0" MaxLength="10"/>
+          <Field Name="E81_03" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="18"/>
+          <Field Name="E187_04" minOccurs="0" MaxLength="2"/>
+          <Field Name="E167_05" minOccurs="0" DataType="Numeric" MinLength="3" MaxLength="8"/>
+          <Field Name="E232_06" minOccurs="0" DataType="Numeric" MinLength="2" MaxLength="6"/>
+          <Field Name="E205_07" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="6"/>
+          <Field Name="E183_08" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="8"/>
+          <Field Name="E184_09" minOccurs="0" MaxLength="1"/>
+          <Field Name="E102_10" minOccurs="0" MaxLength="1"/>
+          <Field Name="E40_11" minOccurs="0" MaxLength="2"/>
+          <Field Name="E140_12" minOccurs="0" MaxLength="4"/>
+          <Field Name="E319_13" minOccurs="0" MaxLength="6"/>
+          <Field Name="E219_14" minOccurs="0" MaxLength="3"/>
+          <Field Name="E567_15" minOccurs="0" DataType="Numeric" MinLength="4" MaxLength="5"/>
+          <Field Name="E571_16" minOccurs="0" MaxLength="1"/>
+          <Field Name="E188_17" minOccurs="0" MaxLength="1"/>
+          <Field Name="E761_18" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="1"/>
+          <Field Name="E56_19" minOccurs="0" MaxLength="2"/>
+          <Field Name="E65_20" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="18"/>
+          <Field Name="E189_21" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="18"/>
+          <Field Name="E24_22" minOccurs="0" MaxLength="4"/>
+          <Field Name="E140_23" minOccurs="0" MaxLength="4"/>
+          <Field Name="E301_24" minOccurs="0" MaxLength="4"/>
+        </Component>
+        <Component Name="W09" TagIdentifier="W09" minOccurs="0">
+          <Field Name="E40_01" minOccurs="0" MaxLength="2"/>
+          <Field Name="E408_02" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="4"/>
+          <Field Name="E355_03" minOccurs="0" MaxLength="2"/>
+          <Field Name="E408_04" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="4"/>
+          <Field Name="E355_05" minOccurs="0" MaxLength="2"/>
+          <Field Name="E3_06" minOccurs="0" MaxLength="60"/>
+          <Field Name="E1122_07" minOccurs="0" MaxLength="1"/>
+          <Field Name="E488_08" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="3"/>
+          <Field Name="E380_09" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+        </Component>
+        <Component Name="K1" TagIdentifier="K1" minOccurs="0" maxOccurs="10">
+          <Field Name="E61_01" minOccurs="0" MaxLength="30"/>
+          <Field Name="E61_02" minOccurs="0" MaxLength="30"/>
+        </Component>
+        <Component Name="L0" TagIdentifier="L0" minOccurs="0">
+          <Field Name="E213_01" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="3"/>
+          <Field Name="E220_02" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="11"/>
+          <Field Name="E221_03" minOccurs="0" MaxLength="2"/>
+          <Field Name="E81_04" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="18"/>
+          <Field Name="E187_05" minOccurs="0" MaxLength="2"/>
+          <Field Name="E183_06" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="8"/>
+          <Field Name="E184_07" minOccurs="0" MaxLength="1"/>
+          <Field Name="E80_08" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="7"/>
+          <Field Name="E211_09" minOccurs="0" MaxLength="3"/>
+          <Field Name="E458_10" minOccurs="0" MaxLength="25"/>
+          <Field Name="E188_11" minOccurs="0" MaxLength="1"/>
+          <Field Name="E56_12" minOccurs="0" MaxLength="2"/>
+          <Field Name="E380_13" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+          <Field Name="E211_14" minOccurs="0" MaxLength="3"/>
+          <Field Name="E1073_15" minOccurs="0" MaxLength="1"/>
+        </Component>
+        <Component Name="L5" TagIdentifier="L5" minOccurs="0">
+          <Field Name="E213_01" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="3"/>
+          <Field Name="E79_02" minOccurs="0" MaxLength="512"/>
+          <Field Name="E22_03" minOccurs="0" MaxLength="30"/>
+          <Field Name="E23_04" minOccurs="0" MaxLength="1"/>
+          <Field Name="E103_05" minOccurs="0" MaxLength="5"/>
+          <Field Name="E87_06" minOccurs="0" MaxLength="48"/>
+          <Field Name="E88_07" minOccurs="0" MaxLength="2"/>
+          <Field Name="E23_08" minOccurs="0" MaxLength="1"/>
+          <Field Name="E22_09" minOccurs="0" MaxLength="30"/>
+          <Field Name="E595_10" minOccurs="0" MaxLength="1"/>
+        </Component>
+        <Component Name="L4" TagIdentifier="L4" minOccurs="0">
+          <Field Name="E82_01" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="18"/>
+          <Field Name="E189_02" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="18"/>
+          <Field Name="E65_03" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="18"/>
+          <Field Name="E90_04" minOccurs="0" MaxLength="1"/>
+          <Field Name="E380_05" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+          <Field Name="E1271_06" minOccurs="0" MaxLength="30"/>
+        </Component>
+        <Component Name="L1" TagIdentifier="L1" minOccurs="0">
+          <Field Name="E213_01" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="3"/>
+          <Field Name="E60_02" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="9"/>
+          <Field Name="E122_03" minOccurs="0" MaxLength="2"/>
+          <Field Name="E58_04" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="12"/>
+          <Field Name="E191_05" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="9"/>
+          <Field Name="E117_06" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="9"/>
+          <Field Name="E120_07" minOccurs="0" MaxLength="9"/>
+          <Field Name="E150_08" minOccurs="0" MaxLength="3"/>
+          <Field Name="E121_09" minOccurs="0" MaxLength="3"/>
+          <Field Name="E39_10" minOccurs="0" MaxLength="1"/>
+          <Field Name="E16_11" minOccurs="0" MaxLength="1"/>
+          <Field Name="E276_12" minOccurs="0" MaxLength="25"/>
+          <Field Name="E257_13" minOccurs="0" MaxLength="1"/>
+          <Field Name="E74_14" minOccurs="0" DataType="Numeric" MinLength="2" MaxLength="12"/>
+          <Field Name="E122_15" minOccurs="0" MaxLength="2"/>
+          <Field Name="E372_16" minOccurs="0" MaxLength="1"/>
+          <Field Name="E220_17" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="11"/>
+          <Field Name="E221_18" minOccurs="0" MaxLength="2"/>
+          <Field Name="E954_19" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="10"/>
+          <Field Name="E100_20" minOccurs="0" MaxLength="3"/>
+          <Field Name="E610_21" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="15"/>
+        </Component>
+        <Component Name="Loop_H1" ObjID="H1" minOccurs="0" maxOccurs="10">
+          <Component Name="H1" TagIdentifier="H1" minOccurs="0">
+            <Field Name="E62_01" minOccurs="0" MaxLength="10"/>
+            <Field Name="E209_02" minOccurs="0" MaxLength="7"/>
+            <Field Name="E208_03" minOccurs="0" MaxLength="1"/>
+            <Field Name="E64_04" minOccurs="0" MaxLength="30"/>
+            <Field Name="E63_05" minOccurs="0" MaxLength="35"/>
+            <Field Name="E200_06" minOccurs="0" MaxLength="6"/>
+            <Field Name="E77_07" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="3"/>
+            <Field Name="E355_08" minOccurs="0" MaxLength="2"/>
+            <Field Name="E254_09" minOccurs="0" MaxLength="3"/>
+          </Component>
+          <Component Name="H2" TagIdentifier="H2" minOccurs="0" maxOccurs="10">
+            <Field Name="E64_01" minOccurs="0" MaxLength="30"/>
+            <Field Name="E274_02" minOccurs="0" MaxLength="30"/>
+          </Component>
+        </Component>
+      </Component>
+      <Component Name="V1" TagIdentifier="V1" minOccurs="0" maxOccurs="2">
+        <Field Name="E597_01" minOccurs="0" MaxLength="20"/>
+        <Field Name="E182_02" minOccurs="0" MaxLength="35"/>
+        <Field Name="E26_03" minOccurs="0" MaxLength="3"/>
+        <Field Name="E55_04" minOccurs="0" MaxLength="17"/>
+        <Field Name="E140_05" minOccurs="0" MaxLength="4"/>
+        <Field Name="E249_06" minOccurs="0" MaxLength="1"/>
+        <Field Name="E854_07" minOccurs="0" MaxLength="2"/>
+        <Field Name="E897_08" minOccurs="0" MaxLength="1"/>
+        <Field Name="E91_09" minOccurs="0" MaxLength="2"/>
+      </Component>
+      <Component Name="V9" TagIdentifier="V9" minOccurs="0" maxOccurs="10">
+        <Field Name="E304_01" minOccurs="0" MaxLength="3"/>
+        <Field Name="E106_02" minOccurs="0" MaxLength="25"/>
+        <Field Name="E373_03" minOccurs="0" MaxLength="8"/>
+        <Field Name="E337_04" minOccurs="0" MaxLength="8"/>
+        <Field Name="E19_05" minOccurs="0" MaxLength="30"/>
+        <Field Name="E156_06" minOccurs="0" MaxLength="2"/>
+        <Field Name="E26_07" minOccurs="0" MaxLength="3"/>
+        <Field Name="E641_08" minOccurs="0" MaxLength="3"/>
+        <Field Name="E154_09" minOccurs="0" MaxLength="9"/>
+        <Field Name="E380_10" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+        <Field Name="E1274_11" minOccurs="0" MaxLength="2"/>
+        <Field Name="E61_12" minOccurs="0" MaxLength="30"/>
+        <Field Name="E623_13" minOccurs="0" MaxLength="2"/>
+        <Field Name="E380_14" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="15"/>
+        <Field Name="E154_15" minOccurs="0" MaxLength="9"/>
+        <Field Name="E86_16" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="3"/>
+        <Field Name="E86_17" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="3"/>
+        <Field Name="E86_18" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="3"/>
+        <Field Name="E81_19" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="18"/>
+        <Field Name="E82_20" minOccurs="0" DataType="Decimal" MinLength="1" MaxLength="18"/>
+      </Component>
+      <Component Name="SE" TagIdentifier="SE" minOccurs="0">
+        <Field Name="E96_01" minOccurs="0" MaxLength="10"/>
+        <Field Name="E329_02" minOccurs="0" MaxLength="9"/>
+      </Component>
+    </Component>
+    <Component Name="GE" TagIdentifier="GE" minOccurs="0">
+      <Field Name="E97_01" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="6"/>
+      <Field Name="E28_02" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="9"/>
+    </Component>
+    <Component Name="IEA" TagIdentifier="IEA" minOccurs="0">
+      <Field Name="I16_01" minOccurs="0" DataType="Numeric" MinLength="1" MaxLength="5"/>
+      <Field Name="I12_02" minOccurs="0" DataType="Numeric" MinLength="9" MaxLength="9"/>
+    </Component>
+  </Component>
+</E2XDefinition>

@@ -1,0 +1,72 @@
+{
+  "definitionFileName": "$DEFINITION$",
+  "TP_ID": "$TP_ID$",
+  "MSG_TYPE_ID": "$MSG_TYPE_ID$",
+  "DIR_ID": "$DIR_ID$",
+  "MSG_FMT_ID": "$MSG_FMT_ID$",
+  "operation": "$OPERATION$",
+  "ediControlNumberSender": "$CTRL_SENDER$",
+  "ediControlNumberReceiver": "$CTRL_RECEIVER$",
+  "ediControlNumberMessageType": "$MSG_TYPE_ID$",
+  "ediControlNumberFormat": "$MSG_FMT_ID$"
+}
+
+<<transformSetting>>
+{
+  "recordDelimiter": "$RECORD_DELIMITER$",
+  "elementDelimiter": "$ELEMENT_DELIMITER$",
+  "subElementDelimiter": "$SUBELE_DELIMITER$",
+  "x12ReplacementChar":"$X12_REPLACER$",
+  "escapeChar": "$ESCAPE_CHAR$",
+  "elementType": "delimited",
+  "isSuppressEmptyNodes": "true",
+  "isX12": "true",
+  "isFieldValueTrimRightSpace": "false",
+  "isFieldValueTrimLeadingSpace": "false",
+  "x12Envelop": {
+    "isa": {
+      "I01_01": "$ISA_01$",
+      "I02_02": "$ISA_02$",
+      "I03_03": "$ISA_03$",
+      "I04_04": "$ISA_04$",
+      "I05_05": "$ISA_05$",
+      "I06_06": "$ISA_06$",
+      "I05_07": "$ISA_07$",
+      "I07_08": "$ISA_08$",
+      "I08_09": "$ISA_09$",
+      "I09_10": "$ISA_10$",
+      "I10_11": "$ISA_11$",
+      "I11_12": "$ISA_12$",
+      "I12_13": "$ISA_13$",
+      "I13_14": "$ISA_14$",
+      "I14_15": "$ISA_15$",
+      "I15_16": "$ISA_16$"
+    },
+    "gs": {
+      "E479_01": "$GS_01$",
+      "E142_02": "$GS_02$",
+      "E124_03": "$GS_03$",
+      "E373_04": "$GS_04$",
+      "E337_05": "$GS_05$",
+      "E28_06": "$GS_06$",
+      "E455_07": "$GS_07$",
+      "E480_08": "$GS_08$"
+    },
+    "st": {
+      "E143_01": "$ST_01$",
+      "E329_02": "%TXN_CTRL_NUM_START%"
+    },
+    "se": {
+      "E96_01": "-",
+      "E329_02": "%TXN_CTRL_NUM_END%"
+    },
+    "ge": {
+      "E97_01": "%TXN_COUNT%",
+      "E28_02": "%GROUP_CTRL_NUM%"
+    },
+    "iea": {
+      "I16_01": "1",
+      "I12_02": "%EDI_CTRL_NUM%"
+    }
+  }
+}

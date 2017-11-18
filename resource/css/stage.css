@@ -1,0 +1,14 @@
+.root{
+    -fx-background-image: url(/images/rootBackground.jpg);
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+}
+/*button类型选择器设置所有Button的背景色*/
+.button {
+    -fx-background-color: darkturquoise;
+}
+
+/*hover伪类选择器设置鼠标移过Button时的背景色*/
+.button:hover {
+    -fx-background-color: lightskyblue;
+}

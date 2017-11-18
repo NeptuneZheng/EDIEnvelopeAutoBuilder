@@ -1,0 +1,2544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Beluga Parser Definition XML for ForeSight -->
+<!-- Created By: Kubo -->
+<E2XDefinition ElementDelimiter="+" ElementType="delimited"
+	EscapeChar="?" OutXMLTargetNameSpace=""
+	OutXMLTargetNameSpacePrefix="" RecordDelimiter="0x27"
+	SubElementDelimiter=":" isEdifact="true"
+	isFieldValueTrimRightSpace="false" isFieldValueTrimLeadingSpace="false" isOutputForesightXML="true"
+	isSuppressEmptyNodes="true"
+	xmlns="http://www.cargosmart.com/b2b/transformparser/e2x" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Component Name="Transactions">
+		<Component Name="Reordered-Transaction">
+			<Component IsTransactionEnvelope="true" Name="T-IFTMBF"
+				OnValidationFailBehaviour="IgnoreProblematicTransactions"
+				OutXMLTargetNameSapce="http://www.tibco.com/ns/Foresight/2010/20" maxOccurs="unbounded">
+				<!-- for txn envelop behavior, OnValidationFailBehaviour possible value are: 'FailCompleteMessage' or 'IgnoreProblematicTransactions' -->
+				<Component Name="S-UNA" TagIdentifier="UNA"
+					maxOccurs="99999999" minOccurs="0">
+					<Field Name="E-UNA01"/>
+					<Field Name="E-UNA02"/>
+					<Field Name="E-UNA03"/>
+					<Field Name="E-UNA04"/>
+					<Field Name="E-UNA05"/>
+					<Field Name="E-UNA06"/>
+				</Component>
+				<Component Name="L-UNB" TagIdentifier="UNB"
+					maxOccurs="99999999" minOccurs="0">
+					<Component Name="S-UNB" TagIdentifier="UNB" minOccurs="0">
+						<Field Name="C-S001_UNB_01" minOccurs="0">
+							<SubField MaxLength="4" MinLength="4" Name="E-0001_UNB_01.01" minOccurs="0"/>
+							<SubField Name="E-0002_UNB_01.02" minOccurs="0"/>
+						</Field>
+						<Field Name="C-S002_UNB_02" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1" Name="E-0004_UNB_02.01" minOccurs="0"/>
+							<SubField MaxLength="4" MinLength="1" Name="E-0007_UNB_02.02" minOccurs="0"/>
+							<SubField MaxLength="14" MinLength="1" Name="E-0008_UNB_02.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-S003_UNB_03" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1" Name="E-0010_UNB_03.01" minOccurs="0"/>
+							<SubField MaxLength="4" MinLength="1" Name="E-0007_UNB_03.02" minOccurs="0"/>
+							<SubField MaxLength="14" MinLength="1" Name="E-0014_UNB_03.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-S004_UNB_04" minOccurs="0">
+							<SubField Name="E-0017_UNB_04.01" minOccurs="0"/>
+							<SubField Name="E-0019_UNB_04.02" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="14" MinLength="1"
+						Name="E-0020_UNB_05" minOccurs="0"/>
+						<Field Name="C-S005_UNB_06" minOccurs="0">
+							<SubField MaxLength="14" MinLength="1" Name="E-0022_UNB_06.01" minOccurs="0"/>
+							<SubField MaxLength="2" MinLength="2" Name="E-0025_UNB_06.02" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="14" MinLength="1" Name="E-0026_UNB_07" minOccurs="0"/>
+						<Field MaxLength="1" MinLength="1" Name="E-0029_UNB_08" minOccurs="0"/>
+						<Field MaxLength="1" MinLength="1" Name="E-0031_UNB_09" minOccurs="0"/>
+						<Field MaxLength="35" MinLength="1" Name="E-0032_UNB_10" minOccurs="0"/>
+						<Field MaxLength="1" MinLength="1" Name="E-0035_UNB_11" minOccurs="0"/>
+					</Component>
+					<Component Name="S-UNZ" TagIdentifier="UNZ" minOccurs="0">
+						<Field Name="E-0036_UNZ_01" minOccurs="0"/>
+						<Field MaxLength="14" MinLength="1"
+						Name="E-0020_UNZ_02" minOccurs="0"/>
+					</Component>
+				</Component>
+				<Component Name="L-UNG" TagIdentifier="UNG"
+					maxOccurs="99999999" minOccurs="0">
+					<Component Name="S-UNG" TagIdentifier="UNG" minOccurs="0">
+						<Field MaxLength="6" MinLength="1"
+						Name="E-0038_UNG_01" minOccurs="0"/>
+						<Field Name="C-S006_UNG_02" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-0040_UNG_02.01" minOccurs="0"/>
+							<SubField MaxLength="4" MinLength="1"
+							Name="E-0007_UNG_02.02" minOccurs="0"/>
+						</Field>
+						<Field Name="C-S007_UNG_03" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-0044_UNG_03.01" minOccurs="0"/>
+							<SubField MaxLength="4" MinLength="1"
+							Name="E-0007_UNG_03.02" minOccurs="0"/>
+						</Field>
+						<Field Name="C-S004_UNG_04" minOccurs="0">
+							<SubField Name="E-0017_UNG_04.01" minOccurs="0"/>
+							<SubField Name="E-0019_UNG_04.02" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="14" MinLength="1"
+						Name="E-0048_UNG_05" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-0051_UNG_06" minOccurs="0"/>
+						<Field Name="C-S008_UNG_07" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-0052_UNG_07.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-0054_UNG_07.02" minOccurs="0"/>
+							<SubField MaxLength="6" MinLength="1"
+							Name="E-0057_UNG_07.03" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="14" MinLength="1"
+						Name="E-0058_UNG_08" minOccurs="0"/>
+					</Component>
+					<Component Name="S-UNE" TagIdentifier="UNE" minOccurs="0">
+						<Field Name="E-0060_UNE_01" minOccurs="0"/>
+						<Field MaxLength="14" MinLength="1"
+						Name="E-0048_UNE_02" minOccurs="0"/>
+					</Component>
+				</Component>
+				<Component Name="S-UNH_1" TagIdentifier="UNH">
+					<Field MaxLength="14" MinLength="1" Name="E-0062_1_01"/>
+					<Field Name="C-S009_1_02" minOccurs="0">
+						<SubField MaxLength="6" MinLength="1" Name="E-0065_1_02.01"/>
+						<SubField MaxLength="3" MinLength="1" Name="E-0052_1_02.02"/>
+						<SubField MaxLength="3" MinLength="1" Name="E-0054_1_02.03"/>
+						<SubField MaxLength="3" MinLength="1" Name="E-0051_1_02.04"/>
+						<SubField MaxLength="6" MinLength="1"
+						Name="E-0057_1_02.05" minOccurs="0"/>
+						<SubField MaxLength="6" MinLength="1"
+						Name="E-0110_1_02.06" minOccurs="0"/>
+						<SubField MaxLength="6" MinLength="1"
+						Name="E-0113_1_02.07" minOccurs="0"/>
+					</Field>
+					<Field MaxLength="35" MinLength="1"
+					Name="E-0068_1_03" minOccurs="0"/>
+					<Field Name="C-S010_1_04" minOccurs="0">
+						<SubField Name="E-0070_1_04.01"/>
+						<SubField MaxLength="1" MinLength="1"
+						Name="E-0073_1_04.02" minOccurs="0"/>
+					</Field>
+				</Component>
+				<Component Name="S-BGM_2" TagIdentifier="BGM">
+					<Field Name="C-C002_2_01" minOccurs="0">
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-1001_2_01.01" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-1131_2_01.02" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-3055_2_01.03" minOccurs="0"/>
+						<SubField MaxLength="35" MinLength="1"
+						Name="E-1000_2_01.04" minOccurs="0"/>
+					</Field>
+					<Field Name="C-C106_2_02" minOccurs="0">
+						<SubField MaxLength="35" MinLength="1"
+						Name="E-1004_2_02.01" minOccurs="0"/>
+						<SubField MaxLength="9" MinLength="1"
+						Name="E-1056_2_02.02" minOccurs="0"/>
+						<SubField MaxLength="6" MinLength="1"
+						Name="E-1060_2_02.03" minOccurs="0"/>
+					</Field>
+					<Field MaxLength="3" MinLength="1"
+					Name="E-1225_2_03" minOccurs="0"/>
+					<Field MaxLength="3" MinLength="1"
+					Name="E-4343_2_04" minOccurs="0"/>
+				</Component>
+				<Component Name="S-CTA_3" TagIdentifier="CTA" minOccurs="0">
+					<Field MaxLength="3" MinLength="1"
+					Name="E-3139_3_01" minOccurs="0"/>
+					<Field Name="C-C056_3_02" minOccurs="0">
+						<SubField MaxLength="17" MinLength="1"
+						Name="E-3413_3_02.01" minOccurs="0"/>
+						<SubField MaxLength="35" MinLength="1"
+						Name="E-3412_3_02.02" minOccurs="0"/>
+					</Field>
+				</Component>
+				<Component Name="S-COM_4" TagIdentifier="COM"
+					maxOccurs="9" minOccurs="0">
+					<Field Name="C-C076_4_01">
+						<SubField MaxLength="512" MinLength="1" Name="E-3148_4_01.01"/>
+						<SubField MaxLength="3" MinLength="1" Name="E-3155_4_01.02"/>
+					</Field>
+				</Component>
+				<Component Name="S-DTM_5" TagIdentifier="DTM"
+					maxOccurs="9" minOccurs="0">
+					<Field Name="C-C507_5_01">
+						<SubField MaxLength="3" MinLength="1" Name="E-2005_5_01.01"/>
+						<SubField MaxLength="35" MinLength="1"
+						Name="E-2380_5_01.02" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-2379_5_01.03" minOccurs="0"/>
+					</Field>
+				</Component>
+				<Component Name="S-TSR_6" TagIdentifier="TSR"
+					maxOccurs="9" minOccurs="0">
+					<Field Name="C-C536_6_01" minOccurs="0">
+						<SubField MaxLength="3" MinLength="1" Name="E-4065_6_01.01"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-1131_6_01.02" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-3055_6_01.03" minOccurs="0"/>
+					</Field>
+					<Field Name="C-C233_6_02" minOccurs="0">
+						<SubField MaxLength="3" MinLength="1" Name="E-7273_6_02.01"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-1131_6_02.02" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-3055_6_02.03" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-7273_6_02.04" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-1131_6_02.05" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-3055_6_02.06" minOccurs="0"/>
+					</Field>
+					<Field Name="C-C537_6_03" minOccurs="0">
+						<SubField MaxLength="3" MinLength="1" Name="E-4219_6_03.01"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-1131_6_03.02" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-3055_6_03.03" minOccurs="0"/>
+					</Field>
+					<Field Name="C-C703_6_04" minOccurs="0">
+						<SubField MaxLength="3" MinLength="1" Name="E-7085_6_04.01"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-1131_6_04.02" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-3055_6_04.03" minOccurs="0"/>
+					</Field>
+				</Component>
+				<Component Name="S-MOA_7" TagIdentifier="MOA"
+					maxOccurs="9" minOccurs="0">
+					<Field Name="C-C516_7_01">
+						<SubField MaxLength="3" MinLength="1" Name="E-5025_7_01.01"/>
+						<SubField Name="E-5004_7_01.02" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-6345_7_01.03" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-6343_7_01.04" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-4405_7_01.05" minOccurs="0"/>
+					</Field>
+				</Component>
+				<Component Name="S-FTX_8" TagIdentifier="FTX"
+					maxOccurs="99" minOccurs="0">
+					<Field MaxLength="3" MinLength="1" Name="E-4451_8_01"/>
+					<Field MaxLength="3" MinLength="1"
+					Name="E-4453_8_02" minOccurs="0"/>
+					<Field Name="C-C107_8_03" minOccurs="0">
+						<SubField MaxLength="17" MinLength="1" Name="E-4441_8_03.01"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-1131_8_03.02" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-3055_8_03.03" minOccurs="0"/>
+					</Field>
+					<Field Name="C-C108_8_04" minOccurs="0">
+						<SubField MaxLength="512" MinLength="1" Name="E-4440_8_04.01"/>
+						<SubField MaxLength="512" MinLength="1"
+						Name="E-4440_8_04.02" minOccurs="0"/>
+						<SubField MaxLength="512" MinLength="1"
+						Name="E-4440_8_04.03" minOccurs="0"/>
+						<SubField MaxLength="512" MinLength="1"
+						Name="E-4440_8_04.04" minOccurs="0"/>
+						<SubField MaxLength="512" MinLength="1"
+						Name="E-4440_8_04.05" minOccurs="0"/>
+					</Field>
+					<Field MaxLength="3" MinLength="1"
+					Name="E-3453_8_05" minOccurs="0"/>
+					<Field MaxLength="3" MinLength="1"
+					Name="E-4447_8_06" minOccurs="0"/>
+				</Component>
+				<Component Name="S-CNT_9" TagIdentifier="CNT"
+					maxOccurs="9" minOccurs="0">
+					<Field Name="C-C270_9_01">
+						<SubField MaxLength="3" MinLength="1" Name="E-6069_9_01.01"/>
+						<SubField Name="E-6066_9_01.02"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-6411_9_01.03" minOccurs="0"/>
+					</Field>
+				</Component>
+				<Component Name="S-GDS_10" TagIdentifier="GDS"
+					maxOccurs="9" minOccurs="0">
+					<Field Name="C-C703_10_01" minOccurs="0">
+						<SubField MaxLength="3" MinLength="1" Name="E-7085_10_01.01"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-1131_10_01.02" minOccurs="0"/>
+						<SubField MaxLength="3" MinLength="1"
+						Name="E-3055_10_01.03" minOccurs="0"/>
+					</Field>
+				</Component>
+				<Component Name="L-LOC_11" maxOccurs="99" minOccurs="0">
+					<Component Name="S-LOC_11" TagIdentifier="LOC">
+						<Field MaxLength="3" MinLength="1" Name="E-3227_11_01"/>
+						<Field Name="C-C517_11_02" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3225_11_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_11_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_11_02.03" minOccurs="0"/>
+							<SubField MaxLength="256" MinLength="1"
+							Name="E-3224_11_02.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C519_11_03" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3223_11_03.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_11_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_11_03.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-3222_11_03.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C553_11_04" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3233_11_04.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_11_04.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_11_04.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-3232_11_04.04" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-5479_11_05" minOccurs="0"/>
+					</Component>
+					<Component Name="S-DTM_12" TagIdentifier="DTM"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C507_12_01">
+							<SubField MaxLength="3" MinLength="1" Name="E-2005_12_01.01"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-2380_12_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-2379_12_01.03" minOccurs="0"/>
+						</Field>
+					</Component>
+				</Component>
+				<Component Name="L-TOD_13" maxOccurs="2" minOccurs="0">
+					<Component Name="S-TOD_13" TagIdentifier="TOD">
+						<Field MaxLength="3" MinLength="1"
+						Name="E-4055_13_01" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-4215_13_02" minOccurs="0"/>
+						<Field Name="C-C100_13_03" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-4053_13_03.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_13_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_13_03.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-4052_13_03.04" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-4052_13_03.05" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-LOC_14" TagIdentifier="LOC"
+						maxOccurs="9" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-3227_14_01"/>
+						<Field Name="C-C517_14_02" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3225_14_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_14_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_14_02.03" minOccurs="0"/>
+							<SubField MaxLength="256" MinLength="1"
+							Name="E-3224_14_02.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C519_14_03" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3223_14_03.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_14_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_14_03.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-3222_14_03.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C553_14_04" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3233_14_04.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_14_04.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_14_04.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-3232_14_04.04" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-5479_14_05" minOccurs="0"/>
+					</Component>
+				</Component>
+				<Component Name="L-RFF_15" maxOccurs="99" minOccurs="0">
+					<Component Name="S-RFF_15" TagIdentifier="RFF">
+						<Field Name="C-C506_15_01">
+							<SubField MaxLength="3" MinLength="1" Name="E-1153_15_01.01"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-1154_15_01.02" minOccurs="0"/>
+							<SubField MaxLength="6" MinLength="1"
+							Name="E-1156_15_01.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-4000_15_01.04" minOccurs="0"/>
+							<SubField MaxLength="6" MinLength="1"
+							Name="E-1060_15_01.05" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-DTM_16" TagIdentifier="DTM"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C507_16_01">
+							<SubField MaxLength="3" MinLength="1" Name="E-2005_16_01.01"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-2380_16_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-2379_16_01.03" minOccurs="0"/>
+						</Field>
+					</Component>
+				</Component>
+				<Component Name="L-GOR_17" maxOccurs="9" minOccurs="0">
+					<Component Name="S-GOR_17" TagIdentifier="GOR">
+						<Field MaxLength="3" MinLength="1"
+						Name="E-8323_17_01" minOccurs="0"/>
+						<Field Name="C-C232_17_02" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9415_17_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9411_17_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9417_17_02.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9353_17_02.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C232_17_03" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9415_17_03.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9411_17_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9417_17_03.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9353_17_03.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C232_17_04" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9415_17_04.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9411_17_04.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9417_17_04.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9353_17_04.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C232_17_05" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9415_17_05.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9411_17_05.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9417_17_05.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-9353_17_05.04" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-FTX_18" TagIdentifier="FTX"
+						maxOccurs="9" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-4451_18_01"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-4453_18_02" minOccurs="0"/>
+						<Field Name="C-C107_18_03" minOccurs="0">
+							<SubField MaxLength="17" MinLength="1" Name="E-4441_18_03.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_18_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_18_03.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C108_18_04" minOccurs="0">
+							<SubField MaxLength="512" MinLength="1" Name="E-4440_18_04.01"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_18_04.02" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_18_04.03" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_18_04.04" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_18_04.05" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-3453_18_05" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-4447_18_06" minOccurs="0"/>
+					</Component>
+					<Component Name="L-DOC_19" maxOccurs="9" minOccurs="0">
+						<Component Name="S-DOC_19" TagIdentifier="DOC">
+							<Field Name="C-C002_19_01">
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1001_19_01.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_19_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_19_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1000_19_01.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C503_19_02" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1004_19_02.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1373_19_02.02" minOccurs="0"/>
+								<SubField MaxLength="70" MinLength="1"
+								Name="E-1366_19_02.03" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3453_19_02.04" minOccurs="0"/>
+								<SubField MaxLength="9" MinLength="1"
+								Name="E-1056_19_02.05" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1060_19_02.06" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-3153_19_03" minOccurs="0"/>
+							<Field Name="E-1220_19_04" minOccurs="0"/>
+							<Field Name="E-1218_19_05" minOccurs="0"/>
+						</Component>
+						<Component Name="S-DTM_20" TagIdentifier="DTM" minOccurs="0">
+							<Field Name="C-C507_20_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-2005_20_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-2380_20_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-2379_20_01.03" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+				</Component>
+				<Component Name="L-TCC_21" maxOccurs="99" minOccurs="0">
+					<Component Name="S-TCC_21" TagIdentifier="TCC">
+						<Field Name="C-C200_21_01" minOccurs="0">
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-8023_21_01.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_21_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_21_01.03" minOccurs="0"/>
+							<SubField MaxLength="26" MinLength="1"
+							Name="E-8022_21_01.04" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-4237_21_01.05" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7140_21_01.06" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C203_21_02" minOccurs="0">
+							<SubField MaxLength="9" MinLength="1" Name="E-5243_21_02.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_21_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_21_02.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-5242_21_02.04" minOccurs="0"/>
+							<SubField MaxLength="6" MinLength="1"
+							Name="E-5275_21_02.05" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_21_02.06" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_21_02.07" minOccurs="0"/>
+							<SubField MaxLength="6" MinLength="1"
+							Name="E-5275_21_02.08" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_21_02.09" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_21_02.10" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C528_21_03" minOccurs="0">
+							<SubField MaxLength="18" MinLength="1"
+							Name="E-7357_21_03.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_21_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_21_03.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C554_21_04" minOccurs="0">
+							<SubField MaxLength="9" MinLength="1"
+							Name="E-5243_21_04.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_21_04.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_21_04.03" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-LOC_22" TagIdentifier="LOC" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-3227_22_01"/>
+						<Field Name="C-C517_22_02" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3225_22_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_22_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_22_02.03" minOccurs="0"/>
+							<SubField MaxLength="256" MinLength="1"
+							Name="E-3224_22_02.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C519_22_03" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3223_22_03.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_22_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_22_03.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-3222_22_03.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C553_22_04" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3233_22_04.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_22_04.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_22_04.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-3232_22_04.04" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-5479_22_05" minOccurs="0"/>
+					</Component>
+					<Component Name="S-FTX_23" TagIdentifier="FTX" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-4451_23_01"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-4453_23_02" minOccurs="0"/>
+						<Field Name="C-C107_23_03" minOccurs="0">
+							<SubField MaxLength="17" MinLength="1" Name="E-4441_23_03.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_23_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_23_03.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C108_23_04" minOccurs="0">
+							<SubField MaxLength="512" MinLength="1" Name="E-4440_23_04.01"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_23_04.02" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_23_04.03" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_23_04.04" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_23_04.05" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-3453_23_05" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-4447_23_06" minOccurs="0"/>
+					</Component>
+					<Component Name="S-CUX_24" TagIdentifier="CUX" minOccurs="0">
+						<Field Name="C-C504_24_01" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-6347_24_01.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6345_24_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6343_24_01.03" minOccurs="0"/>
+							<SubField Name="E-6348_24_01.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C504_24_02" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-6347_24_02.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6345_24_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6343_24_02.03" minOccurs="0"/>
+							<SubField Name="E-6348_24_02.04" minOccurs="0"/>
+						</Field>
+						<Field Name="E-5402_24_03" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-6341_24_04" minOccurs="0"/>
+					</Component>
+					<Component Name="S-PRI_25" TagIdentifier="PRI" minOccurs="0">
+						<Field Name="C-C509_25_01" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-5125_25_01.01"/>
+							<SubField Name="E-5118_25_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-5375_25_01.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-5387_25_01.04" minOccurs="0"/>
+							<SubField Name="E-5284_25_01.05" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6411_25_01.06" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-5213_25_02" minOccurs="0"/>
+					</Component>
+					<Component Name="S-EQN_26" TagIdentifier="EQN" minOccurs="0">
+						<Field Name="C-C523_26_01">
+							<SubField Name="E-6350_26_01.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6353_26_01.02" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-PCD_27" TagIdentifier="PCD" minOccurs="0">
+						<Field Name="C-C501_27_01">
+							<SubField MaxLength="3" MinLength="1" Name="E-5245_27_01.01"/>
+							<SubField Name="E-5482_27_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-5249_27_01.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_27_01.04" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_27_01.05" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-MOA_28" TagIdentifier="MOA"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C516_28_01">
+							<SubField MaxLength="3" MinLength="1" Name="E-5025_28_01.01"/>
+							<SubField Name="E-5004_28_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6345_28_01.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6343_28_01.04" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-4405_28_01.05" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-QTY_29" TagIdentifier="QTY"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C186_29_01">
+							<SubField MaxLength="3" MinLength="1" Name="E-6063_29_01.01"/>
+							<SubField MaxLength="35" MinLength="1" Name="E-6060_29_01.02"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6411_29_01.03" minOccurs="0"/>
+						</Field>
+					</Component>
+				</Component>
+				<Component Name="L-TDT_30" maxOccurs="99" minOccurs="0">
+					<Component Name="S-TDT_30" TagIdentifier="TDT">
+						<Field MaxLength="3" MinLength="1" Name="E-8051_30_01"/>
+						<Field MaxLength="17" MinLength="1"
+						Name="E-8028_30_02" minOccurs="0"/>
+						<Field Name="C-C220_30_03" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-8067_30_03.01" minOccurs="0"/>
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-8066_30_03.02" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C228_30_04" minOccurs="0">
+							<SubField MaxLength="8" MinLength="1"
+							Name="E-8179_30_04.01" minOccurs="0"/>
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-8178_30_04.02" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C040_30_05" minOccurs="0">
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-3127_30_05.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_30_05.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_30_05.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3128_30_05.04" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-8101_30_06" minOccurs="0"/>
+						<Field Name="C-C401_30_07" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-8457_30_07.01"/>
+							<SubField MaxLength="3" MinLength="1" Name="E-8459_30_07.02"/>
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-7130_30_07.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C222_30_08" minOccurs="0">
+							<SubField MaxLength="20" MinLength="1"
+							Name="E-8213_30_08.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_30_08.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_30_08.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-8212_30_08.04" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-8453_30_08.05" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-8281_30_09" minOccurs="0"/>
+					</Component>
+					<Component Name="S-DTM_31" TagIdentifier="DTM"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C507_31_01">
+							<SubField MaxLength="3" MinLength="1" Name="E-2005_31_01.01"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-2380_31_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-2379_31_01.03" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-TSR_32" TagIdentifier="TSR"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C536_32_01" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-4065_32_01.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_32_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_32_01.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C233_32_02" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-7273_32_02.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_32_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_32_02.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7273_32_02.04" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_32_02.05" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_32_02.06" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C537_32_03" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-4219_32_03.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_32_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_32_03.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C703_32_04" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-7085_32_04.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_32_04.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_32_04.03" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="L-LOC_33" maxOccurs="99" minOccurs="0">
+						<Component Name="S-LOC_33" TagIdentifier="LOC">
+							<Field MaxLength="3" MinLength="1" Name="E-3227_33_01"/>
+							<Field Name="C-C517_33_02" minOccurs="0">
+								<SubField MaxLength="25" MinLength="1"
+								Name="E-3225_33_02.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_33_02.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_33_02.03" minOccurs="0"/>
+								<SubField MaxLength="256" MinLength="1"
+								Name="E-3224_33_02.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C519_33_03" minOccurs="0">
+								<SubField MaxLength="25" MinLength="1"
+								Name="E-3223_33_03.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_33_03.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_33_03.03" minOccurs="0"/>
+								<SubField MaxLength="70" MinLength="1"
+								Name="E-3222_33_03.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C553_33_04" minOccurs="0">
+								<SubField MaxLength="25" MinLength="1"
+								Name="E-3233_33_04.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_33_04.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_33_04.03" minOccurs="0"/>
+								<SubField MaxLength="70" MinLength="1"
+								Name="E-3232_33_04.04" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-5479_33_05" minOccurs="0"/>
+						</Component>
+						<Component Name="S-DTM_34" TagIdentifier="DTM"
+							maxOccurs="9" minOccurs="0">
+							<Field Name="C-C507_34_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-2005_34_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-2380_34_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-2379_34_01.03" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="L-RFF_35" maxOccurs="9" minOccurs="0">
+						<Component Name="S-RFF_35" TagIdentifier="RFF">
+							<Field Name="C-C506_35_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-1153_35_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1154_35_01.02" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1156_35_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-4000_35_01.04" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1060_35_01.05" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-DTM_36" TagIdentifier="DTM" minOccurs="0">
+							<Field Name="C-C507_36_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-2005_36_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-2380_36_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-2379_36_01.03" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+				</Component>
+				<Component Name="L-NAD_37" maxOccurs="99" minOccurs="0">
+					<Component Name="S-NAD_37" TagIdentifier="NAD">
+						<Field MaxLength="3" MinLength="1" Name="E-3035_37_01"/>
+						<Field Name="C-C082_37_02" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1" Name="E-3039_37_02.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_37_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_37_02.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C058_37_03" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1" Name="E-3124_37_03.01"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3124_37_03.02" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3124_37_03.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3124_37_03.04" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3124_37_03.05" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C080_37_04" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1" Name="E-3036_37_04.01"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3036_37_04.02" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3036_37_04.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3036_37_04.04" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3036_37_04.05" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3045_37_04.06" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C059_37_05" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1" Name="E-3042_37_05.01"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3042_37_05.02" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3042_37_05.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3042_37_05.04" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="35" MinLength="1"
+						Name="E-3164_37_06" minOccurs="0"/>
+						<Field Name="C-C819_37_07" minOccurs="0">
+							<SubField MaxLength="9" MinLength="1"
+							Name="E-3229_37_07.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_37_07.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_37_07.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-3228_37_07.04" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="17" MinLength="1"
+						Name="E-3251_37_08" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-3207_37_09" minOccurs="0"/>
+					</Component>
+					<Component Name="S-LOC_38" TagIdentifier="LOC"
+						maxOccurs="9" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-3227_38_01"/>
+						<Field Name="C-C517_38_02" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3225_38_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_38_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_38_02.03" minOccurs="0"/>
+							<SubField MaxLength="256" MinLength="1"
+							Name="E-3224_38_02.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C519_38_03" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3223_38_03.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_38_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_38_03.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-3222_38_03.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C553_38_04" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3233_38_04.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_38_04.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_38_04.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-3232_38_04.04" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-5479_38_05" minOccurs="0"/>
+					</Component>
+					<Component Name="L-CTA_39" maxOccurs="9" minOccurs="0">
+						<Component Name="S-CTA_39" TagIdentifier="CTA">
+							<Field MaxLength="3" MinLength="1"
+							Name="E-3139_39_01" minOccurs="0"/>
+							<Field Name="C-C056_39_02" minOccurs="0">
+								<SubField MaxLength="17" MinLength="1"
+								Name="E-3413_39_02.01" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3412_39_02.02" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-COM_40" TagIdentifier="COM"
+							maxOccurs="9" minOccurs="0">
+							<Field Name="C-C076_40_01">
+								<SubField MaxLength="512" MinLength="1" Name="E-3148_40_01.01"/>
+								<SubField MaxLength="3" MinLength="1" Name="E-3155_40_01.02"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="L-DOC_41" maxOccurs="9" minOccurs="0">
+						<Component Name="S-DOC_41" TagIdentifier="DOC">
+							<Field Name="C-C002_41_01">
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1001_41_01.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_41_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_41_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1000_41_01.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C503_41_02" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1004_41_02.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1373_41_02.02" minOccurs="0"/>
+								<SubField MaxLength="70" MinLength="1"
+								Name="E-1366_41_02.03" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3453_41_02.04" minOccurs="0"/>
+								<SubField MaxLength="9" MinLength="1"
+								Name="E-1056_41_02.05" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1060_41_02.06" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-3153_41_03" minOccurs="0"/>
+							<Field Name="E-1220_41_04" minOccurs="0"/>
+							<Field Name="E-1218_41_05" minOccurs="0"/>
+						</Component>
+						<Component Name="S-DTM_42" TagIdentifier="DTM" minOccurs="0">
+							<Field Name="C-C507_42_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-2005_42_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-2380_42_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-2379_42_01.03" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="L-RFF_43" maxOccurs="9" minOccurs="0">
+						<Component Name="S-RFF_43" TagIdentifier="RFF">
+							<Field Name="C-C506_43_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-1153_43_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1154_43_01.02" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1156_43_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-4000_43_01.04" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1060_43_01.05" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-DTM_44" TagIdentifier="DTM"
+							maxOccurs="9" minOccurs="0">
+							<Field Name="C-C507_44_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-2005_44_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-2380_44_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-2379_44_01.03" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="L-CPI_45" maxOccurs="9" minOccurs="0">
+						<Component Name="S-CPI_45" TagIdentifier="CPI">
+							<Field Name="C-C229_45_01" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1" Name="E-5237_45_01.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_45_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_45_01.03" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C231_45_02" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1" Name="E-4215_45_02.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_45_02.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_45_02.03" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-4237_45_03" minOccurs="0"/>
+						</Component>
+						<Component Name="S-RFF_46" TagIdentifier="RFF"
+							maxOccurs="99" minOccurs="0">
+							<Field Name="C-C506_46_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-1153_46_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1154_46_01.02" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1156_46_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-4000_46_01.04" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1060_46_01.05" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-CUX_47" TagIdentifier="CUX" minOccurs="0">
+							<Field Name="C-C504_47_01" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1" Name="E-6347_47_01.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6345_47_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6343_47_01.03" minOccurs="0"/>
+								<SubField Name="E-6348_47_01.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C504_47_02" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1" Name="E-6347_47_02.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6345_47_02.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6343_47_02.03" minOccurs="0"/>
+								<SubField Name="E-6348_47_02.04" minOccurs="0"/>
+							</Field>
+							<Field Name="E-5402_47_03" minOccurs="0"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-6341_47_04" minOccurs="0"/>
+						</Component>
+						<Component Name="S-LOC_48" TagIdentifier="LOC"
+							maxOccurs="9" minOccurs="0">
+							<Field MaxLength="3" MinLength="1" Name="E-3227_48_01"/>
+							<Field Name="C-C517_48_02" minOccurs="0">
+								<SubField MaxLength="25" MinLength="1"
+								Name="E-3225_48_02.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_48_02.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_48_02.03" minOccurs="0"/>
+								<SubField MaxLength="256" MinLength="1"
+								Name="E-3224_48_02.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C519_48_03" minOccurs="0">
+								<SubField MaxLength="25" MinLength="1"
+								Name="E-3223_48_03.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_48_03.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_48_03.03" minOccurs="0"/>
+								<SubField MaxLength="70" MinLength="1"
+								Name="E-3222_48_03.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C553_48_04" minOccurs="0">
+								<SubField MaxLength="25" MinLength="1"
+								Name="E-3233_48_04.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_48_04.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_48_04.03" minOccurs="0"/>
+								<SubField MaxLength="70" MinLength="1"
+								Name="E-3232_48_04.04" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-5479_48_05" minOccurs="0"/>
+						</Component>
+						<Component Name="S-MOA_49" TagIdentifier="MOA"
+							maxOccurs="9" minOccurs="0">
+							<Field Name="C-C516_49_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-5025_49_01.01"/>
+								<SubField Name="E-5004_49_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6345_49_01.03" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6343_49_01.04" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-4405_49_01.05" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="L-TSR_50" maxOccurs="99" minOccurs="0">
+						<Component Name="S-TSR_50" TagIdentifier="TSR">
+							<Field Name="C-C536_50_01" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1" Name="E-4065_50_01.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_50_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_50_01.03" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C233_50_02" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1" Name="E-7273_50_02.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_50_02.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_50_02.03" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-7273_50_02.04" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_50_02.05" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_50_02.06" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C537_50_03" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1" Name="E-4219_50_03.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_50_03.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_50_03.03" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C703_50_04" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1" Name="E-7085_50_04.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_50_04.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_50_04.03" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-RFF_51" TagIdentifier="RFF" minOccurs="0">
+							<Field Name="C-C506_51_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-1153_51_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1154_51_01.02" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1156_51_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-4000_51_01.04" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1060_51_01.05" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-LOC_52" TagIdentifier="LOC" minOccurs="0">
+							<Field MaxLength="3" MinLength="1" Name="E-3227_52_01"/>
+							<Field Name="C-C517_52_02" minOccurs="0">
+								<SubField MaxLength="25" MinLength="1"
+								Name="E-3225_52_02.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_52_02.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_52_02.03" minOccurs="0"/>
+								<SubField MaxLength="256" MinLength="1"
+								Name="E-3224_52_02.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C519_52_03" minOccurs="0">
+								<SubField MaxLength="25" MinLength="1"
+								Name="E-3223_52_03.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_52_03.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_52_03.03" minOccurs="0"/>
+								<SubField MaxLength="70" MinLength="1"
+								Name="E-3222_52_03.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C553_52_04" minOccurs="0">
+								<SubField MaxLength="25" MinLength="1"
+								Name="E-3233_52_04.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_52_04.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_52_04.03" minOccurs="0"/>
+								<SubField MaxLength="70" MinLength="1"
+								Name="E-3232_52_04.04" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-5479_52_05" minOccurs="0"/>
+						</Component>
+						<Component Name="S-TPL_53" TagIdentifier="TPL" minOccurs="0">
+							<Field Name="C-C222_53_01">
+								<SubField MaxLength="9" MinLength="1"
+								Name="E-8213_53_01.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_53_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_53_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-8212_53_01.04" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-8453_53_01.05" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-FTX_54" TagIdentifier="FTX"
+							maxOccurs="9" minOccurs="0">
+							<Field MaxLength="3" MinLength="1" Name="E-4451_54_01"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-4453_54_02" minOccurs="0"/>
+							<Field Name="C-C107_54_03" minOccurs="0">
+								<SubField MaxLength="17" MinLength="1" Name="E-4441_54_03.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_54_03.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_54_03.03" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C108_54_04" minOccurs="0">
+								<SubField MaxLength="512" MinLength="1" Name="E-4440_54_04.01"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_54_04.02" minOccurs="0"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_54_04.03" minOccurs="0"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_54_04.04" minOccurs="0"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_54_04.05" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-3453_54_05" minOccurs="0"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-4447_54_06" minOccurs="0"/>
+						</Component>
+					</Component>
+				</Component>
+				<Component Name="L-GID_55" maxOccurs="999" minOccurs="0">
+					<Component Name="S-GID_55" TagIdentifier="GID">
+						<Field Name="E-1496_55_01" minOccurs="0"/>
+						<Field Name="C-C213_55_02" minOccurs="0">
+							<SubField Name="E-7224_55_02.01" minOccurs="0"/>
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-7065_55_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_55_02.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_55_02.04" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7064_55_02.05" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7233_55_02.06" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C213_55_03" minOccurs="0">
+							<SubField Name="E-7224_55_03.01" minOccurs="0"/>
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-7065_55_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_55_03.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_55_03.04" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7064_55_03.05" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7233_55_03.06" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C213_55_04" minOccurs="0">
+							<SubField Name="E-7224_55_04.01" minOccurs="0"/>
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-7065_55_04.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_55_04.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_55_04.04" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7064_55_04.05" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7233_55_04.06" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C213_55_05" minOccurs="0">
+							<SubField Name="E-7224_55_05.01" minOccurs="0"/>
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-7065_55_05.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_55_05.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_55_05.04" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7064_55_05.05" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7233_55_05.06" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C213_55_06" minOccurs="0">
+							<SubField Name="E-7224_55_06.01" minOccurs="0"/>
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-7065_55_06.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_55_06.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_55_06.04" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7064_55_06.05" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7233_55_06.06" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-HAN_56" TagIdentifier="HAN" minOccurs="0">
+						<Field Name="C-C524_56_01" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-4079_56_01.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_56_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_56_01.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-4078_56_01.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C218_56_02" minOccurs="0">
+							<SubField MaxLength="4" MinLength="1"
+							Name="E-7419_56_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_56_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_56_02.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7418_56_02.04" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-TMP_57" TagIdentifier="TMP" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-6245_57_01"/>
+						<Field Name="C-C239_57_02" minOccurs="0">
+							<SubField Name="E-6246_57_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6411_57_02.02" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-RNG_58" TagIdentifier="RNG" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-6167_58_01"/>
+						<Field Name="C-C280_58_02" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-6411_58_02.01"/>
+							<SubField Name="E-6162_58_02.02" minOccurs="0"/>
+							<SubField Name="E-6152_58_02.03" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-TMD_59" TagIdentifier="TMD" minOccurs="0">
+						<Field Name="C-C219_59_01" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-8335_59_01.01" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-8334_59_01.02" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="26" MinLength="1"
+						Name="E-8332_59_02" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-8341_59_03" minOccurs="0"/>
+					</Component>
+					<Component Name="S-LOC_60" TagIdentifier="LOC"
+						maxOccurs="9" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-3227_60_01"/>
+						<Field Name="C-C517_60_02" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3225_60_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_60_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_60_02.03" minOccurs="0"/>
+							<SubField MaxLength="256" MinLength="1"
+							Name="E-3224_60_02.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C519_60_03" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3223_60_03.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_60_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_60_03.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-3222_60_03.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C553_60_04" minOccurs="0">
+							<SubField MaxLength="25" MinLength="1"
+							Name="E-3233_60_04.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_60_04.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_60_04.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-3232_60_04.04" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-5479_60_05" minOccurs="0"/>
+					</Component>
+					<Component Name="S-MOA_61" TagIdentifier="MOA"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C516_61_01">
+							<SubField MaxLength="3" MinLength="1" Name="E-5025_61_01.01"/>
+							<SubField Name="E-5004_61_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6345_61_01.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6343_61_01.04" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-4405_61_01.05" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-PIA_62" TagIdentifier="PIA"
+						maxOccurs="9" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-4347_62_01"/>
+						<Field Name="C-C212_62_02">
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7140_62_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7143_62_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_62_02.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_62_02.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C212_62_03" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7140_62_03.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7143_62_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_62_03.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_62_03.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C212_62_04" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7140_62_04.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7143_62_04.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_62_04.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_62_04.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C212_62_05" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7140_62_05.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7143_62_05.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_62_05.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_62_05.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C212_62_06" minOccurs="0">
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7140_62_06.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-7143_62_06.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_62_06.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_62_06.04" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-FTX_63" TagIdentifier="FTX"
+						maxOccurs="9" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-4451_63_01"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-4453_63_02" minOccurs="0"/>
+						<Field Name="C-C107_63_03" minOccurs="0">
+							<SubField MaxLength="17" MinLength="1" Name="E-4441_63_03.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_63_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_63_03.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C108_63_04" minOccurs="0">
+							<SubField MaxLength="512" MinLength="1" Name="E-4440_63_04.01"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_63_04.02" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_63_04.03" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_63_04.04" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_63_04.05" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-3453_63_05" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-4447_63_06" minOccurs="0"/>
+					</Component>
+					<Component Name="S-PCD_64" TagIdentifier="PCD"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C501_64_01">
+							<SubField MaxLength="3" MinLength="1" Name="E-5245_64_01.01"/>
+							<SubField Name="E-5482_64_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-5249_64_01.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_64_01.04" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_64_01.05" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="L-NAD_65" maxOccurs="9" minOccurs="0">
+						<Component Name="S-NAD_65" TagIdentifier="NAD">
+							<Field MaxLength="3" MinLength="1" Name="E-3035_65_01"/>
+							<Field Name="C-C082_65_02" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-3039_65_02.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_65_02.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_65_02.03" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C058_65_03" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-3124_65_03.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3124_65_03.02" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3124_65_03.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3124_65_03.04" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3124_65_03.05" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C080_65_04" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-3036_65_04.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3036_65_04.02" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3036_65_04.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3036_65_04.04" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3036_65_04.05" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3045_65_04.06" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C059_65_05" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-3042_65_05.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3042_65_05.02" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3042_65_05.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3042_65_05.04" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="35" MinLength="1"
+							Name="E-3164_65_06" minOccurs="0"/>
+							<Field Name="C-C819_65_07" minOccurs="0">
+								<SubField MaxLength="9" MinLength="1"
+								Name="E-3229_65_07.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_65_07.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_65_07.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3228_65_07.04" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="17" MinLength="1"
+							Name="E-3251_65_08" minOccurs="0"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-3207_65_09" minOccurs="0"/>
+						</Component>
+						<Component Name="S-DTM_66" TagIdentifier="DTM" minOccurs="0">
+							<Field Name="C-C507_66_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-2005_66_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-2380_66_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-2379_66_01.03" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="S-GDS_67" TagIdentifier="GDS"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C703_67_01" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-7085_67_01.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_67_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_67_01.03" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="L-MEA_68" maxOccurs="99" minOccurs="0">
+						<Component Name="S-MEA_68" TagIdentifier="MEA">
+							<Field MaxLength="3" MinLength="1" Name="E-6311_68_01"/>
+							<Field Name="C-C502_68_02" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6313_68_02.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6321_68_02.02" minOccurs="0"/>
+								<SubField MaxLength="17" MinLength="1"
+								Name="E-6155_68_02.03" minOccurs="0"/>
+								<SubField MaxLength="70" MinLength="1"
+								Name="E-6154_68_02.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C174_68_03" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1" Name="E-6411_68_03.01"/>
+								<SubField MaxLength="18" MinLength="1"
+								Name="E-6314_68_03.02" minOccurs="0"/>
+								<SubField Name="E-6162_68_03.03" minOccurs="0"/>
+								<SubField Name="E-6152_68_03.04" minOccurs="0"/>
+								<SubField Name="E-6432_68_03.05" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-7383_68_04" minOccurs="0"/>
+						</Component>
+						<Component Name="S-EQN_69" TagIdentifier="EQN" minOccurs="0">
+							<Field Name="C-C523_69_01">
+								<SubField Name="E-6350_69_01.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6353_69_01.02" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="L-DIM_70" maxOccurs="99" minOccurs="0">
+						<Component Name="S-DIM_70" TagIdentifier="DIM">
+							<Field MaxLength="3" MinLength="1" Name="E-6145_70_01"/>
+							<Field Name="C-C211_70_02">
+								<SubField MaxLength="3" MinLength="1" Name="E-6411_70_02.01"/>
+								<SubField Name="E-6168_70_02.02" minOccurs="0"/>
+								<SubField Name="E-6140_70_02.03" minOccurs="0"/>
+								<SubField Name="E-6008_70_02.04" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-EQN_71" TagIdentifier="EQN" minOccurs="0">
+							<Field Name="C-C523_71_01">
+								<SubField Name="E-6350_71_01.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6353_71_01.02" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="L-RFF_72" maxOccurs="9" minOccurs="0">
+						<Component Name="S-RFF_72" TagIdentifier="RFF">
+							<Field Name="C-C506_72_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-1153_72_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1154_72_01.02" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1156_72_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-4000_72_01.04" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1060_72_01.05" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-DTM_73" TagIdentifier="DTM"
+							maxOccurs="9" minOccurs="0">
+							<Field Name="C-C507_73_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-2005_73_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-2380_73_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-2379_73_01.03" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="L-PCI_74" maxOccurs="9" minOccurs="0">
+						<Component Name="S-PCI_74" TagIdentifier="PCI">
+							<Field MaxLength="3" MinLength="1"
+							Name="E-4233_74_01" minOccurs="0"/>
+							<Field Name="C-C210_74_02" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-7102_74_02.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7102_74_02.02" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7102_74_02.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7102_74_02.04" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7102_74_02.05" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7102_74_02.06" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7102_74_02.07" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7102_74_02.08" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7102_74_02.09" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7102_74_02.10" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8275_74_03" minOccurs="0"/>
+							<Field Name="C-C827_74_04" minOccurs="0">
+								<SubField MaxLength="3" MinLength="1" Name="E-7511_74_04.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_74_04.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_74_04.03" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-RFF_75" TagIdentifier="RFF" minOccurs="0">
+							<Field Name="C-C506_75_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-1153_75_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1154_75_01.02" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1156_75_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-4000_75_01.04" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1060_75_01.05" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-DTM_76" TagIdentifier="DTM" minOccurs="0">
+							<Field Name="C-C507_76_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-2005_76_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-2380_76_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-2379_76_01.03" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="S-GIN_77" TagIdentifier="GIN"
+							maxOccurs="9" minOccurs="0">
+							<Field MaxLength="3" MinLength="1" Name="E-7405_77_01"/>
+							<Field Name="C-C208_77_02">
+								<SubField MaxLength="35" MinLength="1" Name="E-7402_77_02.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7402_77_02.02" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C208_77_03" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-7402_77_03.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7402_77_03.02" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C208_77_04" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-7402_77_04.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7402_77_04.02" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C208_77_05" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-7402_77_05.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7402_77_05.02" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C208_77_06" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-7402_77_06.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-7402_77_06.02" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="L-DOC_78" maxOccurs="9" minOccurs="0">
+						<Component Name="S-DOC_78" TagIdentifier="DOC">
+							<Field Name="C-C002_78_01">
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1001_78_01.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_78_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_78_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1000_78_01.04" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C503_78_02" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-1004_78_02.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1373_78_02.02" minOccurs="0"/>
+								<SubField MaxLength="70" MinLength="1"
+								Name="E-1366_78_02.03" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3453_78_02.04" minOccurs="0"/>
+								<SubField MaxLength="9" MinLength="1"
+								Name="E-1056_78_02.05" minOccurs="0"/>
+								<SubField MaxLength="6" MinLength="1"
+								Name="E-1060_78_02.06" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-3153_78_03" minOccurs="0"/>
+							<Field Name="E-1220_78_04" minOccurs="0"/>
+							<Field Name="E-1218_78_05" minOccurs="0"/>
+						</Component>
+						<Component Name="S-DTM_79" TagIdentifier="DTM"
+							maxOccurs="9" minOccurs="0">
+							<Field Name="C-C507_79_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-2005_79_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-2380_79_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-2379_79_01.03" minOccurs="0"/>
+							</Field>
+						</Component>
+					</Component>
+					<Component Name="L-TPL_80" maxOccurs="9" minOccurs="0">
+						<Component Name="S-TPL_80" TagIdentifier="TPL">
+							<Field Name="C-C222_80_01">
+								<SubField MaxLength="9" MinLength="1"
+								Name="E-8213_80_01.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_80_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_80_01.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-8212_80_01.04" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-8453_80_01.05" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="L-MEA_81" maxOccurs="9" minOccurs="0">
+							<Component Name="S-MEA_81" TagIdentifier="MEA">
+								<Field MaxLength="3" MinLength="1" Name="E-6311_81_01"/>
+								<Field Name="C-C502_81_02" minOccurs="0">
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-6313_81_02.01" minOccurs="0"/>
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-6321_81_02.02" minOccurs="0"/>
+									<SubField MaxLength="17"
+										MinLength="1"
+									Name="E-6155_81_02.03" minOccurs="0"/>
+									<SubField MaxLength="70"
+										MinLength="1"
+									Name="E-6154_81_02.04" minOccurs="0"/>
+								</Field>
+								<Field Name="C-C174_81_03" minOccurs="0">
+									<SubField MaxLength="3"
+									MinLength="1" Name="E-6411_81_03.01"/>
+									<SubField MaxLength="18"
+										MinLength="1"
+									Name="E-6314_81_03.02" minOccurs="0"/>
+									<SubField Name="E-6162_81_03.03" minOccurs="0"/>
+									<SubField Name="E-6152_81_03.04" minOccurs="0"/>
+									<SubField Name="E-6432_81_03.05" minOccurs="0"/>
+								</Field>
+								<Field MaxLength="3" MinLength="1"
+								Name="E-7383_81_04" minOccurs="0"/>
+							</Component>
+							<Component Name="S-EQN_82"
+								TagIdentifier="EQN" minOccurs="0">
+								<Field Name="C-C523_82_01">
+									<SubField Name="E-6350_82_01.01" minOccurs="0"/>
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-6353_82_01.02" minOccurs="0"/>
+								</Field>
+							</Component>
+						</Component>
+					</Component>
+					<Component Name="L-SGP_83" maxOccurs="999" minOccurs="0">
+						<Component Name="S-SGP_83" TagIdentifier="SGP">
+							<Field Name="C-C237_83_01">
+								<SubField MaxLength="17" MinLength="1"
+								Name="E-8260_83_01.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_83_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_83_01.03" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3207_83_01.04" minOccurs="0"/>
+							</Field>
+							<Field Name="E-7224_83_02" minOccurs="0"/>
+						</Component>
+						<Component Name="L-MEA_84" maxOccurs="9" minOccurs="0">
+							<Component Name="S-MEA_84" TagIdentifier="MEA">
+								<Field MaxLength="3" MinLength="1" Name="E-6311_84_01"/>
+								<Field Name="C-C502_84_02" minOccurs="0">
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-6313_84_02.01" minOccurs="0"/>
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-6321_84_02.02" minOccurs="0"/>
+									<SubField MaxLength="17"
+										MinLength="1"
+									Name="E-6155_84_02.03" minOccurs="0"/>
+									<SubField MaxLength="70"
+										MinLength="1"
+									Name="E-6154_84_02.04" minOccurs="0"/>
+								</Field>
+								<Field Name="C-C174_84_03" minOccurs="0">
+									<SubField MaxLength="3"
+									MinLength="1" Name="E-6411_84_03.01"/>
+									<SubField MaxLength="18"
+										MinLength="1"
+									Name="E-6314_84_03.02" minOccurs="0"/>
+									<SubField Name="E-6162_84_03.03" minOccurs="0"/>
+									<SubField Name="E-6152_84_03.04" minOccurs="0"/>
+									<SubField Name="E-6432_84_03.05" minOccurs="0"/>
+								</Field>
+								<Field MaxLength="3" MinLength="1"
+								Name="E-7383_84_04" minOccurs="0"/>
+							</Component>
+							<Component Name="S-EQN_85"
+								TagIdentifier="EQN" minOccurs="0">
+								<Field Name="C-C523_85_01">
+									<SubField Name="E-6350_85_01.01" minOccurs="0"/>
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-6353_85_01.02" minOccurs="0"/>
+								</Field>
+							</Component>
+						</Component>
+					</Component>
+					<Component Name="L-DGS_86" maxOccurs="99" minOccurs="0">
+						<Component Name="S-DGS_86" TagIdentifier="DGS">
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8273_86_01" minOccurs="0"/>
+							<Field Name="C-C205_86_02" minOccurs="0">
+								<SubField MaxLength="7" MinLength="1" Name="E-8351_86_02.01"/>
+								<SubField MaxLength="7" MinLength="1"
+								Name="E-8078_86_02.02" minOccurs="0"/>
+								<SubField MaxLength="10" MinLength="1"
+								Name="E-8092_86_02.03" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C234_86_03" minOccurs="0">
+								<SubField Name="E-7124_86_03.01" minOccurs="0"/>
+								<SubField MaxLength="8" MinLength="1"
+								Name="E-7088_86_03.02" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C223_86_04" minOccurs="0">
+								<SubField Name="E-7106_86_04.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6411_86_04.02" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8339_86_05" minOccurs="0"/>
+							<Field MaxLength="6" MinLength="1"
+							Name="E-8364_86_06" minOccurs="0"/>
+							<Field MaxLength="4" MinLength="1"
+							Name="E-8410_86_07" minOccurs="0"/>
+							<Field MaxLength="10" MinLength="1"
+							Name="E-8126_86_08" minOccurs="0"/>
+							<Field Name="C-C235_86_09" minOccurs="0">
+								<SubField MaxLength="4" MinLength="1"
+								Name="E-8158_86_09.01" minOccurs="0"/>
+								<SubField MaxLength="4" MinLength="4"
+								Name="E-8186_86_09.02" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C236_86_10" minOccurs="0">
+								<SubField MaxLength="4" MinLength="1"
+								Name="E-8246_86_10.01" minOccurs="0"/>
+								<SubField MaxLength="4" MinLength="1"
+								Name="E-8246_86_10.02" minOccurs="0"/>
+								<SubField MaxLength="4" MinLength="1"
+								Name="E-8246_86_10.03" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8255_86_11" minOccurs="0"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8325_86_12" minOccurs="0"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8211_86_13" minOccurs="0"/>
+						</Component>
+						<Component Name="S-FTX_87" TagIdentifier="FTX"
+							maxOccurs="99" minOccurs="0">
+							<Field MaxLength="3" MinLength="1" Name="E-4451_87_01"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-4453_87_02" minOccurs="0"/>
+							<Field Name="C-C107_87_03" minOccurs="0">
+								<SubField MaxLength="17" MinLength="1" Name="E-4441_87_03.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_87_03.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_87_03.03" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C108_87_04" minOccurs="0">
+								<SubField MaxLength="512" MinLength="1" Name="E-4440_87_04.01"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_87_04.02" minOccurs="0"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_87_04.03" minOccurs="0"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_87_04.04" minOccurs="0"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_87_04.05" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-3453_87_05" minOccurs="0"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-4447_87_06" minOccurs="0"/>
+						</Component>
+						<Component Name="L-CTA_88" maxOccurs="9" minOccurs="0">
+							<Component Name="S-CTA_88" TagIdentifier="CTA">
+								<Field MaxLength="3" MinLength="1"
+								Name="E-3139_88_01" minOccurs="0"/>
+								<Field Name="C-C056_88_02" minOccurs="0">
+									<SubField MaxLength="17"
+										MinLength="1"
+									Name="E-3413_88_02.01" minOccurs="0"/>
+									<SubField MaxLength="35"
+										MinLength="1"
+									Name="E-3412_88_02.02" minOccurs="0"/>
+								</Field>
+							</Component>
+							<Component Name="S-COM_89"
+								TagIdentifier="COM" maxOccurs="9" minOccurs="0">
+								<Field Name="C-C076_89_01">
+									<SubField MaxLength="512"
+									MinLength="1" Name="E-3148_89_01.01"/>
+									<SubField MaxLength="3"
+									MinLength="1" Name="E-3155_89_01.02"/>
+								</Field>
+							</Component>
+						</Component>
+						<Component Name="L-MEA_90" maxOccurs="9" minOccurs="0">
+							<Component Name="S-MEA_90" TagIdentifier="MEA">
+								<Field MaxLength="3" MinLength="1" Name="E-6311_90_01"/>
+								<Field Name="C-C502_90_02" minOccurs="0">
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-6313_90_02.01" minOccurs="0"/>
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-6321_90_02.02" minOccurs="0"/>
+									<SubField MaxLength="17"
+										MinLength="1"
+									Name="E-6155_90_02.03" minOccurs="0"/>
+									<SubField MaxLength="70"
+										MinLength="1"
+									Name="E-6154_90_02.04" minOccurs="0"/>
+								</Field>
+								<Field Name="C-C174_90_03" minOccurs="0">
+									<SubField MaxLength="3"
+									MinLength="1" Name="E-6411_90_03.01"/>
+									<SubField MaxLength="18"
+										MinLength="1"
+									Name="E-6314_90_03.02" minOccurs="0"/>
+									<SubField Name="E-6162_90_03.03" minOccurs="0"/>
+									<SubField Name="E-6152_90_03.04" minOccurs="0"/>
+									<SubField Name="E-6432_90_03.05" minOccurs="0"/>
+								</Field>
+								<Field MaxLength="3" MinLength="1"
+								Name="E-7383_90_04" minOccurs="0"/>
+							</Component>
+							<Component Name="S-EQN_91"
+								TagIdentifier="EQN" minOccurs="0">
+								<Field Name="C-C523_91_01">
+									<SubField Name="E-6350_91_01.01" minOccurs="0"/>
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-6353_91_01.02" minOccurs="0"/>
+								</Field>
+							</Component>
+						</Component>
+						<Component Name="L-SGP_92" maxOccurs="999" minOccurs="0">
+							<Component Name="S-SGP_92" TagIdentifier="SGP">
+								<Field Name="C-C237_92_01">
+									<SubField MaxLength="17"
+										MinLength="1"
+									Name="E-8260_92_01.01" minOccurs="0"/>
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-1131_92_01.02" minOccurs="0"/>
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-3055_92_01.03" minOccurs="0"/>
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-3207_92_01.04" minOccurs="0"/>
+								</Field>
+								<Field Name="E-7224_92_02" minOccurs="0"/>
+							</Component>
+							<Component Name="L-MEA_93" maxOccurs="9" minOccurs="0">
+								<Component Name="S-MEA_93" TagIdentifier="MEA">
+									<Field MaxLength="3" MinLength="1" Name="E-6311_93_01"/>
+									<Field Name="C-C502_93_02" minOccurs="0">
+										<SubField MaxLength="3"
+											MinLength="1"
+										Name="E-6313_93_02.01" minOccurs="0"/>
+										<SubField MaxLength="3"
+											MinLength="1"
+										Name="E-6321_93_02.02" minOccurs="0"/>
+										<SubField MaxLength="17"
+											MinLength="1"
+										Name="E-6155_93_02.03" minOccurs="0"/>
+										<SubField MaxLength="70"
+											MinLength="1"
+										Name="E-6154_93_02.04" minOccurs="0"/>
+									</Field>
+									<Field Name="C-C174_93_03" minOccurs="0">
+										<SubField MaxLength="3"
+										MinLength="1" Name="E-6411_93_03.01"/>
+										<SubField MaxLength="18"
+											MinLength="1"
+										Name="E-6314_93_03.02" minOccurs="0"/>
+										<SubField Name="E-6162_93_03.03" minOccurs="0"/>
+										<SubField Name="E-6152_93_03.04" minOccurs="0"/>
+										<SubField Name="E-6432_93_03.05" minOccurs="0"/>
+									</Field>
+									<Field MaxLength="3" MinLength="1"
+									Name="E-7383_93_04" minOccurs="0"/>
+								</Component>
+								<Component Name="S-EQN_94"
+									TagIdentifier="EQN" minOccurs="0">
+									<Field Name="C-C523_94_01">
+										<SubField Name="E-6350_94_01.01" minOccurs="0"/>
+										<SubField MaxLength="3"
+											MinLength="1"
+										Name="E-6353_94_01.02" minOccurs="0"/>
+									</Field>
+								</Component>
+							</Component>
+						</Component>
+					</Component>
+				</Component>
+				<Component Name="L-EQD_95" maxOccurs="999" minOccurs="0">
+					<Component Name="S-EQD_95" TagIdentifier="EQD">
+						<Field MaxLength="3" MinLength="1" Name="E-8053_95_01"/>
+						<Field Name="C-C237_95_02" minOccurs="0">
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-8260_95_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_95_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_95_02.03" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3207_95_02.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C224_95_03" minOccurs="0">
+							<SubField MaxLength="10" MinLength="1"
+							Name="E-8155_95_03.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_95_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_95_03.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-8154_95_03.04" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-8077_95_04" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-8249_95_05" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-8169_95_06" minOccurs="0"/>
+					</Component>
+					<Component Name="S-EQN_96" TagIdentifier="EQN" minOccurs="0">
+						<Field Name="C-C523_96_01">
+							<SubField Name="E-6350_96_01.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6353_96_01.02" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-TMD_97" TagIdentifier="TMD" minOccurs="0">
+						<Field Name="C-C219_97_01" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-8335_97_01.01" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-8334_97_01.02" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="26" MinLength="1"
+						Name="E-8332_97_02" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-8341_97_03" minOccurs="0"/>
+					</Component>
+					<Component Name="S-MEA_98" TagIdentifier="MEA"
+						maxOccurs="9" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-6311_98_01"/>
+						<Field Name="C-C502_98_02" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6313_98_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6321_98_02.02" minOccurs="0"/>
+							<SubField MaxLength="17" MinLength="1"
+							Name="E-6155_98_02.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-6154_98_02.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C174_98_03" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1" Name="E-6411_98_03.01"/>
+							<SubField MaxLength="18" MinLength="1"
+							Name="E-6314_98_03.02" minOccurs="0"/>
+							<SubField Name="E-6162_98_03.03" minOccurs="0"/>
+							<SubField Name="E-6152_98_03.04" minOccurs="0"/>
+							<SubField Name="E-6432_98_03.05" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-7383_98_04" minOccurs="0"/>
+					</Component>
+					<Component Name="S-DIM_99" TagIdentifier="DIM"
+						maxOccurs="9" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-6145_99_01"/>
+						<Field Name="C-C211_99_02">
+							<SubField MaxLength="3" MinLength="1" Name="E-6411_99_02.01"/>
+							<SubField Name="E-6168_99_02.02" minOccurs="0"/>
+							<SubField Name="E-6140_99_02.03" minOccurs="0"/>
+							<SubField Name="E-6008_99_02.04" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-TPL_100" TagIdentifier="TPL"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C222_100_01">
+							<SubField MaxLength="9" MinLength="1"
+							Name="E-8213_100_01.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_100_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_100_01.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-8212_100_01.04" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-8453_100_01.05" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-HAN_101" TagIdentifier="HAN" minOccurs="0">
+						<Field Name="C-C524_101_01" minOccurs="0">
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-4079_101_01.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_101_01.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_101_01.03" minOccurs="0"/>
+							<SubField MaxLength="70" MinLength="1"
+							Name="E-4078_101_01.04" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C218_101_02" minOccurs="0">
+							<SubField MaxLength="4" MinLength="1"
+							Name="E-7419_101_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_101_02.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_101_02.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-7418_101_02.04" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-TMP_102" TagIdentifier="TMP" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-6245_102_01"/>
+						<Field Name="C-C239_102_02" minOccurs="0">
+							<SubField Name="E-6246_102_02.01" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-6411_102_02.02" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="S-FTX_103" TagIdentifier="FTX"
+						maxOccurs="9" minOccurs="0">
+						<Field MaxLength="3" MinLength="1" Name="E-4451_103_01"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-4453_103_02" minOccurs="0"/>
+						<Field Name="C-C107_103_03" minOccurs="0">
+							<SubField MaxLength="17" MinLength="1" Name="E-4441_103_03.01"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-1131_103_03.02" minOccurs="0"/>
+							<SubField MaxLength="3" MinLength="1"
+							Name="E-3055_103_03.03" minOccurs="0"/>
+						</Field>
+						<Field Name="C-C108_103_04" minOccurs="0">
+							<SubField MaxLength="512" MinLength="1" Name="E-4440_103_04.01"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_103_04.02" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_103_04.03" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_103_04.04" minOccurs="0"/>
+							<SubField MaxLength="512" MinLength="1"
+							Name="E-4440_103_04.05" minOccurs="0"/>
+						</Field>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-3453_103_05" minOccurs="0"/>
+						<Field MaxLength="3" MinLength="1"
+						Name="E-4447_103_06" minOccurs="0"/>
+					</Component>
+					<Component Name="S-RFF_104" TagIdentifier="RFF"
+						maxOccurs="9" minOccurs="0">
+						<Field Name="C-C506_104_01">
+							<SubField MaxLength="3" MinLength="1" Name="E-1153_104_01.01"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-1154_104_01.02" minOccurs="0"/>
+							<SubField MaxLength="6" MinLength="1"
+							Name="E-1156_104_01.03" minOccurs="0"/>
+							<SubField MaxLength="35" MinLength="1"
+							Name="E-4000_104_01.04" minOccurs="0"/>
+							<SubField MaxLength="6" MinLength="1"
+							Name="E-1060_104_01.05" minOccurs="0"/>
+						</Field>
+					</Component>
+					<Component Name="L-NAD_105" maxOccurs="9" minOccurs="0">
+						<Component Name="S-NAD_105" TagIdentifier="NAD">
+							<Field MaxLength="3" MinLength="1" Name="E-3035_105_01"/>
+							<Field Name="C-C082_105_02" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-3039_105_02.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_105_02.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_105_02.03" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C058_105_03" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-3124_105_03.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3124_105_03.02" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3124_105_03.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3124_105_03.04" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3124_105_03.05" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C080_105_04" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-3036_105_04.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3036_105_04.02" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3036_105_04.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3036_105_04.04" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3036_105_04.05" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3045_105_04.06" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C059_105_05" minOccurs="0">
+								<SubField MaxLength="35" MinLength="1" Name="E-3042_105_05.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3042_105_05.02" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3042_105_05.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3042_105_05.04" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="35" MinLength="1"
+							Name="E-3164_105_06" minOccurs="0"/>
+							<Field Name="C-C819_105_07" minOccurs="0">
+								<SubField MaxLength="9" MinLength="1"
+								Name="E-3229_105_07.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_105_07.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_105_07.03" minOccurs="0"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-3228_105_07.04" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="17" MinLength="1"
+							Name="E-3251_105_08" minOccurs="0"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-3207_105_09" minOccurs="0"/>
+						</Component>
+						<Component Name="S-DTM_106" TagIdentifier="DTM"
+							maxOccurs="2" minOccurs="0">
+							<Field Name="C-C507_106_01">
+								<SubField MaxLength="3" MinLength="1" Name="E-2005_106_01.01"/>
+								<SubField MaxLength="35" MinLength="1"
+								Name="E-2380_106_01.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-2379_106_01.03" minOccurs="0"/>
+							</Field>
+						</Component>
+						<Component Name="L-CTA_107" maxOccurs="9" minOccurs="0">
+							<Component Name="S-CTA_107" TagIdentifier="CTA">
+								<Field MaxLength="3" MinLength="1"
+								Name="E-3139_107_01" minOccurs="0"/>
+								<Field Name="C-C056_107_02" minOccurs="0">
+									<SubField MaxLength="17"
+										MinLength="1"
+									Name="E-3413_107_02.01" minOccurs="0"/>
+									<SubField MaxLength="35"
+										MinLength="1"
+									Name="E-3412_107_02.02" minOccurs="0"/>
+								</Field>
+							</Component>
+							<Component Name="S-COM_108"
+								TagIdentifier="COM" maxOccurs="9" minOccurs="0">
+								<Field Name="C-C076_108_01">
+									<SubField MaxLength="512"
+									MinLength="1" Name="E-3148_108_01.01"/>
+									<SubField MaxLength="3"
+									MinLength="1" Name="E-3155_108_01.02"/>
+								</Field>
+							</Component>
+							<Component Name="S-DTM_109"
+								TagIdentifier="DTM" minOccurs="0">
+								<Field Name="C-C507_109_01">
+									<SubField MaxLength="3"
+									MinLength="1" Name="E-2005_109_01.01"/>
+									<SubField MaxLength="35"
+										MinLength="1"
+									Name="E-2380_109_01.02" minOccurs="0"/>
+									<SubField MaxLength="3"
+										MinLength="1"
+									Name="E-2379_109_01.03" minOccurs="0"/>
+								</Field>
+							</Component>
+						</Component>
+					</Component>
+					<Component Name="L-DGS_110" maxOccurs="99" minOccurs="0">
+						<Component Name="S-DGS_110" TagIdentifier="DGS">
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8273_110_01" minOccurs="0"/>
+							<Field Name="C-C205_110_02" minOccurs="0">
+								<SubField MaxLength="7" MinLength="1" Name="E-8351_110_02.01"/>
+								<SubField MaxLength="7" MinLength="1"
+								Name="E-8078_110_02.02" minOccurs="0"/>
+								<SubField MaxLength="10" MinLength="1"
+								Name="E-8092_110_02.03" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C234_110_03" minOccurs="0">
+								<SubField Name="E-7124_110_03.01" minOccurs="0"/>
+								<SubField MaxLength="8" MinLength="1"
+								Name="E-7088_110_03.02" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C223_110_04" minOccurs="0">
+								<SubField Name="E-7106_110_04.01" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-6411_110_04.02" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8339_110_05" minOccurs="0"/>
+							<Field MaxLength="6" MinLength="1"
+							Name="E-8364_110_06" minOccurs="0"/>
+							<Field MaxLength="4" MinLength="1"
+							Name="E-8410_110_07" minOccurs="0"/>
+							<Field MaxLength="10" MinLength="1"
+							Name="E-8126_110_08" minOccurs="0"/>
+							<Field Name="C-C235_110_09" minOccurs="0">
+								<SubField MaxLength="4" MinLength="1"
+								Name="E-8158_110_09.01" minOccurs="0"/>
+								<SubField MaxLength="4" MinLength="4"
+								Name="E-8186_110_09.02" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C236_110_10" minOccurs="0">
+								<SubField MaxLength="4" MinLength="1"
+								Name="E-8246_110_10.01" minOccurs="0"/>
+								<SubField MaxLength="4" MinLength="1"
+								Name="E-8246_110_10.02" minOccurs="0"/>
+								<SubField MaxLength="4" MinLength="1"
+								Name="E-8246_110_10.03" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8255_110_11" minOccurs="0"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8325_110_12" minOccurs="0"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-8211_110_13" minOccurs="0"/>
+						</Component>
+						<Component Name="S-FTX_111" TagIdentifier="FTX"
+							maxOccurs="9" minOccurs="0">
+							<Field MaxLength="3" MinLength="1" Name="E-4451_111_01"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-4453_111_02" minOccurs="0"/>
+							<Field Name="C-C107_111_03" minOccurs="0">
+								<SubField MaxLength="17" MinLength="1" Name="E-4441_111_03.01"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-1131_111_03.02" minOccurs="0"/>
+								<SubField MaxLength="3" MinLength="1"
+								Name="E-3055_111_03.03" minOccurs="0"/>
+							</Field>
+							<Field Name="C-C108_111_04" minOccurs="0">
+								<SubField MaxLength="512" MinLength="1" Name="E-4440_111_04.01"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_111_04.02" minOccurs="0"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_111_04.03" minOccurs="0"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_111_04.04" minOccurs="0"/>
+								<SubField MaxLength="512" MinLength="1"
+								Name="E-4440_111_04.05" minOccurs="0"/>
+							</Field>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-3453_111_05" minOccurs="0"/>
+							<Field MaxLength="3" MinLength="1"
+							Name="E-4447_111_06" minOccurs="0"/>
+						</Component>
+						<Component Name="L-CTA_112" maxOccurs="9" minOccurs="0">
+							<Component Name="S-CTA_112" TagIdentifier="CTA">
+								<Field MaxLength="3" MinLength="1"
+								Name="E-3139_112_01" minOccurs="0"/>
+								<Field Name="C-C056_112_02" minOccurs="0">
+									<SubField MaxLength="17"
+										MinLength="1"
+									Name="E-3413_112_02.01" minOccurs="0"/>
+									<SubField MaxLength="35"
+										MinLength="1"
+									Name="E-3412_112_02.02" minOccurs="0"/>
+								</Field>
+							</Component>
+							<Component Name="S-COM_113"
+								TagIdentifier="COM" maxOccurs="9" minOccurs="0">
+								<Field Name="C-C076_113_01">
+									<SubField MaxLength="512"
+									MinLength="1" Name="E-3148_113_01.01"/>
+									<SubField MaxLength="3"
+									MinLength="1" Name="E-3155_113_01.02"/>
+								</Field>
+							</Component>
+						</Component>
+					</Component>
+				</Component>
+				<Component Name="S-UNT_114" TagIdentifier="UNT">
+					<Field Name="E-0074_114_01"/>
+					<Field MaxLength="14" MinLength="1" Name="E-0062_114_02"/>
+				</Component>
+			</Component>
+		</Component>
+	</Component>
+</E2XDefinition>

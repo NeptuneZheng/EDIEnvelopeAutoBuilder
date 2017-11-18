@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Class-Path: b2b-beluga-ediparser-1.9.8.jar commons-configuration-1.5.j
+ ar commons-lang-2.3.jar dom4j-1.6.1.jar edtftpj-pro.jar ftp4j-1.5.1.j
+ ar jms.jar jsch-0.1.43.jar mail.jar ojdbc14_g.jar poi.jar poi-ooxml.j
+ ar poi-ooxml-schemas.jar tibjms.jar junit-4.12.jar hamcrest-core-1.3.
+ jar commons-io-2.4.jar log4j-1.2.17.jar gson-2.8.0.jar
+Main-Class: scene.main.Main
+

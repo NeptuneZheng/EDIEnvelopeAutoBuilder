@@ -1,0 +1,13 @@
+{
+  "definitionFileName": "CUS_4010_315_CS.xml",
+  "TP_ID": "DSGOODS",
+  "MSG_TYPE_ID": "CT",
+  "DIR_ID": "O",
+  "MSG_FMT_ID": "X.12",
+  "operation": "x2e",
+  "ediControlNumberSender": "CARGOSMART",
+  "ediControlNumberReceiver": "DSGOODS",
+  "ediControlNumberMessageType": "CT",
+  "ediControlNumberFormat": "X.12",
+  "transformSetting": "{\"recordDelimiter\":\"~\",\"elementDelimiter\":\"*\",\"subElementDelimiter\":\"\",\"escapeChar\":\"\",\"elementType\":\"delimited\",\"isSuppressEmptyNodes\":\"true\",\"isX12\":\"true\",\"isFieldValueTrimRightSpace\":\"false\",\"x12Envelop\":{\"isa\":{\"I01_01\":\"00\",\"I02_02\":\"          \",\"I03_03\":\"00\",\"I04_04\":\"          \",\"I05_05\":\"ZZ\",\"I06_06\":\"CARGOSMART     \",\"I05_07\":\"ZZ\",\"I07_08\":\"APLUNET        \",\"I08_09\":\"%yyMMdd%\",\"I09_10\":\"%HHmm%\",\"I10_11\":\"U\",\"I11_12\":\"00401\",\"I12_13\":\"%EDI_CTRL_NUM%\",\"I13_14\":\"0\",\"I14_15\":\"P\",\"I15_16\":\"\\u003e\"},\"gs\":{\"E479_01\":\"QO\",\"E142_02\":\"CARGOSMART\",\"E124_03\":\"APLUNET\",\"E373_04\":\"%yyyyMMdd%\",\"E337_05\":\"%HHmm%\",\"E28_06\":\"%GROUP_CTRL_NUM%\",\"E455_07\":\"X\",\"E480_08\":\"004010\"},\"st\":{\"E143_01\":\"315\",\"E329_02\":\"%TXN_CTRL_NUM_START%\"},\"se\":{\"E96_01\":\"   \",\"E329_02\":\"%TXN_CTRL_NUM_END%\"},\"ge\":{\"E97_01\":\"%TXN_COUNT%\",\"E28_02\":\"%GROUP_CTRL_NUM%\"},\"iea\":{\"I16_01\":\"1\",\"I12_02\":\"%EDI_CTRL_NUM%\"}}}"
+}
