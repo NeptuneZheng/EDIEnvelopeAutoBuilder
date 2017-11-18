@@ -14,7 +14,7 @@ public class AutoGenHeader {
 
 
         String env = "QA4";
-        String tp_id ="OECW";
+        String tp_id ="TRANSLOGISTIC";
         String dir_id = "O";
         String msg_type_id ="CT";
         String msg_format = "EDIFACT";

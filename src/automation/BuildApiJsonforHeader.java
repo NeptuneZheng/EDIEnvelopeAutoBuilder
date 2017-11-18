@@ -323,49 +323,51 @@ public class BuildApiJsonforHeader {
 		}
         //ung
 
+        if(!pmtConfig.getUng().equals("")){
+            cfg.edifactEnvelop.ung = new UNG();
+            cfg.edifactEnvelop.ung.E0038_01 = ungArrays[1];
+            if(ungArrays.length>1){
+                String[] ung02Elemtent = ungArrays[2].split(String.format("\\%s", pmtConfig.getSubSeperator()));
+                cfg.edifactEnvelop.ung.S006_02 = new UNGS006();
+                cfg.edifactEnvelop.ung.S006_02.E0040_01 = ung02Elemtent[0];
+                if(ung02Elemtent.length>1){
+                    cfg.edifactEnvelop.ung.S006_02.E0007_02 = ung02Elemtent[1];
+                }
 
-        cfg.edifactEnvelop.ung = new UNG();
-        cfg.edifactEnvelop.ung.E0038_01 = ungArrays[1];
-        if(ungArrays.length>1){
-            String[] ung02Elemtent = ungArrays[2].split(String.format("\\%s", pmtConfig.getSubSeperator()));
-            cfg.edifactEnvelop.ung.S006_02 = new UNGS006();
-            cfg.edifactEnvelop.ung.S006_02.E0040_01 = ung02Elemtent[0];
-            if(ung02Elemtent.length>1){
-                cfg.edifactEnvelop.ung.S006_02.E0007_02 = ung02Elemtent[1];
             }
+            if(ungArrays.length>2){
+                String[] ung03Elemtent = ungArrays[3].split(String.format("\\%s", pmtConfig.getSubSeperator()));
+                cfg.edifactEnvelop.ung.S007_03 = new UNGS007();
+                cfg.edifactEnvelop.ung.S007_03.E0044_01 = ung03Elemtent[0];
+                if(ung03Elemtent.length>1){
+                    cfg.edifactEnvelop.ung.S007_03.E0007_02 = ung03Elemtent[1];
+                }
 
-        }
-        if(ungArrays.length>2){
-            String[] ung03Elemtent = ungArrays[3].split(String.format("\\%s", pmtConfig.getSubSeperator()));
-            cfg.edifactEnvelop.ung.S007_03 = new UNGS007();
-            cfg.edifactEnvelop.ung.S007_03.E0044_01 = ung03Elemtent[0];
-            if(ung03Elemtent.length>1){
-                cfg.edifactEnvelop.ung.S007_03.E0007_02 = ung03Elemtent[1];
             }
+            if(ungArrays.length>3){
+                String[] ung04Elemtent = ungArrays[4].split(String.format("\\%s", pmtConfig.getSubSeperator()));
+                cfg.edifactEnvelop.ung.S004_04 = new UNGS004();
+                cfg.edifactEnvelop.ung.S007_03.E0044_01 = FunctionHelper.returnDateFormat(ung04Elemtent[0]);
+                cfg.edifactEnvelop.ung.S007_03.E0007_02 = FunctionHelper.returnDateFormat(ung04Elemtent[1]);
+            }
+            cfg.edifactEnvelop.ung.E0048_05 = "%EDI_CTRL_NUM_FORMAT%";
+            if(ungArrays.length>5){
+                cfg.edifactEnvelop.ung.E0051_06 = ungArrays[6];
+            }
+            if(ungArrays.length>6){
+                String[] ung07Elemtent = ungArrays[7].split(String.format("\\%s", pmtConfig.getSubSeperator()));
+                cfg.edifactEnvelop.ung.S008_07 = new UNGS008();
+                cfg.edifactEnvelop.ung.S008_07.E0052_01= ung07Elemtent[0];
+                if(ung07Elemtent.length>1){
+                    cfg.edifactEnvelop.ung.S008_07.E0054_02= ung07Elemtent[1];
+                }
+                if(ung07Elemtent.length>2){
+                    cfg.edifactEnvelop.ung.S008_07.E0057_03= ung07Elemtent[2];
+                }
 
-        }
-        if(ungArrays.length>3){
-            String[] ung04Elemtent = ungArrays[4].split(String.format("\\%s", pmtConfig.getSubSeperator()));
-            cfg.edifactEnvelop.ung.S004_04 = new UNGS004();
-            cfg.edifactEnvelop.ung.S007_03.E0044_01 = FunctionHelper.returnDateFormat(ung04Elemtent[0]);
-            cfg.edifactEnvelop.ung.S007_03.E0007_02 = FunctionHelper.returnDateFormat(ung04Elemtent[1]);
-        }
-        cfg.edifactEnvelop.ung.E0048_05 = "%EDI_CTRL_NUM_FORMAT%";
-        if(ungArrays.length>5){
-            cfg.edifactEnvelop.ung.E0051_06 = ungArrays[6];
-        }
-        if(ungArrays.length>6){
-            String[] ung07Elemtent = ungArrays[7].split(String.format("\\%s", pmtConfig.getSubSeperator()));
-            cfg.edifactEnvelop.ung.S008_07 = new UNGS008();
-            cfg.edifactEnvelop.ung.S008_07.E0052_01= ung07Elemtent[0];
-            if(ung07Elemtent.length>1){
-                cfg.edifactEnvelop.ung.S008_07.E0054_02= ung07Elemtent[1];
             }
-            if(ung07Elemtent.length>2){
-                cfg.edifactEnvelop.ung.S008_07.E0057_03= ung07Elemtent[2];
-            }
+        }
 
-        }
 
 		//unh
 		String[] unh02Elemtent = unhArrays[2].split(String.format("\\%s", pmtConfig.getSubSeperator()));
@@ -385,7 +387,6 @@ public class BuildApiJsonforHeader {
 		//reference with cfg.edifactEnvelop.unh.E0062_01, should be same
 		cfg.edifactEnvelop.unt.E0062_02 = "%EDI_CTRL_NUM_IN_TXN_FORMAT%%TXN_COUNT_FORMAT%";
 		if(!pmtConfig.getUne().equals("")){
-
 			cfg.edifactEnvelop.une = new UNE();
 			cfg.edifactEnvelop.une.E0060_01 = "%TXN_COUNT%" ;
 			cfg.edifactEnvelop.une.E0048_02 = "%EDI_CTRL_NUM_FORMAT%";
