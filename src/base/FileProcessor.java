@@ -302,13 +302,19 @@ public class FileProcessor {
         String subSeperator = ":";
         logger.info(fileContent);
         if (fileContent.startsWith("ISA")) {
-        	if(fileContent.endsWith("\r\n") && !String.valueOf(fileContent.charAt(105)).equals("\r")){
-				delimiter =  String.valueOf(fileContent.charAt(105))+"\r\n";
-			}else if(fileContent.endsWith("\r\n") && String.valueOf(fileContent.charAt(105)).equals("\r")){
-				delimiter =  String.valueOf(fileContent.charAt(105))+"\n";
-			}else {
-				delimiter = String.valueOf(fileContent.charAt(105));
-			}
+
+			delimiter =  fileContent.replaceAll("[\\s\\S]*[0-9]","");
+//        	if(fileContent.endsWith("\r\n") && !String.valueOf(fileContent.charAt(105)).equals("\r")){
+//				delimiter =  String.valueOf(fileContent.charAt(105))+"\r\n";
+//			}else if(fileContent.endsWith("\n") && !String.valueOf(fileContent.charAt(105)).equals("\r") && !String.valueOf(fileContent.charAt(105)).equals("\n")){
+//				delimiter =  String.valueOf(fileContent.charAt(105))+"\n";
+//			}else if(fileContent.endsWith("\n") && String.valueOf(fileContent.charAt(105)).equals("\n")){
+//				delimiter =  "\n";
+//			}else if(fileContent.endsWith("\r\n") &&  String.valueOf(fileContent.charAt(105)).equals("\r")){
+//				delimiter = "\r\n";
+//			} else {
+//				delimiter = String.valueOf(fileContent.charAt(105));
+//			}
             //	delimiter = fileContent.charAt(fileContent.indexOf("ISA") + 105);
             sep = String.valueOf(fileContent.charAt(3));
             //sep = String.valueOf(fileContent.charAt(fileContent.indexOf("ISA") + 3));
@@ -317,7 +323,7 @@ public class FileProcessor {
         } else if(fileContent.contains("\nISA*")){
 
 
-            delimiter = String.valueOf(fileContent.charAt(fileContent.indexOf("ISA") + 105));
+            delimiter = fileContent.replaceAll("[\\s\\S]*[0-9]","");
 
             sep = String.valueOf(fileContent.charAt(fileContent.indexOf("ISA") + 3));
 
