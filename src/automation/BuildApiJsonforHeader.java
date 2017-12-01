@@ -347,8 +347,8 @@ public class BuildApiJsonforHeader {
             if(ungArrays.length>3){
                 String[] ung04Elemtent = ungArrays[4].split(String.format("\\%s", pmtConfig.getSubSeperator()));
                 cfg.edifactEnvelop.ung.S004_04 = new UNGS004();
-                cfg.edifactEnvelop.ung.S007_03.E0044_01 = FunctionHelper.returnDateFormat(ung04Elemtent[0]);
-                cfg.edifactEnvelop.ung.S007_03.E0007_02 = FunctionHelper.returnDateFormat(ung04Elemtent[1]);
+                cfg.edifactEnvelop.ung.S004_04.E0017_01 = FunctionHelper.returnDateFormat(ung04Elemtent[0]);
+                cfg.edifactEnvelop.ung.S004_04.E0019_02 = FunctionHelper.returnDateFormat(ung04Elemtent[1]);
             }
             cfg.edifactEnvelop.ung.E0048_05 = "%EDI_CTRL_NUM_FORMAT%";
             if(ungArrays.length>5){
