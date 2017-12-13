@@ -330,25 +330,24 @@ public class FileProcessor {
             subSeperator = fileContent.substring(fileContent.indexOf("ISA")+104, fileContent.indexOf("ISA")+105);
 
         }else if (fileContent.startsWith("UNA")) {
-            delimiter = String.valueOf(fileContent.charAt(fileContent.indexOf("UNA") + 8));
+            delimiter =  fileContent.replaceAll("[\\s\\S]*[0-9]","");;
             //sep = String.valueOf(fileContent.charAt(4));
             sep = String.valueOf(fileContent.charAt(fileContent.indexOf("UNA") + 4));
             subSeperator = fileContent.substring(3, 4);
-        }
-        else {
+        } else {
             //sep = String.valueOf(fileContent.charAt(3));
             sep = String.valueOf(fileContent.charAt(fileContent.indexOf("UNH") + 3));
             String data[] = fileContent.split("UNH");
-
-            if (data[0].equals("\n") || data[0].endsWith("\n")){
-
-                delimiter = String.valueOf(fileContent.charAt(data[0].length() - 2));
-                logger.info(delimiter);
-                if(!delimiter.equals("'"))
-                    delimiter = "\n";
-            }
-            else
-                delimiter = String.valueOf(fileContent.charAt(data[0].length() - 1));
+			delimiter =fileContent.replaceAll("[\\s\\S]*[0-9]","");
+//            if (data[0].equals("\n") || data[0].endsWith("\n")){
+//
+//                delimiter =fileContent.replaceAll("[\\s\\S]*[0-9]","");
+//                logger.info(delimiter);
+//                if(!delimiter.equals("'"))F
+//                    delimiter = "\n";
+//            }
+//            else
+//                delimiter = fileContent.replaceAll("[\\s\\S]*[0-9]","");
             // logger.info("delimiter if not have UNA:" + delimiter);
             subSeperator = String.valueOf(data[0].charAt(data[0].indexOf("UNB") + 8));
 
