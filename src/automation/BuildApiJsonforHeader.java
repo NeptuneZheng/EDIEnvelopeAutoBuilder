@@ -178,7 +178,12 @@ public class BuildApiJsonforHeader {
 		cfg.recordDelimiter = BaseFunctionHelper.encode(pmtConfig.getDelimiter());
 		cfg.elementDelimiter = pmtConfig.getSeperator();
 		cfg.subElementDelimiter = pmtConfig.getSubSeperator();
-		cfg.escapeChar = escapeChar;
+		if(!escapeChar.equals("")){
+			cfg.escapeChar = escapeChar;
+		}else{
+			cfg.escapeChar = "?";
+		}
+
 		cfg.elementType = "delimited";
 		cfg.isSuppressEmptyNodes = "true";
 		cfg.isX12 = "false";
