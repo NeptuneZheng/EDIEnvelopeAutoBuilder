@@ -14,10 +14,10 @@ public class AutoGenHeader {
 
 
         String env = "QA4";
-        String tp_id ="TRANSLOGISTIC";
+        String tp_id ="APLUNET";
         String dir_id = "O";
         String msg_type_id ="CT";
-        String msg_format = "EDIFACT";
+        String msg_format = "X.12";
 
         String folderpath = "D:\\Auto_Code\\TestFile\\";
         String inputfilename = BaseFunctionHelper.getFile(folderpath);
@@ -28,7 +28,7 @@ public class AutoGenHeader {
 
 
         if(pmtConfig.getMsg_format().equals("X.12")){
-            BuildApiJsonforHeader.buildJson4BelugaOcean("CARGOSMART","CUS_4010_310_CS.xml","|",pmtConfig);
+           BuildApiJsonforHeader.buildJson4BelugaOcean("CARGOSMART","CUS_4010_315_CS.xml","|",pmtConfig);
 
         }else if(pmtConfig.getMsg_format().equals("EDIFACT")){
             BuildApiJsonforHeader.buildJson4BelugaOceanWithEdifact("CARGOSMART","CUS_D96B_IFTSTA_CS.xml","?",pmtConfig);

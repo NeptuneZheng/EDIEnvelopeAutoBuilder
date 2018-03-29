@@ -62,7 +62,7 @@ public class AutoEDIEnvelopeBuilder {
         def.ediControlNumberFormat = "X.12";
 
         //2, edi envelop settings, X.12 or Edifact
-        def.transformSetting = x12Envelop(isa,gs,spliter,elementDelimiter,recordDelimiter,x12ReplacementChar);
+        //def.transformSetting = x12Envelop(isa,gs,spliter,elementDelimiter,recordDelimiter,x12ReplacementChar);
 //		def.transformSetting = x12Envelop();
         //def.transformSetting = edifactEnvelop();
 

@@ -38,10 +38,10 @@ public class BuildApiJson {
 			//buildJson4GroovyPMT();
 			
 			//build X.12 Transform Settings
-			buildJson4BelugaOcean();
+			//buildJson4BelugaOcean();
 			
 			//build Edifact Transform Settings
-			//buildJson4BelugaOceanWithEdifact();
+			buildJson4BelugaOceanWithEdifact();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -92,7 +92,7 @@ public class BuildApiJson {
 		def.ediControlNumberFormat = "X.12";
 		
 		//2, edi envelop settings, X.12 or Edifact
-		def.transformSetting = x12Envelop("ISA*00*          *00*          *ZZ*CARGOSMART     *12*2013308849     *170921*1003*U*00401*000064301*0*P*>", "GS*QO*CARGOSMART*ASO*20170921*1003*64301*X*004010");
+		//def.transformSetting = x12Envelop("ISA*00*          *00*          *ZZ*CARGOSMART     *12*2013308849     *170921*1003*U*00401*000064301*0*P*>", "GS*QO*CARGOSMART*ASO*20170921*1003*64301*X*004010");
 //		def.transformSetting = x12Envelop();
 		//def.transformSetting = edifactEnvelop();
 		
@@ -124,7 +124,7 @@ public class BuildApiJson {
 		
 		//2, edi envelop settings, X.12 or Edifact
 		//def.transformSetting = x12Envelop();
-		def.transformSetting = edifactEnvelop();
+		//ef.transformSetting = edifactEnvelop();
 		
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String str = gson.toJson(def);

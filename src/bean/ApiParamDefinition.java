@@ -16,6 +16,6 @@ public class ApiParamDefinition {
 	public String ediControlNumberMessageType;
 	public String ediControlNumberFormat;
 	
-	public String transformSetting;
+	//public String transformSetting;
 	
 }
