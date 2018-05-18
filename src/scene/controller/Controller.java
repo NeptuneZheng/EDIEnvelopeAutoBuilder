@@ -140,8 +140,8 @@ public class Controller extends Exception implements Initializable {
     }
 
     public void initFormateBox(){
-        formateBox.setItems(FXCollections.observableArrayList("X.12", "EDIFACT"));
-        messageType.setItems(FXCollections.observableArrayList("CT", "BC","BL"));
+        formateBox.setItems(FXCollections.observableArrayList("X.12", "EDIFACT","UIF"));
+        messageType.setItems(FXCollections.observableArrayList("CT", "BC","BL","IN","BR","CS2OnlineBR"));
         dbEnviroment.setItems(FXCollections.observableArrayList("QA3", "QA4"));
         formateBox.getSelectionModel().select(0);
         messageType.getSelectionModel().select(0);

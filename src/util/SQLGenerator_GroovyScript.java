@@ -160,7 +160,7 @@ public class SQLGenerator_GroovyScript {
 		 File SQLTemplate = new File (scriptTemplatePath);
 		 String SQLTemplateBody = LocalFileUtil.readBigFile(SQLTemplate.getAbsolutePath());
 		 		
-		for(String current : CommonUtil.cutString(base64, 1000)){
+		for(String current : CommonUtil.cutString(base64, 2000)){
 			String variableName = "var"+count;
 			concatVariables.append(variableName);
 			concatVariables.append("||");
