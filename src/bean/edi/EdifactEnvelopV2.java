@@ -4,7 +4,7 @@ package bean.edi;
  * Created by XIAOTR on 3/29/2018.
  */
 public class EdifactEnvelopV2 {
-    public String UNA = "";
+    public String una = "";
     public UNB unb = null;
     public UNG ung = null;
     public UNH unh = null;

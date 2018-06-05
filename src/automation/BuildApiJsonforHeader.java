@@ -206,7 +206,7 @@ public class BuildApiJsonforHeader {
 		
 		cfg.edifactEnvelopV2 = new EdifactEnvelopV2();
 
-		cfg.edifactEnvelopV2.UNA = pmtConfig.getUna();
+		cfg.edifactEnvelopV2.una = pmtConfig.getUna();
 
 		String[] unbArrays = pmtConfig.getUnb().split(String.format("\\%s", pmtConfig.getSeperator()));
 		String[] unhArrays = pmtConfig.getUnh().split(String.format("\\%s", pmtConfig.getSeperator()));
